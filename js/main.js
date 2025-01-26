@@ -119,15 +119,6 @@
     window.toggleContent = toggleContent;
 
 
-    // Función para mostrar/ocultar el contenido dinámico
-    function toggleContent(id) {
-        const content = document.getElementById(id);
-        if (content.classList.contains('d-none')) {
-            content.classList.remove('d-none');
-        } else {
-            content.classList.add('d-none');
-        }
-    }
     
     document.querySelectorAll('a[href="#servicios"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -145,5 +136,30 @@
         });
     });
 
+    // Función para mostrar/ocultar el contenido
+    function toggleInfo(card) {
+        const info = card.querySelector('.info');
+        const content = card.querySelector('.p-4'); // Seleccionamos el área que queremos expandir
+
+        // Comprobamos si la sección de información está visible
+        if (info.style.display === 'none' || info.style.display === '') {
+            // Mostrar la información
+            info.style.display = 'block';
+            // Expande el contenedor de la tarjeta para ajustarse al contenido
+            content.style.maxHeight = content.scrollHeight + "px"; // Ajustamos la altura del contenedor
+        } else {
+            // Ocultar la información
+            info.style.display = 'none';
+            // Reducimos la altura del contenedor
+            content.style.maxHeight = null;
+        }
+    }
+
+    // Listener de clic para las tarjetas
+    document.querySelectorAll('.uniform-card').forEach(function(card) {
+        card.addEventListener('click', function() {
+            toggleInfo(card);
+        });
+    });
 })(jQuery);
 
