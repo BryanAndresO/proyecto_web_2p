@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Constructor de Algoritmos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    #game-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    .code-blocks {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .code-block {
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .code-block:hover {
+      background-color: #388e3c;
+    }
+    .algorithm {
+      width: 50%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+    }
+    .empty-space {
+      height: 40px;
+      border: 2px dashed #4caf50;
+      border-radius: 5px;
+    }
+    .completed {
+      background-color: #388e3c;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>El Constructor de Algoritmos</h1>
+  <p>Suma de dos números</p>
+  
+  <div id="game-container">
+    <div class="code-blocks">
+      <div class="code-block" draggable="true" ondragstart="drag(event)" id="block2">a = </div>
+      <div class="code-block" draggable="true" ondragstart="drag(event)" id="block3">b = </div>
+      <div class="code-block" draggable="true" ondragstart="drag(event)" id="block4">Resultado = </div>
+      <div class="code-block" draggable="true" ondragstart="drag(event)" id="block5">a + b</div>
+      <div class="code-block" draggable="true" ondragstart="drag(event)" id="block6">Mostrar Resultado</div>
+    </div>
+
+    <div class="algorithm" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div class="empty-space" id="empty1"></div>
+      <div class="empty-space" id="empty2"></div>
+      <div class="empty-space" id="empty3"></div>
+      <div class="empty-space" id="empty4"></div>
+      <div class="empty-space" id="empty5"></div>
+    </div>
+  </div>
+  
+  <div id="completed" class="completed">¡Felicidades! El algoritmo está completo.</div>
+
+  <script>
+    let blocks = {
+      "block1": "Sumar 2 números",
+      "block2": "a = ",
+      "block3": "b = ",
+      "block4": "Resultado = ",
+      "block5": "a + b",
+      "block6": "Mostrar Resultado"
+    };
+
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      const data = ev.dataTransfer.getData("text");
+      const block = document.getElementById(data);
+      const dropZone = ev.target;
+
+      if (dropZone.className === "empty-space" && !dropZone.hasAttribute("data-block")) {
+        dropZone.innerHTML = blocks[data];
+        dropZone.setAttribute("data-block", data);
+        checkCompletion();
+      }
+    }
+
+    function checkCompletion() {
+      const emptySpaces = document.querySelectorAll('.empty-space');
+      const completedSpaces = Array.from(emptySpaces).filter(space => space.hasAttribute("data-block"));
+
+      if (completedSpaces.length === emptySpaces.length) {
+        validateOrder(completedSpaces);
+      }
+    }
+
+    function validateOrder(completedSpaces) {
+      const correctOrder = ["block2", "block3", "block5", "block4", "block6"];
+      const userOrder = completedSpaces.map(space => space.getAttribute("data-block"));
+
+      if (JSON.stringify(userOrder) === JSON.stringify(correctOrder)) {
+        document.getElementById("completed").style.display = "block";
+      } else {
+        alert("El orden de los bloques es incorrecto. Intenta de nuevo.");
+        resetGame();
+      }
+    }
+
+    function resetGame() {
+      const emptySpaces = document.querySelectorAll('.empty-space');
+      emptySpaces.forEach(space => {
+        space.innerHTML = "";
+        space.removeAttribute("data-block");
+      });
+      document.getElementById("completed").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
