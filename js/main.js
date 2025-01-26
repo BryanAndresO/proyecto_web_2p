@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,36 +24,36 @@
             $('.sticky-top').css('top', '-100px');
         }
     });
-    
-    
+
+
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
     const $dropdownToggle = $(".dropdown-toggle");
     const $dropdownMenu = $(".dropdown-menu");
     const showClass = "show";
-    
-    $(window).on("load resize", function() {
+
+    $(window).on("load resize", function () {
         if (this.matchMedia("(min-width: 992px)").matches) {
             $dropdown.hover(
-            function() {
-                const $this = $(this);
-                $this.addClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "true");
-                $this.find($dropdownMenu).addClass(showClass);
-            },
-            function() {
-                const $this = $(this);
-                $this.removeClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "false");
-                $this.find($dropdownMenu).removeClass(showClass);
-            }
+                function () {
+                    const $this = $(this);
+                    $this.addClass(showClass);
+                    $this.find($dropdownToggle).attr("aria-expanded", "true");
+                    $this.find($dropdownMenu).addClass(showClass);
+                },
+                function () {
+                    const $this = $(this);
+                    $this.removeClass(showClass);
+                    $this.find($dropdownToggle).attr("aria-expanded", "false");
+                    $this.find($dropdownMenu).removeClass(showClass);
+                }
             );
         } else {
             $dropdown.off("mouseenter mouseleave");
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -63,7 +63,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -75,8 +75,8 @@
         items: 1,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
@@ -91,31 +91,59 @@
         margin: 24,
         dots: true,
         loop: true,
-        nav : false,
+        nav: false,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:3
+            992: {
+                items: 3
             }
         }
     });
-    
-        // Función para mostrar/ocultar contenido dinámico en las tarjetas
-        function toggleContent(id) {
-            const content = document.getElementById(id);
-            if (content.classList.contains('d-none')) {
-                content.classList.remove('d-none');
-            } else {
-                content.classList.add('d-none');
-            }
+
+    // Función para mostrar/ocultar contenido dinámico en las tarjetas
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content.classList.contains('d-none')) {
+            content.classList.remove('d-none');
+        } else {
+            content.classList.add('d-none');
         }
+    }
+
+    // Exponer la función para ser llamada desde el HTML
+    window.toggleContent = toggleContent;
+
+
+    // Función para mostrar/ocultar el contenido dinámico
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content.classList.contains('d-none')) {
+            content.classList.remove('d-none');
+        } else {
+            content.classList.add('d-none');
+        }
+    }
     
-        // Exponer la función para ser llamada desde el HTML
-        window.toggleContent = toggleContent;
+    document.querySelectorAll('a[href="#servicios"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Ajusta el desplazamiento según la posición exacta del elemento
+            const target = document.querySelector(this.getAttribute('href'));
+            const offset = -100; // Ajusta este valor según lo que necesites (en píxeles)
+
+            // Realiza un desplazamiento suave
+            window.scrollTo({
+                top: target.offsetTop + offset,
+                behavior: 'smooth'
+            });
+        });
+    });
+
 })(jQuery);
 
