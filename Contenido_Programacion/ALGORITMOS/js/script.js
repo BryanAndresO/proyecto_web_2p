@@ -37,3 +37,61 @@ function checkAnswer(element) {
     feedback.innerHTML = '';
   }, 2000);
 }
+
+
+const images = document.querySelectorAll(".step-image");
+  const dropzones = document.querySelectorAll(".dropzone");
+  const checkButton = document.getElementById("checkOrder");
+
+  images.forEach(image => {
+    image.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text/plain", e.target.dataset.order);
+    });
+  });
+
+  dropzones.forEach(dropzone => {
+    dropzone.addEventListener("dragover", (e) => {
+      e.preventDefault();
+    });
+
+    dropzone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      const order = e.dataTransfer.getData("text/plain");
+      const draggedImage = document.querySelector(`img[data-order='${order}']`);
+
+      // Si la imagen ya está en una zona, no hacer nada
+      if (draggedImage.parentNode === dropzone) return;
+
+      // Remove existing image if present
+      if (dropzone.firstChild) {
+        dropzone.innerHTML = "";
+      }
+
+      // Append the dragged image to the dropzone
+      dropzone.appendChild(draggedImage);
+
+      // Deshabilitar el "draggable" para evitar mover la imagen después de ser colocada
+      draggedImage.setAttribute('draggable', 'false');
+    });
+  });
+
+  checkButton.addEventListener("click", () => {
+    dropzones.forEach(dropzone => {
+      const placedImage = dropzone.querySelector("img");
+      if (placedImage) {
+        const correctOrder = dropzone.dataset.correctOrder;
+        const placedOrder = placedImage.dataset.order;
+
+        if (correctOrder === placedOrder) {
+          dropzone.classList.add("correct");
+          dropzone.classList.remove("incorrect");
+        } else {
+          dropzone.classList.add("incorrect");
+          dropzone.classList.remove("correct");
+        }
+      } else {
+        dropzone.classList.add("incorrect");
+        dropzone.classList.remove("correct");
+      }
+    });
+  });
