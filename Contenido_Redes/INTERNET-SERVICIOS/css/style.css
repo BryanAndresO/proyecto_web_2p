@@ -151,15 +151,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
 @media (min-width: 768px) {
     .testimonial-carousel::before,
     .testimonial-carousel::after {
@@ -175,3 +166,55 @@
 }
 
 
+.icon-hover {
+    display: inline-block; /* Asegura que el icono tenga un bloque en línea */
+    transition: transform 0.3s ease; /* Agrega transición para el movimiento */
+  }
+  
+  .icon-hover:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+  }
+  .clickable-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .clickable-image:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Agrega sombra para resaltar */
+  }
+
+  .progress-bar {
+    transition: width 1s ease-in-out; /* Animación suave al crecer */
+  }
+  
+  .progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem; /* Tamaño de la raya */
+  }
+  
+  /* Colores personalizados para diferentes porcentajes */
+  .progress-bar[aria-valuenow="25"] {
+    background-color: #ffc107; /* Amarillo para DSL */
+  }
+  
+  .progress-bar[aria-valuenow="50"] {
+    background-color: #28a745; /* Verde para Fibra Óptica */
+  }
+  
+  .progress-bar[aria-valuenow="10"] {
+    background-color: #dc3545; /* Rojo para Satélite */
+  }
+  
+  .progress-bar[aria-valuenow="15"] {
+    background-color: #17a2b8; /* Cyan para Móvil */
+  }
+  
+  .progress-bar[aria-valuenow="30"] {
+    background-color: #6f42c1; /* Morado para Conexión por Cable */
+  }
+  
+  .progress-bar[aria-valuenow="20"] {
+    background-color: #fd7e14; /* Naranja para Conexión Inalámbrica */
+  }
+  
