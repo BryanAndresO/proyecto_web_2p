@@ -1,0 +1,124 @@
+.drag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dropzone {
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.draggable {
+    cursor: grab;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 10px;
+}
+
+.carousel-item img {
+    max-height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.carousel-caption {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.draggable-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.intro-text {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.intro-text h2 {
+    color: #007bff;
+}
+
+.intro-text p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.example button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.example button:hover {
+    background-color: #005bb5;
+}
+#diagram-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#diagram img {
+    max-width: 100%;
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+.btn {
+    width: 100%;
+    margin: 10px 0;
+}
+.result-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.zoom-container img {
+    transition: transform 0.3s ease; /* Animación suave */
+  }
+
+  .zoom-container:hover img {
+    transform: scale(1.1); /* Zoom al 110% */
+  }
+
+  .juega:hover {
+    background-color: #040B14 ;
+    border-color: #040B14;
+  }
+
+  .botonStart {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+    margin-top: 10px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+}
+    .botonStart:hover {
+    background-color: #2BC5D4; /* Color al pasar el mouse */
+}
