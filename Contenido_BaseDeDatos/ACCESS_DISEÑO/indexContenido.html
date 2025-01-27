@@ -26,7 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <link href="css/lock.css" rel="stylesheet">
   <!-- =======================================================
   * Template Name: iPortfolio
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -58,7 +58,41 @@
             <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-
+            <!-- Para un jueguito -->  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+      .draggable {
+          width: 150px;
+          padding: 10px;
+          margin: 10px;
+          background-color: #007bff;
+          color: white;
+          text-align: center;
+          cursor: move;
+          border-radius: 5px;
+      }
+      .dropzone {
+          width: 500px;
+          height: 300px;
+          border: 2px dashed #007bff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 20px auto;
+          font-weight: bold;
+          color: #007bff;
+      }
+      .dropzone div {
+            margin: 5px 0;
+        }
+      .correct {
+            background-color: #28a745 !important;
+        }
+        .incorrect {
+            background-color: #dc3545 !important;
+        }
+  </style>  
 
 </head>
 
@@ -73,7 +107,7 @@
       <img src="img/Logo_Access.png" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="indexContenido.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">Bases de Datos</h1>
@@ -90,62 +124,65 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Inicio</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i>Conceptos Básicos</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Base de Datos de Ejemplo</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Videos Tutoriales</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Desafios y Retos</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span> Encuestas </span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li><a href="#contenido"><i class="bi bi-person navicon"></i>Conceptos Básicos</a></li>
+        <li><a href="#ejemplo"><i class="bi bi-file-earmark-text navicon"></i> Base de Datos de Ejemplo</a></li>
+        <li><a href="#recursos"><i class="bi bi-images navicon"></i> Recursos Interactivos</a></li>
+        <li class="dropdown"><a href="#quest"><i class="bi bi-menu-button navicon"></i> <span>Juegos y Retos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
+            <li><a href="./retos/RETO_1.html">Reto 1</a></li>
+            <li><a href="./retos/RETO_2.html">Reto 2</a></li>
+            <li><a href="./retos/RETO_3.html">Reto 3</a></li>
+            <li><a href="./retos/RETO_4.html">Reto 4</a></li>
           </ul>
         </li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Examen final </a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Examen Final</a></li>
+        <li><a href="#Certificado"><i class="bi bi-envelope navicon"></i> Certificado </a></li>
       </ul>
     </nav>
 
   </header>
     
   <main class="main">
-   
-    
-
   <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-      <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-          <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>BASE DE DATOS ACCESS</h2>
-      </a>
-      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto p-4 p-lg-0">
-              <a href="" class="nav-item nav-link">Home</a>
-              <a href="about.html" class="nav-item nav-link"></a>
-              <a href="courses.html" class="nav-item nav-link"></a>
-              <div class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Curso</a>
-                  <div class="dropdown-menu fade-down m-0">
-                      <a href="team.html" class="dropdown-item">Programación</a>
-                      <a href="testimonial.html" class="dropdown-item">Redes</a>
-                      <a href="404.html" class="dropdown-item">Base de Datos</a>
-                  </div>
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="/indexhome.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>PROYECTO WEB</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="/indexhome.html" class="nav-item nav-link">INICIO</a>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Programacion</a>
+              <div class="dropdown-menu fade-down m-0">
+                  <a href="team.html" class="dropdown-item">Algoritmos</a>
+                  <a href="testimonial.html" class="dropdown-item">Diagramas de Flujo</a>
+                  <a href="404.html" class="dropdown-item">Python</a>
               </div>
           </div>
-          <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Conoce a cada Grupo<i class="fa fa-arrow-right ms-3"></i></a>
-      </div>
-  </nav>
+
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">REDES</a>
+            <div class="dropdown-menu fade-down m-0">
+                <a href="/Contenido_Redes/MEDIOSCONEXION/indexContenido.html" class="dropdown-item">Medios de Conexion</a>
+                <a href="/Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item">Redes LAN</a>
+                <a href="/Contenido_Redes/INTERNET-SERVICIOS/indexContenido.html" class="dropdown-item">Internet</a>
+            </div>
+          </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">BASE DE DATOS</a>
+              <div class="dropdown-menu fade-down m-0">
+                  <a href="../ACCESS_DISEÑO/indexContenido.html" class="dropdown-item">Acces</a>
+                  <a href="../VB+ACCESS/indexContenido.html" class="dropdown-item">Visual Basic + Access</a>
+                  <a href="../RDBMS-MYSQL(WORBECH)/indexContenido.html" class="dropdown-item">RDBMS - MySQL WorkBench</a>
+              </div>
+            </div>
+        </div>
+        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+  </nav>
   <!-- Navbar End -->
 
     <!-- Hero Section -->
@@ -160,254 +197,386 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+    <!-- Conceptos Basicos -->
+    <header class="bg-primary text-white text-center py-4">
+      <h1>Microsoft Access</h1>
+    </header>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
+<main class="container my-5 px-4 py5">
+  <section id="contenido" class="about section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Conceptos Básicos de Microsoft Access</h2>
+    <p>Microsoft Access es una herramienta poderosa para gestionar bases de datos de manera eficiente. A continuación, exploraremos los temas fundamentales que necesitas conocer.</p>
+  </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="accordion" id="accessAccordion">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>UI/UX Designer &amp; Web Developer.</h2>
-            <p class="fst-italic py-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
+      <!-- Tema 1: Tablas -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTablas">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTablas" aria-expanded="true" aria-controls="collapseTablas">
+            1. Tablas
+          </button>
+        </h2>
+        <div id="collapseTablas" class="accordion-collapse collapse show" aria-labelledby="headingTablas" data-bs-parent="#accessAccordion">
+          <div class="accordion-body text-center">
+            <p>Las tablas son el componente principal de Access. Permiten almacenar datos de manera estructurada mediante filas y columnas.</p>
+            <img src="img/Tabla_Access.jpg" class="img-fluid rounded shadow-sm mb-3" alt="Tablas en Access">
+            <br>
+            <button class="btn btn-primary" onclick="mostrarVideo('videoTablas')">Ver Video</button>
+            <div id="videoTablas" class="collapse mt-3">
+              <video controls width="100%">
+                <source src="videos/TABLA.mp4" type="video/mp4">Tu navegador no soporta el elemento de video.
+              </video>
+            </div>
+            <!-- Subtemas de Tablas -->
+            <div class="mt-3">
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema1_2" aria-expanded="false" aria-controls="subtema1_2">Subtema: Establecer una Clave Primaria</button>
+              <div id="subtema1_2" class="collapse mt-2">
+                <p>Una clave primaria garantiza la unicidad de los registros dentro de la tabla.</p>
               </div>
             </div>
-            <p class="py-3">
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
-            </p>
           </div>
         </div>
-
       </div>
 
-    </section><!-- /About Section -->
+      <!-- Tema 2: Tipos de Campo -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCampos">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCampos" aria-expanded="false" aria-controls="collapseCampos">
+            2. Tipos de Campo
+          </button>
+        </h2>
+        <div id="collapseCampos" class="accordion-collapse collapse" aria-labelledby="headingCampos" data-bs-parent="#accessAccordion">
+          <div class="accordion-body text-center">
+            <p>Los tipos de campo en Access determinan la naturaleza de los datos que se pueden almacenar en una tabla.</p>
+            <img src="img/Tipo_Datos.png" class="img-fluid rounded shadow-sm mb-3" alt="Tablas en Access">
+            <br>
+            <button class="btn btn-primary" onclick="mostrarVideo('videoCampos')">Ver Video</button>
+            <div id="videoCampos" class="collapse mt-3">
+              <video controls width="100%">
+                <source src="videos/Tipos.mp4" type="video/mp4">Tu navegador no soporta el elemento de video.
+              </video>
+            </div>
+            <!-- Subtema de Campos -->
+            <div class="mt-3">
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema2_1" aria-expanded="false" aria-controls="subtema2_1">Subtema: Tipos Comunes de Campos</button>
+              <div id="subtema2_1" class="collapse mt-2">
+                <p>Algunos tipos comunes incluyen Texto, Número, Fecha/Hora, y Booleano.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tema 3: Relaciones -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingRelaciones">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRelaciones" aria-expanded="false" aria-controls="collapseRelaciones">
+            3. Relaciones
+          </button>
+        </h2>
+        <div id="collapseRelaciones" class="accordion-collapse collapse" aria-labelledby="headingRelaciones" data-bs-parent="#accessAccordion">
+          <div class="accordion-body text-center">
+            <p>Las relaciones permiten conectar diferentes tablas a través de campos comunes.</p>
+            <img src="img/Conceptos_Relaciones.png" class="img-fluid rounded shadow-sm mb-3" alt="Relaciones en Access">
+            <br>
+            <button class="btn btn-primary" onclick="mostrarVideo('videoRelaciones')">Ver Video</button>
+            <div id="videoRelaciones" class="collapse mt-3">
+              <video controls width="100%">
+                <source src="videos/Relaciones_Access.mp4" type="video/mp4">Tu navegador no soporta el elemento de video.
+              </video>
+            </div>
+            <!-- Subtemas de Relaciones -->
+            <div class="mt-3">
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema3_1" aria-expanded="false" aria-controls="subtema3_1">Subtema: Relaciones Uno a Uno</button>
+              <div id="subtema3_1" class="collapse mt-2">
+                <p>En una relación uno a uno, cada registro de una tabla está relacionado con un solo registro de otra tabla.</p>
+              </div>
+            </div>
+            <div class="mt-3">
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema3_2" aria-expanded="false" aria-controls="subtema3_2">Subtema: Relaciones Uno a Muchos</button>
+              <div id="subtema3_2" class="collapse mt-2">
+                <p>En una relación uno a muchos, un registro en una tabla puede estar relacionado con múltiples registros en otra tabla.</p>
+              </div>
+            </div>
+            <div class="mt-3">
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema3_3" aria-expanded="false" aria-controls="subtema3_3">Subtema: Relaciones Muchos a Muchos</button>
+              <div id="subtema3_3" class="collapse mt-2">
+                <p>En una relación muchos a muchos, varios registros en una tabla pueden estar relacionados con varios registros en otra tabla.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tema 4: Formularios -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFormularios">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFormularios" aria-expanded="false" aria-controls="collapseFormularios">
+            4. Formularios
+          </button>
+        </h2>
+        <div id="collapseFormularios" class="accordion-collapse collapse" aria-labelledby="headingFormularios" data-bs-parent="#accessAccordion">
+          <div class="accordion-body text-center">
+            <p>Los formularios en Access permiten una entrada de datos más amigable y organizada para los usuarios.</p>
+            <img src="img/Formulario_Access.jpg" class="img-fluid rounded shadow-sm mb-3" alt="Formularios en Access">
+            <br>
+            <button class="btn btn-primary" onclick="mostrarVideo('videoFormularios')">Ver Video</button>
+            <div id="videoFormularios" class="collapse mt-3">
+              <video controls width="100%">
+                <source src="videos/Formulario_Access.mp4" type="video/mp4">Tu navegador no soporta el elemento de video.
+              </video>
+            </div>
+            <!-- Subtemas de Formularios -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Tema 5: Consultas -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingConsultas">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConsultas" aria-expanded="false" aria-controls="collapseConsultas">
+            5. Consultas
+          </button>
+        </h2>
+        <div id="collapseConsultas" class="accordion-collapse collapse" aria-labelledby="headingConsultas" data-bs-parent="#accessAccordion">
+          <div class="accordion-body text-center">
+            <p>Las consultas en Access permiten extraer información específica de una o varias tablas.</p>
+            <img src="img/Consulta_Access.png" class="img-fluid rounded shadow-sm mb-3" alt="Consultas en Access">
+            <br>
+            <button class="btn btn-primary" onclick="mostrarVideo('videoConsultas')">Ver Video</button>
+            <div id="videoConsultas" class="collapse mt-3">
+              <video controls width="100%">
+                <source src="videos/Consulta_Access.mp4" type="video/mp4">Tu navegador no soporta el elemento de video.
+              </video>
+            </div>
+            <!-- Subtemas de Consultas -->
+       <!--      <div class="mt-3">
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#subtema5_1" aria-expanded="false" aria-controls="subtema5_1">Subtema: Consultas de Selección</button>
+              <div id="subtema5_1" class="collapse mt-2">
+                <p>Las consultas de selección permiten obtener datos de las tablas mediante condiciones específicas.</p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Tema 6: Claves Primarias y Foráneas -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingIndices">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndices" aria-expanded="false" aria-controls="collapseIndices">
+            6. Claves Primarias y Foráneas
+          </button>
+        </h2>
+        <div id="collapseIndices" class="accordion-collapse collapse" aria-labelledby="headingIndices" data-bs-parent="#accessAccordion">
+          <div class="accordion-body text-center">
+            <p>Las claves primarias y foráneas permiten establecer relaciones entre tablas y garantizar la integridad de los datos.</p>
+            <img src="./img/extra.png" class="img-fluid rounded shadow-sm mb-3" alt="Consultas en Access">
+            <br>
+            <button class="btn btn-primary" onclick="mostrarVideo('videoIndices')">Ver Video</button>
+            <div id="videoIndices" class="collapse mt-3">
+              <video controls width="100%">
+                <source src="./videos/Foraneas_clave.mp4" type="video/mp4">Tu navegador no soporta el elemento de video.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal para videos -->
+      <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Video Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeModal"></button>
+                </div>
+                <div class="modal-body">
+                    <video controls width="100%" id="videoModalSource">
+                        <source src="" type="video/mp4">Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="drag-game" class="game section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Cuestionario de conceptos Basicos de Access</h2>
+      <p>¡Bienvenidos al quiz interactivo sobre la creación de bases de datos en Microsoft Access! En este ejercicio, pondremos a prueba tus conocimientos sobre la creación y gestión de bases de datos utilizando Access. A lo largo de las preguntas, se cubrirán conceptos como tablas, relaciones, claves primarias y foráneas, consultas y formularios, todos los cuales son esenciales al trabajar con bases de datos en Access.</p>
+      <p>Este quiz está dirigido a aquellos que están aprendiendo o desean reforzar su comprensión de cómo usar Microsoft Access para organizar y gestionar datos de manera efectiva. ¡Es el momento perfecto para aplicar lo que has aprendido y probar tus habilidades! Si alguna pregunta te resulta difícil, no te preocupes, las respuestas te ayudarán a comprender mejor el tema.</p>
+      <p>¡Comencemos y veamos qué tanto sabes sobre la creación de bases de datos en Access!</p>
+  </div>
+    <div class="quiz-container">
+        <div class="quiz-row">
+            <div class="quiz-column">
+                <div class="quiz-card">
+                    <h2 class="quiz-title">Cuestionario de Microsoft Access</h2>
+                    <form id="quizForm">
+                        <div class="quiz-question">
+                            <label for="q1" class="quiz-label">1. ¿Qué es una tabla en Microsoft Access?</label>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q1" value="a" id="q1a">
+                                <label class="quiz-option-label" for="q1a">Un archivo de texto con datos</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q1" value="b" id="q1b">
+                                <label class="quiz-option-label" for="q1b">Una colección de datos organizados en filas y columnas</label>
+                            </div>
+                        </div>
+                        <div class="quiz-question">
+                            <label for="q2" class="quiz-label">2. ¿Qué tipo de campo es utilizado para almacenar texto?</label>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q2" value="a" id="q2a">
+                                <label class="quiz-option-label" for="q2a">Campo Fecha</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q2" value="b" id="q2b">
+                                <label class="quiz-option-label" for="q2b">Campo de Texto</label>
+                            </div>
+                        </div>
+                        <div class="quiz-question">
+                            <label for="q3" class="quiz-label">3. ¿Qué es una clave primaria?</label>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q3" value="a" id="q3a">
+                                <label class="quiz-option-label" for="q3a">Un campo único que identifica un registro</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q3" value="b" id="q3b">
+                                <label class="quiz-option-label" for="q3b">Un campo que se utiliza para cálculos</label>
+                            </div>
+                        </div>
+                        <div class="quiz-question">
+                            <label for="q4" class="quiz-label">4. ¿Cómo se llama el enlace entre dos tablas?</label>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q4" value="a" id="q4a">
+                                <label class="quiz-option-label" for="q4a">Relación</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q4" value="b" id="q4b">
+                                <label class="quiz-option-label" for="q4b">Llave</label>
+                            </div>
+                        </div>
+                        <div class="quiz-question">
+                            <label for="q5" class="quiz-label">5. ¿Qué es una consulta?</label>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q5" value="a" id="q5a">
+                                <label class="quiz-option-label" for="q5a">Una operación para obtener datos de una o más tablas</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q5" value="b" id="q5b">
+                                <label class="quiz-option-label" for="q5b">Un formulario para ingresar datos</label>
+                            </div>
+                        </div>
+                        <div class="quiz-question">
+                            <label for="q6" class="quiz-label">6. ¿Qué es un formulario en Access?</label>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q6" value="a" id="q6a">
+                                <label class="quiz-option-label" for="q6a">Una vista para visualizar los registros de la base de datos</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input class="quiz-input" type="radio" name="q6" value="b" id="q6b">
+                                <label class="quiz-option-label" for="q6b">Una interfaz para ingresar y modificar datos</label>
+                            </div>
+                        </div>
+                        <div class="quiz-submit">
+                            <button type="button" class="quiz-btn" onclick="checkAnswers()">Enviar Respuestas</button>
+                        </div>
+                    </form>
+                    <div id="result" class="quiz-result"></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section">
+    <section id="ejempl" class="stats section">
+      <main class="container my-5">
+        <section id="ejemplo" class="example section">
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Ejemplo de Creación de Base de Datos en Access Clientes</h2>
+            <p>¡Hola a todos! Bienvenidos a este tutorial donde aprenderemos a crear una base de datos desde cero en Microsoft Access. A lo largo del video, exploraremos los pasos esenciales para diseñar tu propia base de datos, creando tablas para almacenar información, formularios para facilitar la entrada de datos y reportes para visualizar esos datos de manera organizada.</p>
+            <p>Este video está diseñado especialmente para principiantes, así que no te preocupes si nunca has trabajado con Access antes; aquí te guiaré en cada paso del proceso. ¡Prepárense para sumergirse en el mundo de las bases de datos y dar el primer paso hacia la gestión efectiva de la información! Así que, ¡empecemos!</p>
+            <!-- Etiqueta de video -->
+            <video controls class="img-fluid" style="max-width: 100%; height: auto;" preload="metadata">
+              <source src="videos/Crear una base de datos.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de videos. Por favor, utiliza un navegador actualizado.
+            </video>
+          </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <h1>Creación de Tablas en Access</h1>
 
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
+          <div class="container1">
+              <!-- Primer div: Creación de la tabla -->
+              <div class="form-section">
+                  <h2>Ejercicio 1: Crear Tabla</h2>
+                  <div class="form-item">
+                      <label for="tablaNombre">Nombre de la tabla:</label>
+                      <input type="text" id="tablaNombre" placeholder="Nombre de la tabla">
+                  </div>
+      
+                  <div class="form-item">
+                      <label for="campoNombre">Nombre del campo:</label>
+                      <input type="text" id="campoNombre" placeholder="Nombre del campo">
+                  </div>
+      
+                  <div class="form-item">
+                      <label for="tipoCampo">Tipo de campo:</label>
+                      <select id="tipoCampo">
+                          <option value="Texto">Texto</option>
+                          <option value="Número">Número</option>
+                          <option value="Fecha">Fecha</option>
+                          <option value="Sí/No">Sí/No</option>
+                          <option value="AutoNumérico">AutoNumérico</option>
+                      </select>
+                  </div>
+      
+                  <button onclick="agregarCampo()">Agregar Campo</button>
+                  <br><br>
+                  <button onclick="crearNuevaTabla()">Crear Otra Tabla</button>
+              </div>
+      
+              <!-- Segundo div: Resumen de la tabla creada -->
+              <div class="result-section">
+                  <h2>Resumen de la Tabla Creada</h2>
+                  <div id="tablaResumen"></div>
+              </div>
+      
+              <!-- Tercer div: Formulario de ingreso de datos -->
+              <div class="form-data-section">
+                  <h2>Formulario de Ingreso de Datos</h2>
+                  <div id="formIngreso"></div>
+                  <button onclick="guardarDatos()">Guardar</button>
+              </div>
+      
+              <!-- Cuarto div: Mostrar datos ingresados -->
+              <div class="data-display-section">
+                  <h2>Datos Ingresados</h2>
+                  <table id="tablaDatos" class="result-table">
+                      <thead>
+                          <tr id="cabeceraTabla"></tr>
+                      </thead>
+                      <tbody></tbody>
+                  </table>
+              </div>
+          </div>  
+  </section>
     </section><!-- /Stats Section -->
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
+    <!-- Recursos Interativos Section -->
+    <section id="recursos" class="portfolio section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Brandon Johnson</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <h2>Recursos Interactivos</h2>
+        <p>Esta sección está diseñada para que explores Access de manera dinámica y sin saturación de contenido. ¡Aprovecha estos recursos para convertirte en un experto en bases de datos! 🚀</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -415,155 +584,112 @@
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
+            <li data-filter="*" class="filter-active">Todo</li>
+            <li data-filter=".filter-video">Mini tutoriales</li>
+            <li data-filter=".filter-casos">Casos reales</li>
+            <li data-filter=".filter-descargables">Descargables</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+                <img src="img/tik_crear_BD_Access.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Creación de BD</h4>
+                  <p>Crea tu primera Base de Datos en Access</p>
+                 <a href="videos/Creación_BD_Access.mp4" title="Video 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-casos">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+                <img src="img/LOGO_ZURITA.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Product 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Laboratorios Zurita</h4>
+                  <p>Aprende como se aplica Access a un Laboratorio</p>
+                  <a href="img/LOGO_ZURITA.jpg" title="Laboratorio" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="detalles-laboratorio.html" title="Mas Detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+                <img src="img/tik_crear_tabla_Acess.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Branding 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Creación de Tablas</h4>
+                  <p>Crea tu primera tabla en Access</p>
+                  <a href="videos/Creación_Tabla_Access.mp4" title="Video 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <img src="img/tik_consulta_seleccion_Access.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Books 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Consulta de Selección</h4>
+                  <p>Crea tu consulta de selección en Acces</p>
+                  <a href="videos/Consulta_Selección_Access.mp4" title="Video 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-descargables">
+              <div class="portfolio-content h-100">
+                <img src="img/Descarga_Access.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Descarga Access</h4>
+                  <p>Te damos un lick de Acceso al instalador de Access</p>
+                  <a href="img/Descarga_Access.png" title="Descarga" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="descargables.html" title="Mas detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
+                <img src="img/tik_consulta_eliminar_Acess.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Consulta de Eliminar</h4>
+                  <p>Crea tu consulta de eliminar en Access</p>
+                  <a href="videos/Consulta_Eliminar_Access.mp4" title="Video 4" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
+                <img src="img/tik_consulta_Anexar_Access.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Consulta de Anexar</h4>
+                  <p>Crea tu consulta de anexar en Access</p>
+                  <a href="videos/Consulta_Anexar_Access.mp4" title="Video 5" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
+                <img src="img/tik_consulta_Actualizacion_Access.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Consulta de Actualización</h4>
+                  <p>Crea tu consulta de actualización en Access</p>
+                  <a href="videos/Consulta_Actualizar_Acces.mp4" title="Video 6" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-casos">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                <img src="img/Banc_Logo.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Banco Pichincha</h4>
+                  <p>Aprende como se aplica Access a un Banco</p>
+                  <a href="img/Banc_Logo.jpg" title="Empresa" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="detalles-empresa.html" title="Mas Detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -576,271 +702,104 @@
 
     </section><!-- /Portfolio Section -->
 
+<!-- Recursos Interativos Section -->
+<section id="quest" class="quest section light-background">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+      <h2>DESAFIOS Y RETOS</h2>
+      <p>¡Prepárate para poner a prueba tus conocimientos con Access! En esta sección, encontrarás juegos y retos interactivos diseñados para desafiarte y ayudarte a mejorar tu dominio de las bases de datos. ¿Estás listo para aceptar el reto?</p>
+  </div><!-- End Section Title -->
+  
+  <!-- Retos Section -->
+  <div class="quiz-container ">
+      <div class="row">
+          <!-- Reto 1: Identificar el Tipo de Campo -->
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="card reto-card" data-aos="fade-up">
+                  <img src="./img/RETO2.png" class="card-img-top" alt="Juego 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Juego 1: Identificar el Tipo de Campo</h5>
+                      <p class="card-text">Asocia los tipos de datos correctos con situaciones específicas en Microsoft Access. ¡Demuestra tus conocimientos!</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Reto 2: Identificar la Relación que tienen las Tablas -->
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="card reto-card" data-aos="fade-up">
+                  <img src="./img/RETO1.png" class="card-img-top" alt="Juego 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Juego 2: Identificar la Relación que tienen las Tablas</h5>
+                      <p class="card-text">Analiza las tablas de una base de datos y encuentra cómo se relacionan entre sí para establecer conexiones adecuadas.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Reto 3: Corregir Errores en la Base de Datos -->
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="card reto-card" data-aos="fade-up">
+                  <img src="./img/RETO3.png" class="card-img-top" alt="Reto 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Reto 1: Corregir Errores en la Base de Datos</h5>
+                      <p class="card-text">Identifica y soluciona los errores comunes en una base de datos, como registros duplicados o datos faltantes.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Reto 4: Quiz de Access -->
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="card reto-card" data-aos="fade-up">
+                  <img src="./img/RETO4.png" class="card-img-top" alt="Reto 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Reto 2: Bienvenido al Quiz de Access</h5>
+                      <p class="card-text">Pon a prueba tu conocimiento con un cuestionario sobre Access. ¡Ve qué tan bien lo sabes!</p>
+                  </div>
+              </div>
+          </div>
+      </div><!-- End Row -->
+  </div><!-- End Retos Section -->
+</section><!-- End Section -->
+
     <!-- Services Section -->
     <section id="services" class="services section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div><!-- End Service Item -->
-
+      <div class="container section-title px-4 px-lg-5" data-aos="fade-up">
+        <h2>EXAMEN</h2>
+        <h1 class="mb-4">¡Bienvenido al Examen de Microsoft Access!</h1>
+        <p>
+          Este examen está diseñado para evaluar tus conocimientos sobre las principales funciones y características de Microsoft Access, 
+          una poderosa herramienta para la creación y gestión de bases de datos.
+        </p>
+        <p>
+          A lo largo de <strong>10 preguntas</strong>, pondremos a prueba tu comprensión de conceptos clave como tablas, consultas, formularios, 
+          relaciones y más. El tiempo límite es de <strong>6 minutos</strong>, así que asegúrate de administrar bien tu tiempo y responder 
+          cuidadosamente cada pregunta.
+        </p>
+        <p><strong>Recuerda:</strong></p>
+        <ul class="text-start">
+          <li>Lee cada pregunta con atención antes de seleccionar tu respuesta.</li>
+          <li>Al finalizar, obtendrás tu calificación y, si alcanzas una nota de <strong>7 o más</strong>, recibirás un certificado que valida tu conocimiento.</li>
+        </ul>
+        <p class="fw-bold">¡Buena suerte!</p>
+        <p>Confía en tus habilidades y da lo mejor de ti. ¡Este es tu momento de demostrar todo lo que sabes!</p>
+        <div class="container text-center mt-5 px-4 px-lg-5" data-aos="fade-up">
+          <h1 class="mb-4">Examen de Microsoft Access</h1>
+          <p>¿Estás listo para rendir el examen?</p>
+          <a href="Examen_Final.html" class="btn btn-primary">Sí, estoy listo</a>
         </div>
+  </div><!-- End Section Title -->
 
-      </div>
-
-    </section><!-- /Services Section -->
-
+  
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+    <section id="Certificado" class="testimonials section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Certificado!</h2>
+        <h3>Aqui se va a presentar tu certificado una vez hayas completado el Examen del Curso </h3>
       </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
     </section><!-- /Testimonials Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
 
   </main>
 
@@ -848,7 +807,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Grupo02</strong> <span>Todo los derechos reservados</span></p>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -881,7 +840,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="./js/conceptos.js"></script>
 </body>
 
 </html>
