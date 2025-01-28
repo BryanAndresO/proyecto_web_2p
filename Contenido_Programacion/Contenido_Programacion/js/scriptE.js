@@ -115,6 +115,6 @@ function volverAlInicio() {
     document.getElementById("pantalla-inicial").style.display = "block";
 }
 function salir() {
-    window.location.href = "EjercicioA.html"; // Aquí se coloca la ruta del archivo
+    window.location.href = "../Principal.html"; // Aquí se coloca la ruta del archivo
 }
 

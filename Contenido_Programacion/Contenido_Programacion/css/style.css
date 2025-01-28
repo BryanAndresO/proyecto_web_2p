@@ -1,4 +1,4 @@
-/********** Template CSS **********/
+
 
             /*Estilo Preguntas*/
             #questionButton {
@@ -9,7 +9,7 @@
                 width: 60px;
                 height: 60px;
                 border-radius: 50%;
-                background: url('../assetsBot/robot.png')  ;
+                background: url('../assetsBot/robot.png');
                 background-size: contain; /* Asegura que la imagen se ajuste al botón */
                 border: none; /* Opcional, para quitar el borde del botón */
                 cursor: pointer;
@@ -60,6 +60,10 @@
               cursor: pointer;
               }
       
+      /*Estilo Preguntas*/
+      
+
+/********** Template CSS **********/
 :root {
     --primary: #06BBCC;
     --light: #F0FBFC;

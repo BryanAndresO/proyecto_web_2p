@@ -107,3 +107,18 @@
     
 })(jQuery);
 
+
+        // Función para activar el menú en pantallas pequeñas
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        // Función para activar el dropdown en móviles
+        document.querySelectorAll('.dropdown-toggle').forEach(item => {
+            item.addEventListener('click', function() {
+                const dropdownMenu = this.nextElementSibling;
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    

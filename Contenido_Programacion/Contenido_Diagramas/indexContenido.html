@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Home</title>
+  <title>Index - iPortfolio Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -61,12 +61,23 @@
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
-
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/diagramas.css">
 
 
 </head>
 
 <body class="index-page">
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <!-- Imagen dentro del modal -->
+      <img id="modalImage" src="" alt="Imagen de la herramienta" class="modal-img">
+    </div>
+  </div>
+
 
 
   <header id="header" class="header dark-background d-flex flex-column">
@@ -74,132 +85,107 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/logo.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">REDES</h1>
+      <h1 class="sitename">Diagramas de flujo</h1>
     </a>
 
     <div class="social-links text-center">
-      <!-- Botones Estudiante y Profesor (letra pequeña, botones grandes) -->
-      <div class="text-center" style="margin-top: 20px;">
-        <a href="#" class="btn btn-success elevate-button"
-          style="background-color: #28a745; color: white; padding: 20px 50px; border-radius: 5px; text-decoration: none; margin-right: 20px; font-size: 14px;">
-          <i class="bi bi-person-fill" style="margin-right: 10px; font-size: 20px;"></i> Estudiante
-        </a>
-      </div>
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
-    
-    <!-- Efecto Hover Elevación con CSS -->
-    <style>
-      .elevate-button {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-    
-      .elevate-button:hover {
-        transform: translateY(-10px); /* Hace que el botón se eleve */
-        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Sombra para efecto 3D */
-      }
-    </style>
-    
-
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Redes LAN</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> Introduccion</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Figuras</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Diagramas</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="indexContenido.html" class="active"><i class="bi bi-house-fill navicon"></i> Home</a></li>
-            <li><a href="indexContenido.html"><i class="bi bi-gear-fill navicon"></i> ¿Qué es una Red LAN?</a></li>
-            <li><a href="Topologia.html"><i class="bi bi-graph-up navicon"></i> Topologías de red LAN</a></li>
-            <li><a href="Juegos.html"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
-            <li><a href="Ejercicio.html"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>         
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
           </ul>
         </li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
-
 
   </header>
 
   <main class="main">
 
-    <!-- Navbar Start -->
-  <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>PROYECTO WEB</h2>
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="indexContenido.html" class="nav-item nav-link">Inicio</a>
 
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Programación</a>
-              <div class="dropdown-menu fade-down m-0">
-                  <a href="team.html" class="dropdown-item">Our Team</a>
-                  <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                  <a href="404.html" class="dropdown-item">404 Page</a>
-              </div>
-          </div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+      <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+      </a>
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="../indexHOME.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">Introduccion</a>
+          <a href="courses.html" class="nav-item nav-link">Courses</a>
           <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Redes</a>
+            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
             <div class="dropdown-menu fade-down m-0">
-                <a href="team.html" class="dropdown-item">Our Team</a>
-                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                <a href="404.html" class="dropdown-item">404 Page</a>
+              <a href="team.html" class="dropdown-item">Our Team</a>
+              <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+              <a href="404.html" class="dropdown-item">404 Page</a>
             </div>
+          </div>
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
-            
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Base de Datos</a>
-                <div class="dropdown-menu fade-down m-0">
-                    <a href="team.html" class="dropdown-item">Our Team</a>
-                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    <a href="404.html" class="dropdown-item">404 Page</a>
-                </div>
-            </div>
-            
-        </div>
-        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
-    </div>
-</nav>
+        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i
+            class="fa fa-arrow-right ms-3"></i></a>
+      </div>
+    </nav>
     <!-- Navbar End -->
 
     <!-- Hero Section -->
-     
     <section id="hero" class="hero section dark-background">
 
-      <img src="img/perfil.jpg" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2 style="color: aqua;">REDES LAN</h2>
-        <p>Temas: <span class="typed" data-typed-items="¿Qué es?, Tipos, Ventajas, Topologias etc.</span><span class="
-            typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink"
-            aria-hidden="true"></span></p>
+        <h2>Diagramas de flujo</h2>
+        <p>Aprende <span class="typed" data-typed-items="Conceptos, Interactivo, Juegos, Figuras">Conceptos</span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
 
     </section><!-- /Hero Section -->
-
- 
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
 
     <!-- About Section -->
     <section id="about" class="about section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up" data-aos-delay="100">
+      <div class="container section-title" style="padding: 50px" data-aos="fade-up" data-aos-delay="100">
         <h2>Introduccion</h2>
         <p>Los diagramas de flujo son herramientas visuales que se utilizan para representar de manera sencilla y clara
           los pasos de un proceso o algoritmo. En el contexto de la programación, ayudan a entender cómo resolver un
@@ -265,7 +251,8 @@
 
           <div class="row">
             <!-- Inicio/Fin -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover  "
+              style="padding: 40px;">
               <img src="images/ovalo.svg" alt="Símbolo de Inicio/Final" style="height: 100px; padding-bottom: 10px;">
               <h5><strong>Inicio / Final</strong></h5>
               <p>El símbolo de terminación marca el punto inicial o final del sistema. Por lo general, contiene la
@@ -273,7 +260,8 @@
             </div>
 
             <!-- Acción o Proceso -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/rectangulo.svg" alt="Símbolo de Acción o Proceso" style="height: 100px;">
               <h5><strong>Acción o Proceso</strong></h5>
               <p>Un rectángulo solo puede representar un solo paso dentro de un proceso ("agregar dos tazas de harina"),
@@ -281,21 +269,24 @@
             </div>
 
             <!-- Documento -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/documento.svg" alt="Símbolo de Documento Impreso" style="height: 100px;">
               <h5><strong>Documento</strong></h5>
               <p>Un documento o informe impreso.</p>
             </div>
 
             <!-- Múltiples Documentos -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/multidoc.svg" alt="Símbolo de Multidocumento" style="height: 100px;">
               <h5><strong>Múltiples Documentos</strong></h5>
               <p>Representa multidocumento en el proceso.</p>
             </div>
 
             <!-- Decisión -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/rombo.svg" alt="Símbolo de Decisión o Ramificación"
                 style="height: 100px;padding-bottom: 15px;">
               <h5><strong>Decisión</strong></h5>
@@ -304,7 +295,8 @@
             </div>
 
             <!-- Entrada/Salida -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/poligono.svg" alt="Símbolo de Entrada / Salida"
                 style="height: 100px;padding-bottom: 10px;">
               <h5><strong>Entrada / Salida</strong></h5>
@@ -313,7 +305,8 @@
             </div>
 
             <!-- Entrada Manual -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/entradaman.svg" alt="Símbolo de Entrada Manual"
                 style="height: 100px; padding-bottom: 20px;">
               <h5><strong>Entrada Manual</strong></h5>
@@ -321,14 +314,16 @@
             </div>
 
             <!-- Preparación -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/hexagono.svg" alt="Símbolo de Preparación" style="height: 100px;">
               <h5><strong>Preparación</strong></h5>
               <p>Representa un ajuste a otro paso en el proceso.</p>
             </div>
 
             <!-- Conector -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/flecha.svg" alt="Símbolo del Conector" style="height: 100px;">
               <h5><strong>Conector</strong></h5>
               <p>Indica que el flujo continúa donde se ha colocado un símbolo idéntico (que contiene la misma letra).
@@ -336,14 +331,16 @@
             </div>
 
             <!-- Símbolo O -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/simboloo.svg" alt="Símbolo O" style="height: 100px;">
               <h5><strong>O Símbolo</strong></h5>
               <p>Indica que el flujo del proceso continúa en más de dos ramas.</p>
             </div>
 
             <!-- Unión de Invocación -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/invocacion.svg" alt="Símbolo de Unión de Invocación" style="height: 100px;">
               <h5><strong>Unión de Invocación</strong></h5>
               <p>Indica un punto en el diagrama de flujo en el que múltiples ramificaciones convergen de nuevo en un
@@ -351,7 +348,8 @@
             </div>
 
             <!-- Fusión -->
-            <div class="col-md-4 d-flex flex-column align-items-center text-center" style="padding: 40px;">
+            <div class="col-md-4 d-flex flex-column align-items-center text-center testimonial-img-hover "
+              style="padding: 40px;">
               <img src="images/fusion.svg" alt="Símbolo de Fusión" style="height: 100px;">
               <h5><strong>Fusión</strong></h5>
               <p>Indica un paso en el que dos o más sub-listas o subprocesos se convierten en uno.</p>
@@ -539,7 +537,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2 class="mb-4">Diagramas</h2> <!-- Centrado y margen inferior -->
-        
+
         <div class="d-flex justify-content-center mb-4">
           <!-- Contenedor del video responsivo con un tamaño máximo de 500px -->
           <div class="ratio ratio-16x9" style="max-width: 500px;">
@@ -549,10 +547,11 @@
             </video>
           </div>
         </div>
-        
-        <p class="text-center">Ahora que ya sabes lo principal acerca de diagramas de flujo, analiza los siguientes diagramas:</p>
+
+        <p class="text-center">Ahora que ya sabes lo principal acerca de diagramas de flujo, analiza los siguientes
+          diagramas:</p>
       </div>
-      
+
 
       <main>
         <div class="container">
@@ -722,7 +721,7 @@
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="q8" value="C" id="q8c">
-              <label class="form-check-label" for="q8c">C) Un  rectangulo.</label>
+              <label class="form-check-label" for="q8c">C) Un rectangulo.</label>
             </div>
           </div>
 
@@ -875,7 +874,7 @@
 
         <div id="contenedorSigno" style="display: none;">
           <!-- El src estará vacío inicialmente -->
-          <iframe id="dosIframe" width="100%" height="700px" frameborder="0" style="padding-top: 50px;"></iframe>
+          <iframe id="dosIframe" width="100%" height="800px" frameborder="0" style="padding-top: 50px;"></iframe>
           <div class="text-center">
             <button class="botonStart" id="dosSalir">Regresar</button>
           </div>
@@ -883,7 +882,7 @@
 
         <div id="contenedorSuma" style="display: none;">
           <!-- El src estará vacío inicialmente -->
-          <iframe id="tresIframe" width="100%" height="700px" frameborder="0" style="padding-top: 50px;"></iframe>
+          <iframe id="tresIframe" width="100%" height="900px" frameborder="0" style="padding-top: 50px;"></iframe>
           <div class="text-center">
             <button class="botonStart" id="tresSalir">Regresar</button>
           </div>
@@ -978,7 +977,6 @@
 
               <p><strong>Si deseas reforzar alguno de los algoritmos antes de iniciar la simulación, vuelve al módulo 1:
                   Algoritmos</strong></p>
-              <button class="botonStart" style="width: 100%;">Ir al módulo 1</button>
             </div><br><br>
           </div>
 
@@ -994,7 +992,7 @@
 
           <div class="row py-5" id="rowSimuladores">
             <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.5s" style="padding-top: 10px;">
-              <a class="position-relative d-block overflow-hidden zoom-container" href="">
+              <a class="position-relative d-block overflow-hidden zoom-container">
                 <div class="course-item bg-light">
                   <div class="position-relative overflow-hidden">
                     <img class="img-fluid" src="img/factorial.png" alt="">
@@ -1020,7 +1018,7 @@
             </div>
 
             <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.5s" style="padding-top: 10px;">
-              <a class="position-relative d-block overflow-hidden zoom-container" href="">
+              <a class="position-relative d-block overflow-hidden zoom-container">
                 <div class="course-item bg-light">
                   <div class="position-relative overflow-hidden">
                     <img class="img-fluid" src="img/fibonacci.png" alt="">
@@ -1107,116 +1105,216 @@
 
     </section>
 
-
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+    <section id="contact" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Ejercicios Propuestos</h2>
+        <p>Este es el momento de poner a prueba tus conocimientos sobre <strong>diagramas de flujo</strong>.
+          Aquí te retamos a convertir los algoritmos en representaciones visuales usando las figuras adecuadas:
+          <code>elipses</code> para inicio y fin, <code>rectángulos</code> para acciones,
+          <code>rombos</code> para decisiones y <code>paralelogramos</code> para entrada/salida de datos y el resto de
+          figuras que has aprendido.
+        </p><br><br>
+
+        <p>
+          Antes de comenzar, asegúrate de repasar los conceptos y ejemplos que ya aprendiste.
+          Este es un excelente momento para fortalecer tus habilidades y enfrentar nuevos desafíos.
+          ¡Atrévete a resolver estos ejercicios y convierte tus ideas en diagramas de flujo bien estructurados! 🚀
+        </p><br><br>
+
+        <div class="row">
+
+          <!-- Ejercicio 1 -->
+          <div class="col-md-6 mb-4">
+            <h4 style="color: #2BC5D4;">Contar caracteres</h4>
+            <p>
+              Convierte el siguiente algoritmo en un diagrama de flujo. Este algoritmo te permitirá contar
+              cuántos caracteres hay en una cadena de texto.
+            </p><br>
+            <h5>Pasos del algoritmo:</h5>
+            <ol>
+              <li>Leer cadena.</li>
+              <li>Inicializar <code>contador = 0</code>.</li>
+              <li>Para cada carácter en la cadena, hacer:
+                <ul>
+                  <li>Incrementar <code>contador</code> en 1.</li>
+                </ul>
+              </li>
+              <li>Imprimir <code>contador</code>.</li>
+            </ol>
+          </div>
+
+          <!-- Ejercicio 2 -->
+          <div class="col-md-6 mb-4">
+            <h4 style="color: #2BC5D4;">¿Es un palíndromo?</h4>
+            <p>
+              Convierte el siguiente algoritmo en un diagrama de flujo. Este algoritmo evalúa si una palabra es igual
+              cuando se lee al derecho y al revés.
+            </p><br>
+            <h5>Pasos del algoritmo:</h5>
+            <ol>
+              <li>Leer palabra.</li>
+              <li>Calcular <code>inversa = invertir(palabra)</code>.</li>
+              <li>Si <code>palabra == inversa</code>, entonces imprimir "Es un palíndromo".</li>
+              <li>Si no, imprimir "No es un palíndromo".</li>
+            </ol>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <!-- Ejercicio 3 -->
+          <div class="col-md-6 mb-4">
+            <h4 style="color: #2BC5D4;">¿Número par o impar?</h4>
+            <p>
+              Convierte el siguiente algoritmo en un diagrama de flujo. Este algoritmo determina si un número es par o
+              impar.
+            </p><br>
+            <h5>Pasos del algoritmo:</h5>
+            <ol>
+              <li>Leer número (<code>n</code>).</li>
+              <li>Si <code>n % 2 == 0</code> entonces:
+                <ul>
+                  <li>Imprimir "El número es par".</li>
+                </ul>
+              </li>
+              <li>Si no:
+                <ul>
+                  <li>Imprimir "El número es impar".</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+
+          <!-- Ejercicio 4 -->
+          <div class="col-md-6 mb-4">
+            <h4 style="color: #2BC5D4;">Contar palabras</h4>
+            <p>
+              Convierte el siguiente algoritmo en un diagrama de flujo. Este algoritmo cuenta cuántas palabras hay en
+              una frase.
+            </p><br>
+            <h5>Pasos del algoritmo:</h5>
+            <ol>
+              <li>Leer frase.</li>
+              <li>Inicializar <code>contadorPalabras = 0</code>.</li>
+              <li>Dividir frase en palabras usando espacios como separadores.</li>
+              <li>Para cada palabra encontrada, hacer:
+                <ul>
+                  <li>Incrementar <code>contadorPalabras</code> en 1.</li>
+                </ul>
+              </li>
+              <li>Imprimir <code>contadorPalabras</code>.</li>
+            </ol>
+          </div>
+        </div><!-- End Section Title -->
+
+      </div>
+
+
+    </section><!-- /Contact Section -->
+
+    <!-- Tools for Flowcharts Section -->
+    <section id="testimonials" class="testimonials section light-background" sty>
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Herramientas para Diagramas de Flujo</h2>
+        <p>Ahora que has comprendido qué es un Diagrama de Flujo y cómo realizar uno, descubre estas increíbles
+          herramientas para crear y personalizar diagramas de flujo de manera profesional. Puedes utilizar una de estas
+          herramientas para realizar los ejercicios propuestos en la sección anterior.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="swiper init-swiper">
           <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 1
             }
-          </script>
+          }
+        }
+      </script>
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                    Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
+                  <i class="bi bi-tools"></i>
+                  <span>LucidChart es una herramienta versátil y fácil de usar para crear diagramas colaborativos en
+                    tiempo real.</span>
+                  <i class="bi bi-tools"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <img src="img/lucid.png" class="testimonial-img testimonial-img-hover alt=" LucidChart" id="lucid">
+                <h3>LucidChart</h3>
+                <h4>Herramienta colaborativa</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End tool item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum
-                    velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
+                  <i class="bi bi-briefcase"></i>
+                  <span>Ofrece funciones avanzadas para crear diagramas detallados y profesionales. Forma parte de la
+                    suite ofimática de Microsoft Office.</span>
+                  <i class="bi bi-briefcase"></i>
+
                 </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <img src="img/visio.png" class="testimonial-img testimonial-img-hover" alt="Microsoft Visio" id="visio">
+
+                <h3>Microsoft Visio</h3>
+                <h4>Solución empresarial</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End tool item -->
+
 
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
-                    minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
+                  <i class="bi bi-pencil"></i>
+                  <span>Draw.io es una plataforma gratuita y accesible para diseñar diagramas de flujo en línea o sin
+                    conexión.</span>
+                  <i class="bi bi-pencil"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <img src="img/drawio.png" class="testimonial-img testimonial-img-hover" alt="Draw.io" id="drawio">
+                <h3>Draw.io</h3>
+                <h4>Opción gratuita</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End tool item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim
-                    duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
+                  <i class="bi bi-lightbulb"></i>
+                  <span>Creately es ideal para equipos que necesitan diagramas simples o complejos con herramientas
+                    colaborativas.</span>
+                  <i class="bi bi-lightbulb"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <img src="img/creately.png" class="testimonial-img testimonial-img-hover" alt="Creately" id="creately">
+                <h3>Creately</h3>
+                <h4>Flexibilidad y colaboración</h4>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt
-                    culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End tool item -->
 
           </div>
           <div class="swiper-pagination"></div>
@@ -1224,97 +1322,71 @@
 
       </div>
 
-    </section><!-- /Testimonials Section -->
+
+      <script>
+        // Obtener elementos
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Función para abrir el modal y cambiar la imagen según el ID de la imagen clickeada
+        function openModal(imageId) {
+          modal.style.display = "block"; // Mostrar el modal
+
+          // Cambiar la fuente de la imagen en el modal según el ID de la imagen clickeada
+          switch (imageId) {
+            case 'visio':
+              modalImg.src = "img/visioint.jpg";
+              break;
+            case 'lucid':
+              modalImg.src = "img/lucidint.png";
+              break;
+            case 'drawio':
+              modalImg.src = "img/drawioint.png";
+              break;
+            case 'creately':
+              modalImg.src = "img/createlyint.webp";
+              break;
+            default:
+              modalImg.src = ""; // Deja la imagen vacía si no coincide
+              break;
+          }
+        }
+
+        // Asignar el evento de clic a las imágenes
+        document.getElementById("visio").onclick = function () {
+          openModal('visio');
+        };
+        document.getElementById("lucid").onclick = function () {
+          openModal('lucid');
+        };
+        document.getElementById("drawio").onclick = function () {
+          openModal('drawio');
+        };
+        document.getElementById("creately").onclick = function () {
+          openModal('creately');
+        };
+
+        // Cuando se hace clic en la X, cerrar el modal
+        span.onclick = function () {
+          modal.style.display = "none";
+        }
+
+        // Si se hace clic fuera del contenido del modal, también se cierra
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+      </script>
+
+    </section><!-- /Tools for Flowcharts Section -->
+
+
+
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
-                frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
 
   </main>
 
