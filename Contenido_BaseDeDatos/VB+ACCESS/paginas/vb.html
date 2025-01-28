@@ -151,7 +151,7 @@
   
             <div class="row">
               <div class=" col-lg-1 col-md-1 mt-3 pr-0">
-                <img src="assetsBot/robot.png" alt="Icono" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+                <img src="../assetsBot/robot.png" alt="Icono" class="rounded-circle me-2" style="width: 40px; height: 40px;">
               </div>
               <div class=" col-lg-11 col-md-11  pl-0">
                 <div class="modal-body mb-0" id="responseText"></div>
@@ -166,7 +166,7 @@
   
   <button id="questionButton" class="btn btn-primary " data-aos="fade-up" ></button>
   
-  <div  id="questionMenu" class="speech-bubble card">
+  <div  id="questionMenu" class="speech-bubble card" style="background-color: rgba(240, 248, 255, 0);">
   <ul class="list-group list-group-flush" id="questionList">
     <!-- Preguntas generadas dinámicamente -->
   </ul>
@@ -494,34 +494,37 @@
         <!-- Main JS File -->
         <script src="../assets/js/main.js"></script>
         <script src="../js/script.js"></script>
-
-
+         Pregunta 2: 
+        Pregunta 3: 
+        Pregunta 4: 
+        Pregunta 5: ¿Qué hago si el formulario no se abre al iniciar la base de datos?
+        Configura el formulario de inicio en las opciones de la base de datos. Ve a Archivo > Opciones > Base de datos actual y selecciona el formulario que deseas mostrar automáticamente.
         <script >
 
             document.addEventListener('DOMContentLoaded', function () {
                 // Array de preguntas, respuestas, imágenes y videos
                 const qaArray = [
                     {
-                        question: "¿Qué es un algoritmo?",
-                        response: "Un conjunto de instrucciones que resuelven un problema o realizan una tarea.",
+                        question: " ¿Cómo puedo evitar que los usuarios editen registros directamente en el formulario? ",
+                        response: " Desactiva la edición directa en el formulario cambiando sus propiedades. Puedes configurar el formulario para que solo permita la edición cuando el usuario haga clic en un botón específico Esto te da más control sobre cuándo y cómo se modifican los datos",
                         image: "",
                         video: ""
                     },
                     {
-                        question: "¿Dime una operación aritmética básica en algoritmos?",
-                        response: "Sumar dos números.",
+                        question: "¿Cómo puedo asegurarme de que los usuarios no borren datos accidentalmente?",
+                        response: "Puedes desactivar la opción de eliminación directa en las propiedades del formulario o implementar un mensaje de confirmación que aparezca antes de borrar un registro, asegurando que sea una acción intencional.",
                         image: "",
                         video: ""
                     },
                     {
-                        question: "¿Qué se necesita para usar una condicional en un algoritmo?",
-                        response: "Una condición que puede ser verdadera o falsa.",
+                        question: "¿Cómo puedo crear un formulario en Access que sea más fácil de usar para los usuarios?",
+                        response: " Asegúrate de incluir elementos como cuadros combinados, botones claros y etiquetas descriptivas. Además, organiza los campos de forma lógica para mejorar la experiencia del usuario",
                         image: "",
                         video: ""
                     },
                     {
-                        question: "¿Cuál es el propósito de un ciclo 'while'?",
-                        response: "Repetir un bloque de código mientras una condición sea verdadera.",
+                        question: "¿Cómo puedo implementar un sistema CRUD en Access sin que sea complicado para los usuarios?",
+                        response: "Crea botones dedicados para cada operación (crear, leer, actualizar y eliminar), con mensajes claros que guíen al usuario en cada paso, evitando acciones directas en las tablas. ",
                         image: "",
                         video: ""
                     }
@@ -538,7 +541,6 @@
                     const listItem = document.createElement('li');
                     listItem.className = 'list-group-item question mb-1 list-group-item-action';
                     listItem.style.cssText = 'border: solid 0px #7c2e2e; border-radius: 15px; background-color: #181d38; color: white;';
-                  
                     listItem.setAttribute('data-bs-toggle', 'list');
                     listItem.setAttribute('role', 'tab');
                     listItem.setAttribute('data-index', index);
