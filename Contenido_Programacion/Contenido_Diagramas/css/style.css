@@ -62,11 +62,10 @@
 
   
 .topnav1 {
-    
+    top: 0;
+    margin: 0;
     background-color: whitesmoke;
-    width: 100%;
-    position: fixed; /* Fija la barra en la parte superior */
-    z-index: 1000; /* Mantiene la barra por encima de otros elementos */
+   
   }
   
   .topnav1 a {
@@ -74,7 +73,7 @@
     display: block;
     color: #06BBCC;
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px 16px;
     text-decoration: none;
     font-size: 17px;
   }
