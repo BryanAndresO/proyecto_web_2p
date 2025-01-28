@@ -63,7 +63,13 @@
   
 .topnav1 {
     
-    background-color: #F0FBFC;
+    background-color: whitesmoke;
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 20%;
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    height: 68px; /* Ajusta la altura de la barra */
+    z-index: 1000; /* Mantiene la barra por encima de otros elementos */
   }
   
   .topnav1 a {
@@ -289,7 +295,7 @@
 }
 
 .navbar-light.sticky-top {
-    top: -100px;
+    top: 0px;
     transition: .5s;
 }
 

@@ -183,7 +183,7 @@
 }
 
 .navbar-light.sticky-top {
-    top: -100px;
+    top: px;
     transition: .5s;
 }
 
