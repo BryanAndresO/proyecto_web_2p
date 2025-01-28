@@ -160,35 +160,42 @@
 </ul>
 </div>
 
-<!-- Asistente end -->
-<!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style=" font-family: 'Poppins', sans-serif;">
-    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
-        <h2  class="m-0" style="color:#0dcaf0; font-family: 'Poppins', sans-serif;" ><i class="fa fa-book me-3" style="color:#0dcaf0;"></i >PROYECTO WEB</h2>
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="Principal.html" class="nav-item nav-link">
-              </a>
+<div class="navbar-container">
+  <nav class="navbar">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-brand">
+          <i class="fa fa-book"></i> PROYECTO WEB
+      </a>
 
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Cursos</a>
-              <div class="dropdown-menu fade-down m-0">
-                  <a href="../Principal.html" class="dropdown-item">Programación</a>
-                  <a href="testimonial.html" class="dropdown-item">Redes</a>
-                  <a href="404.html" class="dropdown-item">Base de Datos</a>
-              </div>
-          </div>
-         
-            
+      <!-- Menú -->
+      <ul class="nav-menu">
+          
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="Principal.html" class="nav-item nav-link">
+            </a>
+
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Cursos</a>
+            <div class="dropdown-menu fade-down m-0">
+                <a href="../Principal.html" class="dropdown-item">Programación</a>
+                <a href="testimonial.html" class="dropdown-item">Redes</a>
+                <a href="404.html" class="dropdown-item">Base de Datos</a>
+            </div>
+           
         </div>
-        <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-6 d-none d-lg-block" style="background-color:#0dcaf0; border: #0dcaf0; 
-        border-radius: 0%;"><i class="fa fa-arrow-left ms-3"></i> Home</a>
-    </div>
-</nav>
+       
+          
+      </div>
+      </ul>
+
+
+
+      <!-- Toggle Menu para móviles -->
+      <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+  </nav>
+</div>
+
+
 <!-- Navbar End -->
 
     <!-- About Section -->
@@ -414,7 +421,21 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="script.js"></script>
+  <script>
+    // Función para activar el menú en pantallas pequeñas
+    function toggleMenu() {
+        const menu = document.querySelector('.nav-menu');
+        menu.classList.toggle('active');
+    }
 
+    // Función para activar el dropdown en móviles
+    document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        item.addEventListener('click', function() {
+            const dropdownMenu = this.nextElementSibling;
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
   
 <script >
 
@@ -521,6 +542,24 @@
   });
     </script>
 
+<script>
+  // Función para activar el menú en pantallas pequeñas
+  function toggleMenu() {
+      const menu = document.querySelector('.nav-menu');
+      menu.classList.toggle('active');
+  }
+
+  // Función para activar el dropdown en móviles
+  document.querySelectorAll('.dropdown-toggle').forEach(item => {
+      item.addEventListener('click', function() {
+          const dropdownMenu = this.nextElementSibling;
+          dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+      });
+  });
+</script>
+
 </body>
 
 </html>
+
+

@@ -59,6 +59,166 @@
           }
   
   /*Estilo Preguntas*/
+   /* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar-container .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-container .navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0dcaf0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-container .navbar-brand i {
+    margin-right: 10px;
+}
+
+/* Menú */
+.navbar-container .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-container .nav-item {
+    margin: 0 15px;  /* Separación entre los ítems */
+    position: relative;
+}
+
+.navbar-container .nav-item a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar-container .nav-item a:hover {
+    color: #0dcaf0;
+}
+
+/* Dropdown */
+.navbar-container .dropdown {
+    position: relative;
+}
+
+.navbar-container .dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    list-style: none;
+    padding: 10px 0;
+    width: 150px;
+}
+
+.navbar-container .dropdown-menu li {
+    padding: 12px 20px;  /* Separación entre los ítems del dropdown */
+}
+
+.navbar-container .dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar-container .dropdown-menu li a:hover {
+    background: #0dcaf0;
+    color: white;
+}
+
+/* Botón Home */
+.navbar-container .btn-home {
+    background-color: #0dcaf0;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 20px;  /* Separación entre el botón y el resto de los ítems */
+}
+
+.navbar-container .btn-home i {
+    margin-right: 5px;
+}
+
+.navbar-container .btn-home:hover {
+    background-color: #0bb6d7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-container .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-container .nav-item {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-container .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .navbar-container .nav-menu.active {
+        display: flex;
+    }
+
+    .navbar-container .dropdown-menu {
+        position: relative;
+        display: block;
+    }
+
+    .navbar-container .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .navbar-container .dropdown-menu {
+        position: static;
+        display: block;
+    }
+}
+
 
 /********** Template CSS **********/
 :root {
