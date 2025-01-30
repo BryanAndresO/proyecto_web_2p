@@ -44,12 +44,11 @@ function loadTable() {
       // Mostrar el botón "Guardar"
       row.querySelector('.saveBtn').style.display = 'inline';
       row.querySelector('.saveBtn').addEventListener('click', () => {
-        // Guardar el valor sin validaciones en el momento de guardar
         fields.forEach(field => {
           const cell = row.querySelector(`.${field}`);
           const input = cell.querySelector('input');
           const newValue = input.value.trim();
-          cell.innerHTML = newValue; // Guardar el valor
+          cell.innerHTML = newValue;
         });
 
         // Ocultar el botón de guardar después de guardar
@@ -95,22 +94,36 @@ document.getElementById('submitBtn').addEventListener('click', () => {
   const rows = document.querySelectorAll('#clientsTable tbody tr');
   let totalRows = rows.length;
   
-  // Validar cada fila de la tabla
   rows.forEach(row => {
     const cells = row.querySelectorAll('td');
     let allFieldsCorrect = true;
 
-    // Validar cada campo
-    cells.forEach(cell => {
-      if (!cell.classList.contains('valid') && !cell.querySelector('input')) { // Si no es editable
-        const field = cell.classList[0]; // Obtener el nombre del campo (id, name, etc.)
+    cells.forEach((cell, index) => {
+      // Obtener la cantidad total de columnas en la tabla
+      const totalColumns = row.children.length;
+
+      // Evitar validar la última columna (Acción)
+      if (index === totalColumns - 1) return;
+
+      if (!cell.classList.contains('valid') && !cell.querySelector('input')) { 
+        const field = cell.classList[0]; 
         const inputValue = cell.textContent.trim();
-        
+
         if (validateField(field, inputValue)) {
           cell.classList.add('valid');
+          cell.classList.remove('invalid');
         } else {
           cell.classList.add('invalid');
+          cell.classList.remove('valid');
           allFieldsCorrect = false;
+
+          // Agregar mensaje debajo del texto si no existe ya
+          if (!cell.querySelector('.error-message')) {
+            const errorMessage = document.createElement('div');
+            errorMessage.classList.add('error-message');
+            errorMessage.textContent = `⚠️ Error en ${field}`;
+            cell.appendChild(errorMessage);
+          }
         }
       }
     });
@@ -123,15 +136,13 @@ document.getElementById('submitBtn').addEventListener('click', () => {
   const resultText = document.getElementById('resultText');
   resultText.textContent = `Has corregido ${correctedCount} de ${totalRows} filas correctamente.`;
 
-  // Si corrige al menos 3 de 4 (75%)
   if (correctedCount >= totalRows * 0.75) {
-    resultText.textContent += ' ¡Felicidades! Has pasado al siguiente reto.';
-    document.getElementById('nextButtonContainer').classList.remove('d-none'); // Mostrar el botón de siguiente reto
+    resultText.textContent += ' ✅ ¡Felicidades! Has pasado al siguiente reto.';
+    document.getElementById('nextButtonContainer').classList.remove('d-none');
   } else {
-    resultText.textContent += ' Necesitas corregir más filas para pasar al siguiente reto.';
+    resultText.textContent += ' ❌ Necesitas corregir más filas para pasar al siguiente reto.';
   }
 
-  document.getElementById('gameArea').style.display = 'none';
   document.getElementById('result').style.display = 'block';
 });
 
