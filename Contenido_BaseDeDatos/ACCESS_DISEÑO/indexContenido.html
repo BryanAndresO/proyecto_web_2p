@@ -486,7 +486,64 @@
           </div>
         </div>
       </section>
+      <section id="ejemplo" class="example section">
+        <h1>Creación de Tablas en Access</h1>
 
+        <div class="container1">
+          <!-- Primer div: Creación de la tabla -->
+          <div class="form-section">
+            <h2>Ejercicio 1: Crear Tabla</h2>
+            <div class="form-item">
+              <label for="tablaNombre">Nombre de la tabla:</label>
+              <input type="text" id="tablaNombre" placeholder="Nombre de la tabla">
+            </div>
+
+            <div class="form-item">
+              <label for="campoNombre">Nombre del campo:</label>
+              <input type="text" id="campoNombre" placeholder="Nombre del campo">
+            </div>
+
+            <div class="form-item">
+              <label for="tipoCampo">Tipo de campo:</label>
+              <select id="tipoCampo">
+                <option value="Texto">Texto</option>
+                <option value="Número">Número</option>
+                <option value="Fecha">Fecha</option>
+                <option value="Sí/No">Sí/No</option>
+                <option value="AutoNumérico">AutoNumérico</option>
+              </select>
+            </div>
+
+            <button onclick="agregarCampo()">Agregar Campo</button>
+            <br><br>
+            <button onclick="crearNuevaTabla()">Crear Otra Tabla</button>
+          </div>
+
+          <!-- Segundo div: Resumen de la tabla creada -->
+          <div class="result-section">
+            <h2>Resumen de la Tabla Creada</h2>
+            <div id="tablaResumen"></div>
+          </div>
+
+          <!-- Tercer div: Formulario de ingreso de datos -->
+          <div class="form-data-section">
+            <h2>Formulario de Ingreso de Datos</h2>
+            <div id="formIngreso"></div>
+            <button onclick="guardarDatos()">Guardar</button>
+          </div>
+
+          <!-- Cuarto div: Mostrar datos ingresados -->
+          <div class="data-display-section">
+            <h2>Datos Ingresados</h2>
+            <table id="tablaDatos" class="result-table">
+              <thead>
+                <tr id="cabeceraTabla"></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
       <section id="drag-game" class="game section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Cuestionario de conceptos Basicos de Access</h2>
