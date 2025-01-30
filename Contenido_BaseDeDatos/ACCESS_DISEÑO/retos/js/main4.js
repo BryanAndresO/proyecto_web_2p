@@ -5,7 +5,7 @@ const questions = [
     correct: 1
   },
   {
-    question: "¿Qué se utiliza para crear relaciones entre tablas en Access?",
+    question: "¿Qué herramienta se utiliza para crear relaciones entre tablas en Access?",
     options: ["Consultas", "Formularios", "Claves primarias", "Reportes"],
     correct: 2
   },
