@@ -70,5 +70,5 @@ function showStreakMessage(message, isWin) {
 generateRandomDistance();
 
 function goBack() {
-  window.location.href = "../mediosGuiados.html";
+  window.location.href = "../tabla.html";
 }

@@ -79,14 +79,14 @@ body {
     border-radius: 10px;
     text-align: center;
     animation: fadeIn 0.5s ease-in-out;
+    background-color: #007bff !important; /* Azul */
+  color: white !important; /* Texto en blanco */
   }
   
-  .feedback.correct {
-    background-color: #28a745;
-  }
-  
+  .feedback.correct,
   .feedback.incorrect {
-    background-color: #dc3545;
+    background-color: #007bff !important; /* Azul */
+    color: white !important;
   }
   
   .hidden {
@@ -144,6 +144,7 @@ body {
     background-color: #0056b3;
     transform: scale(1.1);
   }
+  
   
   @keyframes fadeIn {
     from {

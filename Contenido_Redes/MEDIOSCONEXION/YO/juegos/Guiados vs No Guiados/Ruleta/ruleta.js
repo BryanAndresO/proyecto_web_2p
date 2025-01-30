@@ -9,34 +9,34 @@ document.querySelector(".container").appendChild(restartButton);
 
 let isSpinning = false;
 let angle = 0;
-
 const initialQuestions = [
   {
-    pregunta: "¿Cuál es el medio más utilizado para conectar redes locales?",
-    correct: "Cable UTP",
-    incorrect: ["Fibra óptica", "WiFi"],
+    pregunta: "¿Cuál de los siguientes es un medio de transmisión no guiado?",
+    correct: "Satélite",
+    incorrect: ["Cable UTP", "Fibra óptica"],
   },
   {
-    pregunta: "¿Qué tipo de conexión utiliza ondas de radio?",
-    correct: "WiFi",
-    incorrect: ["Cable coaxial", "Fibra óptica"],
-  },
-  {
-    pregunta: "¿Qué tecnología usa fibras ópticas para transmitir datos?",
+    pregunta: "¿Qué tipo de medio guiado utiliza pulsos de luz para transmitir datos?",
     correct: "Fibra óptica",
     incorrect: ["Cable coaxial", "Cable UTP"],
   },
   {
-    pregunta: "¿Qué tipo de cable tiene pares trenzados?",
-    correct: "Cable UTP",
-    incorrect: ["Cable coaxial", "Cable plano"],
+    pregunta: "¿Qué medio no guiado se utiliza para la comunicación a largas distancias a través del espacio?",
+    correct: "Satélite",
+    incorrect: ["WiFi", "Infrarrojos"],
   },
   {
-    pregunta: "¿Cómo se llama el medio de conexión más antiguo?",
-    correct: "Cable coaxial",
-    incorrect: ["Cable UTP", "Fibra óptica"],
+    pregunta: "¿Qué medio de transmisión inalámbrico usa frecuencias de 2.4 GHz y 5 GHz?",
+    correct: "WiFi",
+    incorrect: ["Bluetooth", "Radiofrecuencia"],
+  },
+  {
+    pregunta: "¿Qué tecnología de transmisión se usa en el control remoto de televisores?",
+    correct: "Infrarrojos",
+    incorrect: ["Microondas", "WiFi"],
   },
 ];
+
 
 let questions = [...initialQuestions]; // Clonar las preguntas iniciales
 
