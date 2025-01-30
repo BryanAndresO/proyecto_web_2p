@@ -165,8 +165,6 @@
   </div>
 </nav>
 <!-- Navbar End -->
-
-
     <!-- About Section -->
     <section id="about" class="about section">
   <!-- Contexto del Quiz -->
@@ -189,12 +187,13 @@
   </div>
 
   <!-- Contenedor de Resultados -->
-  <div id="result-container" class="result-container hidden">
-    <h2>¡Buen trabajo!</h2>
-    <p id="result-message">Tu puntuación es: 0/6</p>
-    <div class="buttons-container">
-      <button id="retryBtn" class="retry-btn">Reiniciar Quiz</button>
-      <button id="goToHome" class="home-btn">Inicio</button>
+    <div id="result-container" class="hidden">
+      <div id="result-message"></div>
+      <div class="buttons-container"></div>
+    </div>
+    
+    <div id="answers-container" class="hidden">
+      <!-- Aquí se mostrarán las respuestas cuando el usuario haga clic en "Ver Respuestas" -->
     </div>
   </div>
     </section><!-- /About Section -->

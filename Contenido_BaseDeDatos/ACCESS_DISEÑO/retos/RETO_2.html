@@ -164,123 +164,123 @@
 </nav>
 <!-- Navbar End -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container text-center my-5">
-        <div id="start-container" class="start-container">
-            <h1>Juego 2: Identificar relaciones de una Base de Datos</h1>
-            <p>
-                En este juego, tu objetivo es observar los datos de las tablas y hacer las relaciones correctas entre ellas. 
-                Tienes 3 minutos para analizar las tablas y responder las preguntas. ¡Buena suerte!
-            </p>
-            <p><strong>Contexto de la base de datos:</strong></p>
-            <p>
-                Esta base de datos simula un sistema de ventas. Tenemos cuatro tablas principales:
-                <ul>
-                    <li><strong>Clientes</strong>: Información sobre los clientes.</li>
-                    <li><strong>Pedidos</strong>: Registros de los pedidos realizados por los clientes.</li>
-                    <li><strong>Productos</strong>: Detalles de los productos disponibles.</li>
-                    <li><strong>Categorías</strong>: Información sobre las categorías a las que pertenecen los productos.</li>
-                </ul>
-                Analiza los datos y selecciona las relaciones correctas entre las tablas.
-            </p>
-            <button id="start-btn" class="btn btn-primary">¡Iniciar Juego!</button>
+ <!-- About Section -->
+<section id="about" class="about section">
+  <div class="container text-center my-5">
+    <div id="start-container" class="start-container">
+        <h1>Juego 2: Identificar relaciones de una Base de Datos</h1>
+        <p>
+            En este juego, tu objetivo es observar los datos de las tablas y hacer las relaciones correctas entre ellas. 
+            Tienes 3 minutos para analizar las tablas y responder las preguntas. ¡Buena suerte!
+        </p>
+        <p><strong>Contexto de la base de datos:</strong></p>
+        <p>
+            Esta base de datos simula un sistema de ventas. Tenemos cuatro tablas principales:
+            <ul>
+                <li><strong>Clientes</strong>: Información sobre los clientes.</li>
+                <li><strong>Pedidos</strong>: Registros de los pedidos realizados por los clientes.</li>
+                <li><strong>Productos</strong>: Detalles de los productos disponibles.</li>
+                <li><strong>Categorías</strong>: Información sobre las categorías a las que pertenecen los productos.</li>
+            </ul>
+            Analiza los datos y selecciona las relaciones correctas entre las tablas.
+        </p>
+        <button id="start-btn" class="btn btn-primary">¡Iniciar Juego!</button>
+    </div>
+
+    <div id="game-container" class="game-container" style="display:none;">
+        <h3>Tiempo restante: <span id="timer">180s</span></h3>
+
+        <!-- Tabla de Clientes -->
+        <h4>Tabla de Clientes</h4>
+        <table class="table table-bordered">
+            <tr><th>Cliente ID</th><th>Nombre</th><th>Ciudad</th></tr>
+            <tr><td>1</td><td>Ana Pérez</td><td>Madrid</td></tr>
+            <tr><td>2</td><td>Juan Gómez</td><td>Barcelona</td></tr>
+            <tr><td>3</td><td>Maria Ruiz</td><td>Sevilla</td></tr>
+        </table>
+
+        <!-- Tabla de Pedidos -->
+        <h4>Tabla de Pedidos</h4>
+        <table class="table table-bordered">
+            <tr><th>Pedido ID</th><th>Cliente ID</th><th>Fecha</th></tr>
+            <tr><td>1001</td><td>1</td><td>2024-01-01</td></tr>
+            <tr><td>1002</td><td>2</td><td>2024-01-05</td></tr>
+            <tr><td>1003</td><td>1</td><td>2024-01-10</td></tr>
+        </table>
+
+        <!-- Tabla de Productos -->
+        <h4>Tabla de Productos</h4>
+        <table class="table table-bordered">
+            <tr><th>Producto ID</th><th>Nombre</th><th>Precio</th><th>Categoría ID</th></tr>
+            <tr><td>201</td><td>Camisa</td><td>15</td><td>301</td></tr>
+            <tr><td>202</td><td>Pantalón</td><td>20</td><td>301</td></tr>
+            <tr><td>203</td><td>Zapatos</td><td>30</td><td>302</td></tr>
+        </table>
+
+        <!-- Tabla de Categorías -->
+        <h4>Tabla de Categorías</h4>
+        <table class="table table-bordered">
+            <tr><th>Categoría ID</th><th>Nombre</th></tr>
+            <tr><td>301</td><td>Ropa</td></tr>
+            <tr><td>302</td><td>Calzado</td></tr>
+        </table>
+
+        <div class="options">
+          <h4>Selecciona las relaciones correctas:</h4>
+          <div class="option-container">
+            <label for="relation1">1. Relación entre <strong>Clientes</strong> y <strong>Pedidos</strong></label>
+            <select id="relation1" class="form-control">
+              <option value="" disabled selected>Selecciona tu respuesta</option>
+              <option value="correcta">Un cliente puede realizar varios pedidos.</option>
+              <option value="incorrecta">Un cliente puede realizar un pedido.</option>
+              <option value="incorrecta">Varios clientes pueden realizar varios pedidos.</option>
+              <option value="incorrecta">No existe relación.</option>
+            </select>
+          </div>
+          <div class="option-container">
+            <label for="relation2">2. Relación entre <strong>Productos</strong> y <strong>Categorías</strong></label>
+            <select id="relation2" class="form-control">
+              <option value="" disabled selected>Selecciona tu respuesta</option>
+              <option value="incorrecta">Un producto pertenece a una categoría.</option>
+              <option value="incorrecta">Un producto tiene varias categorías.</option>
+              <option value="correcta">Varios productos pertenecen a una categoría.</option>
+              <option value="incorrecta">Un producto no pertenece a una categoría.</option>
+            </select>
+          </div>
+          <div class="option-container">
+            <label for="relation3">3. Relación entre <strong>Pedidos</strong> y <strong>Clientes</strong></label>
+            <select id="relation3" class="form-control">
+              <option value="" disabled selected>Selecciona tu respuesta</option>
+              <option value="correcta">Un pedido pertenece a un cliente.</option>
+              <option value="incorrecta">Un cliente tiene múltiples pedidos asociados.</option>
+              <option value="incorrecta">Un pedido tiene varios clientes.</option>
+              <option value="incorrecta">No existe relación directa.</option>
+            </select>
+          </div>
+          <div class="option-container">
+            <label for="relation4">4. Relación entre <strong>Productos</strong> y <strong>Pedidos</strong></label>
+            <select id="relation4" class="form-control">
+              <option value="" disabled selected>Selecciona tu respuesta</option>
+              <option value="correcta">Un pedido puede contener varios productos.</option>
+              <option value="incorrecta">Un pedido solo tiene un producto.</option>
+              <option value="incorrecta">Un pedido no contiene productos.</option>
+              <option value="incorrecta">No existe relación directa.</option>
+            </select>
+          </div>
+        
+          <button id="validate-btn" class="btn btn-success" disabled>Validar Respuestas</button>
+        </div>
+        
+        <!-- Contenedor de resultados -->
+        <div id="result-container" style="display:none;">
+          <div id="result-message"></div>
+          <div class="result-actions">
+              <button class="btn btn-primary" onclick="restartGame()">Reiniciar Juego</button>
+              <button class="btn btn-success" onclick="nextChallenge()">Siguiente Reto</button>
+          </div>
         </div>
 
-        <div id="game-container" class="game-container" style="display:none;">
-            <h3>Tiempo restante: <span id="timer">180s</span></h3>
-
-            <!-- Tabla de Clientes -->
-            <h4>Tabla de Clientes</h4>
-            <table class="table table-bordered">
-                <tr><th>Cliente ID</th><th>Nombre</th><th>Ciudad</th></tr>
-                <tr><td>1</td><td>Ana Pérez</td><td>Madrid</td></tr>
-                <tr><td>2</td><td>Juan Gómez</td><td>Barcelona</td></tr>
-                <tr><td>3</td><td>Maria Ruiz</td><td>Sevilla</td></tr>
-            </table>
-
-            <!-- Tabla de Pedidos -->
-            <h4>Tabla de Pedidos</h4>
-            <table class="table table-bordered">
-                <tr><th>Pedido ID</th><th>Cliente ID</th><th>Fecha</th></tr>
-                <tr><td>1001</td><td>1</td><td>2024-01-01</td></tr>
-                <tr><td>1002</td><td>2</td><td>2024-01-05</td></tr>
-                <tr><td>1003</td><td>1</td><td>2024-01-10</td></tr>
-            </table>
-
-            <!-- Tabla de Productos -->
-            <h4>Tabla de Productos</h4>
-            <table class="table table-bordered">
-                <tr><th>Producto ID</th><th>Nombre</th><th>Precio</th></tr>
-                <tr><td>201</td><td>Camisa</td><td>15</td></tr>
-                <tr><td>202</td><td>Pantalón</td><td>20</td></tr>
-                <tr><td>203</td><td>Zapatos</td><td>30</td></tr>
-            </table>
-
-            <!-- Tabla de Categorías -->
-            <h4>Tabla de Categorías</h4>
-            <table class="table table-bordered">
-                <tr><th>Categoría ID</th><th>Nombre</th></tr>
-                <tr><td>301</td><td>Ropa</td></tr>
-                <tr><td>302</td><td>Calzado</td></tr>
-            </table>
-
-            <div class="options">
-              <h4>Selecciona las relaciones correctas:</h4>
-              <div class="option-container">
-                <label for="relation1">1. Relación entre <strong>Clientes</strong> y <strong>Pedidos</strong></label>
-                <select id="relation1" class="form-control">
-                  <option value="" disabled selected>Selecciona tu respuesta</option>
-                  <option value="correcta">Un cliente puede realizar varios pedidos.</option>
-                  <option value="incorrecta">Un cliente puede realizar un pedido.</option>
-                  <option value="incorrecta">Varios clientes pueden realizar varios pedidos.</option>
-                  <option value="incorrecta">No existe relación.</option>
-                </select>
-              </div>
-              <div class="option-container">
-                <label for="relation2">2. Relación entre <strong>Productos</strong> y <strong>Categorías</strong></label>
-                <select id="relation2" class="form-control">
-                  <option value="" disabled selected>Selecciona tu respuesta</option>
-                  <option value="incorrecta">Un producto pertenece a una categoría.</option>
-                  <option value="incorrecta">Un producto tiene varias categorías.</option>
-                  <option value="correcta">Varios productos pertenecen a una categoría.</option>
-                  <option value="incorrecta">Un producto no pertenece a una categoría.</option>
-                </select>
-              </div>
-              <div class="option-container">
-                <label for="relation3">3. Relación entre <strong>Pedidos</strong> y <strong>Clientes</strong></label>
-                <select id="relation3" class="form-control">
-                  <option value="" disabled selected>Selecciona tu respuesta</option>
-                  <option value="correcta">Un pedido pertenece a un cliente.</option>
-                  <option value="incorrecta">Un cliente tiene múltiples pedidos asociados.</option>
-                  <option value="incorrecta">Un pedido tiene varios clientes.</option>
-                  <option value="incorrecta">No existe relación directa.</option>
-                </select>
-              </div>
-              <div class="option-container">
-                <label for="relation4">4. Relación entre <strong>Productos</strong> y <strong>Pedidos</strong></label>
-                <select id="relation4" class="form-control">
-                  <option value="" disabled selected>Selecciona tu respuesta</option>
-                  <option value="correcta">Un pedido puede contener varios productos.</option>
-                  <option value="incorrecta">Un pedido solo tiene un producto.</option>
-                  <option value="incorrecta">Un pedido no contiene productos.</option>
-                  <option value="incorrecta">No existe relación directa.</option>
-                </select>
-              </div>
-            
-              <button id="validate-btn" class="btn btn-success" disabled>Validar Respuestas</button>
-            </div>
-            
-            <!-- Contenedor de resultados -->
-            <div id="result-container" style="display:none;">
-              <div id="result-message"></div>
-              <div class="result-actions">
-                  <button class="btn btn-primary" onclick="restartGame()">Reiniciar Juego</button>
-                  <button class="btn btn-success" onclick="nextChallenge()">Siguiente Reto</button>
-              </div>
-            </div>
-
-    </section><!-- /About Section -->
+  </section><!-- /About Section -->
   </main>
 
   <footer id="footer" class="footer position-relative light-background">

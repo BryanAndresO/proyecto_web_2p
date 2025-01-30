@@ -172,14 +172,22 @@
     <div class="text-center mb-4">
       <h1>Reto: Corregir Errores en la Base de Datos</h1>
       <p>
-        En este reto, tu tarea es corregir los errores en una base de datos de clientes. Algunas filas tienen datos erróneos que debes corregir para pasar al siguiente reto. Si corriges más del 80% de los errores, podrás avanzar.
+        En este reto, tu tarea es corregir los errores en una base de datos de clientes. Algunas filas tienen datos erróneos que debes corregir para pasar al siguiente reto. Si corriges más del 75% de los errores, podrás avanzar.
       </p>
       <button id="startBtn" class="btn btn-primary">Iniciar Reto</button>
     </div>
 
     <div id="gameArea" class="card" style="display: none;">
       <div class="card-body">
-        <h4>Lista de Clientes con Errores</h4>
+        <h2>Instrucciones para corregir los datos</h2>
+        <p>Para corregir las filas de datos, por favor sigue estas instrucciones:</p>
+        <ul>
+          <li><strong>ID:</strong> Debe ser un número, sin letras ni caracteres especiales.</li>
+          <li><strong>Nombre y Apellido:</strong> Deben ser solo letras (sin números ni caracteres especiales), con espacios entre las palabras si es necesario.</li>
+          <li><strong>Email:</strong> Debe seguir la estructura <strong>nombre.apellido@dominio.extension</strong>. Por ejemplo, juan.perez@gmail.com.</li>
+          <li><strong>Fecha:</strong> Debe estar en formato <strong>YYYY-MM-DD</strong> (por ejemplo, 2024-01-25).</li>
+          <li><strong>Edad:</strong> Debe ser un número de dos dígitos (por ejemplo, 25).</li>
+        </ul>
         <div class="table-wrapper">
           <table class="table table-bordered" id="clientsTable">
             <thead>
@@ -199,17 +207,14 @@
           </table>
         </div>
         <button id="submitBtn" class="btn btn-success mt-3">Enviar Correcciones</button>
-      </div>
-    </div>
-
-    <div id="result" style="display: none;" class="mt-4">
-      <p id="resultText"></p>
-      <div id="nextButtonContainer" class="d-none">
-        <a href="RETO_4.html" class="btn btn-primary">Siguiente Reto</a>
-      </div>
-      <button id="restartBtn" class="btn btn-warning mt-3">Reiniciar Juego</button>
-    </div>
-  </div>
+        
+        <div id="result" style="display: none;" class="mt-4">
+          <p id="resultText"></p>
+          <div id="nextButtonContainer" class="d-none">
+            <a href="./RETO_4.html" class="btn btn-primary">Siguiente Reto</a>
+          </div>
+          <button id="restartBtn" class="btn btn-warning mt-3">Reiniciar Juego</button>
+        </div>
 </section>
 
   </main>
