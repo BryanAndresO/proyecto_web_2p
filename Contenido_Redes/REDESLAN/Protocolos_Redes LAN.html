@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tipos de Topologías</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="index-page">
+
+
+  <header id="header" class="header dark-background d-flex flex-column">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/logo.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">REDES</h1>
+    </a>
+
+
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="home.html" class="active"><i class="bi bi-house-fill navicon"></i> Home</a></li>
+        <li><a href="indexContenido.html"><i class="bi bi-gear-fill navicon"></i> ¿Qué es una Red LAN?</a></li>
+        <li><a href="Topologia.html"><i class="bi bi-graph-up navicon"></i> Topologías de red LAN</a></li>
+        <li><a href="Protocolos_Redes LAN.html"><i class="bi bi-diagram-3 navicon"></i> Protocolos</a></li>
+        <li><a href="seguridad.html"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
+        <li><a href="Juegos.html"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
+        <li><a href="Ejercicio.html"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+      <!-- Enlace Inicio 
+      <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->  
+
+      <!-- Menú Programación -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+            class="dropdown-item small-text">Algoritmos</a>
+          <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+            class="dropdown-item small-text">Diagramas</a>
+          <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+            class="dropdown-item small-text">Python</a>
+        </div>
+      </div>
+
+      <!-- Menú Redes -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">Internet</a>
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">Medios de conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">Redes Lan</a>
+
+        </div>
+      </div>
+
+      <!-- Menú Base de Datos -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de Datos</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+            class="dropdown-item small-text">Access</a>
+          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+            class="dropdown-item small-text">MySQL (Workbench)</a>
+          <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">Visual
+            Basic Access</a>
+        </div>
+      </div>
+
+      </div>
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="#about" class="dropdown-item">Internet</a>
+          <a href="#connections" class="dropdown-item">Tipos de Conexión</a>
+          <a href="#resume" class="dropdown-item">Servicios Relacionados</a>
+          <a href="#portfolio2" class="dropdown-item">Navegadores Web</a>
+          <a href="#testimonials" class="dropdown-item">Protocolos de Red</a>
+          <a href="#contact" class="dropdown-item">Backbone</a>
+        </div>
+      </div>
+
+      <a href="#cuestionarios" class="nav-item nav-link">Cuestionario</a>
+
+    </div>
+    <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+
+
+<!-- Protocolos de Redes LAN Section -->
+<section id="protocolos-lan" class="protocolos-lan section bg-light pt-5 pb-5">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2 class="text-center mb-4">Protocolos de Redes LAN</h2>
+    <p class="text-center">Los protocolos de red definen las reglas y estándares que permiten la comunicación eficiente y segura entre los dispositivos conectados en una Red de Área Local (LAN). Aquí te presentamos los principales protocolos utilizados en redes LAN, junto con sus características y aplicaciones.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Protocol Cards -->
+    <div class="row gy-4 justify-content-center">
+
+      <!-- Ethernet Card -->
+      <div class="col-lg-4 col-md-6">
+        <div class="protocol-card bg-white shadow-sm p-4 rounded text-center" data-aos="zoom-in">
+          <img src="img/ethernet-icon.png" alt="Ethernet" class="mb-3" width="60">
+          <h4 class="text-primary">Ethernet (IEEE 802.3)</h4>
+          <p>El protocolo más utilizado en redes LAN cableadas, que ofrece alta velocidad y confiabilidad mediante cables de cobre o fibra óptica.</p>
+          <button class="btn btn-outline-primary mt-3" onclick="toggleDetails('ethernet')">Más Información</button>
+
+          <!-- Hidden Details -->
+          <div id="ethernet-details" class="protocol-details mt-3" style="display: none;">
+            <p><strong>Características:</strong> Estándar para comunicación por cable con velocidades de hasta 100 Gbps.</p>
+            <p><strong>Uso:</strong> Conectividad en oficinas, servidores y redes empresariales.</p>
+            <p><strong>Ventajas:</strong> Alta velocidad, seguridad y estabilidad.</p>
+          </div>
+        </div>
+      </div><!-- End Ethernet Card -->
+
+      <!-- Wi-Fi Card -->
+      <div class="col-lg-4 col-md-6">
+        <div class="protocol-card bg-white shadow-sm p-4 rounded text-center" data-aos="zoom-in">
+          <img src="img/wifi-icon.png" alt="Wi-Fi" class="mb-3" width="60">
+          <h4 class="text-success">Wi-Fi (IEEE 802.11)</h4>
+          <p>Protocolo estándar para redes LAN inalámbricas que permite la transmisión de datos sin cables, usando ondas de radio.</p>
+          <button class="btn btn-outline-success mt-3" onclick="toggleDetails('wifi')">Más Información</button>
+
+          <!-- Hidden Details -->
+          <div id="wifi-details" class="protocol-details mt-3" style="display: none;">
+            <p><strong>Características:</strong> Comunicación inalámbrica con velocidades de hasta 9.6 Gbps en la versión Wi-Fi 6.</p>
+            <p><strong>Uso:</strong> Hogares, oficinas, cafeterías y lugares públicos.</p>
+            <p><strong>Ventajas:</strong> Flexibilidad, movilidad, fácil instalación.</p>
+          </div>
+        </div>
+      </div><!-- End Wi-Fi Card -->
+
+      <!-- TCP/IP Card -->
+      <div class="col-lg-4 col-md-6">
+        <div class="protocol-card bg-white shadow-sm p-4 rounded text-center" data-aos="zoom-in">
+          <img src="img/tcpip-icon.png" alt="TCP/IP" class="mb-3" width="60">
+          <h4 class="text-danger">TCP/IP (Transmission Control Protocol/Internet Protocol)</h4>
+          <p>Conjunto de protocolos que permite la comunicación en redes LAN e Internet, garantizando la entrega correcta de los datos.</p>
+          <button class="btn btn-outline-danger mt-3" onclick="toggleDetails('tcpip')">Más Información</button>
+
+          <!-- Hidden Details -->
+          <div id="tcpip-details" class="protocol-details mt-3" style="display: none;">
+            <p><strong>Características:</strong> TCP asegura la entrega correcta de los datos, y IP gestiona el direccionamiento de los paquetes.</p>
+            <p><strong>Uso:</strong> Protocolo fundamental para la comunicación en redes LAN e Internet.</p>
+            <p><strong>Ventajas:</strong> Fiabilidad y escalabilidad en la comunicación.</p>
+          </div>
+        </div>
+      </div><!-- End TCP/IP Card -->
+
+      <!-- ARP Card -->
+      <div class="col-lg-4 col-md-6">
+        <div class="protocol-card bg-white shadow-sm p-4 rounded text-center" data-aos="zoom-in">
+          <img src="img/arp-icon.png" alt="ARP" class="mb-3" width="60">
+          <h4 class="text-info">ARP (Address Resolution Protocol)</h4>
+          <p>Protocolo que asocia direcciones IP con direcciones MAC para permitir la comunicación entre dispositivos dentro de la LAN.</p>
+          <button class="btn btn-outline-info mt-3" onclick="toggleDetails('arp')">Más Información</button>
+
+          <!-- Hidden Details -->
+          <div id="arp-details" class="protocol-details mt-3" style="display: none;">
+            <p><strong>Características:</strong> Mapea direcciones IP a direcciones MAC en una red local.</p>
+            <p><strong>Uso:</strong> Necesario para la localización de dispositivos en una LAN.</p>
+            <p><strong>Ventajas:</strong> Mejora la eficiencia de la comunicación dentro de la red.</p>
+          </div>
+        </div>
+      </div><!-- End ARP Card -->
+
+      <!-- DHCP Card -->
+      <div class="col-lg-4 col-md-6">
+        <div class="protocol-card bg-white shadow-sm p-4 rounded text-center" data-aos="zoom-in">
+          <img src="img/dhcp-icon.png" alt="DHCP" class="mb-3" width="60">
+          <h4 class="text-warning">DHCP (Dynamic Host Configuration Protocol)</h4>
+          <p>Protocolo que permite asignar direcciones IP de manera automática a los dispositivos conectados a la red.</p>
+          <button class="btn btn-outline-warning mt-3" onclick="toggleDetails('dhcp')">Más Información</button>
+
+          <!-- Hidden Details -->
+          <div id="dhcp-details" class="protocol-details mt-3" style="display: none;">
+            <p><strong>Características:</strong> Asigna direcciones IP automáticamente, simplificando la gestión de direcciones en una red.</p>
+            <p><strong>Uso:</strong> Redes LAN grandes y complejas, donde la administración manual de direcciones IP no es viable.</p>
+            <p><strong>Ventajas:</strong> Simplificación de la administración y reducción de errores.</p>
+          </div>
+        </div>
+      </div><!-- End DHCP Card -->
+
+      <!-- DNS Card -->
+      <div class="col-lg-4 col-md-6">
+        <div class="protocol-card bg-white shadow-sm p-4 rounded text-center" data-aos="zoom-in">
+          <img src="img/dns-icon.png" alt="DNS" class="mb-3" width="60">
+          <h4 class="text-dark">DNS (Domain Name System)</h4>
+          <p>Protocolo utilizado para la resolución de nombres de dominio a direcciones IP, facilitando la conectividad en redes LAN e Internet.</p>
+          <button class="btn btn-outline-dark mt-3" onclick="toggleDetails('dns')">Más Información</button>
+
+          <!-- Hidden Details -->
+          <div id="dns-details" class="protocol-details mt-3" style="display: none;">
+            <p><strong>Características:</strong> Convierte nombres de dominio en direcciones IP, facilitando la conexión entre dispositivos.</p>
+            <p><strong>Uso:</strong> Utilizado para la resolución de nombres en redes LAN e Internet.</p>
+            <p><strong>Ventajas:</strong> Mejora la usabilidad y administración de redes.</p>
+          </div>
+        </div>
+      </div><!-- End DNS Card -->
+
+      <!-- SNMP Card -->
+      <div class="col-lg-4 col-md-6">
+        <div class="protocol-card bg-white shadow-sm p-4 rounded text-center" data-aos="zoom-in">
+          <img src="img/snmp-icon.png" alt="SNMP" class="mb-3" width="60">
+          <h4 class="text-primary">SNMP (Simple Network Management Protocol)</h4>
+          <p>Protocolo utilizado para gestionar y monitorear dispositivos de red dentro de una LAN.</p>
+          <button class="btn btn-outline-primary mt-3" onclick="toggleDetails('snmp')">Más Información</button>
+
+          <!-- Hidden Details -->
+          <div id="snmp-details" class="protocol-details mt-3" style="display: none;">
+            <p><strong>Características:</strong> Permite la supervisión de dispositivos de red y la gestión de su rendimiento.</p>
+            <p><strong>Uso:</strong> Utilizado para la gestión de switches, routers y otros dispositivos de red en una LAN.</p>
+            <p><strong>Ventajas:</strong> Facilita la administración de redes y la detección temprana de problemas.</p>
+          </div>
+        </div>
+      </div><!-- End SNMP Card -->
+
+      <!-- ICMP Card -->
+      <div class="col-lg-4 col-md-6">
+        <div class="protocol-card bg-white shadow-sm p-4 rounded text-center" data-aos="zoom-in">
+          <img src="img/icmp-icon.png" alt="ICMP" class="mb-3" width="60">
+          <h4 class="text-info">ICMP (Internet Control Message Protocol)</h4>
+          <p>Protocolo utilizado para enviar mensajes de error y control, como el comando <strong>ping</strong> para verificar la conectividad.</p>
+          <button class="btn btn-outline-info mt-3" onclick="toggleDetails('icmp')">Más Información</button>
+
+          <!-- Hidden Details -->
+          <div id="icmp-details" class="protocol-details mt-3" style="display: none;">
+            <p><strong>Características:</strong> Se utiliza para diagnóstico y control de errores en la red.</p>
+            <p><strong>Uso:</strong> El comando <strong>ping</strong> es uno de los ejemplos más comunes para verificar la conexión a la red.</p>
+            <p><strong>Ventajas:</strong> Herramienta útil para diagnóstico y solución de problemas.</p>
+          </div>
+        </div>
+      </div><!-- End ICMP Card -->
+
+    </div><!-- End Protocol Cards -->
+
+  </div><!-- End Container -->
+
+</section><!-- End Protocolos de Redes LAN Section -->
+
+<!-- JavaScript to Toggle Details -->
+<script>
+  function toggleDetails(protocol) {
+    var details = document.getElementById(protocol + '-details');
+    details.style.display = details.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
+
+<!-- Cuestionario Interactivo -->
+<section id="quiz" class="quiz section light-background" style="background-color:aquamarine">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Cuestionario: Adivina el Protocolo de Red</h2>
+    <p>Te daremos una descripción de un protocolo de red. ¡Adivina cuál es! Si respondes incorrectamente, deberás intentarlo nuevamente.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div id="quizContainer">
+      <div class="container">
+        <h1>Adivina el Protocolo de Red</h1>
+        <p class="description">Te daremos una descripción de un protocolo de red. ¡Adivina cuál es!</p>
+
+        <p id="protocol-description"></p>
+
+        <input type="text" id="user-answer" placeholder="Escribe tu respuesta aquí...">
+        <button onclick="checkAnswer()">Adivinar</button>
+
+        <p class="result" id="result"></p>
+      </div>
+
+      <!-- Resultado Final -->
+      <div id="finalResult" style="display: none; margin-top: 20px;">
+        <h3>¡Felicidades! Completaste el juego.</h3>
+        <p>Tu calificación final es: <span id="score">0</span>/5.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const protocols = [
+    {
+      description: "Este protocolo se utiliza para la comunicación a través de cables de cobre o fibra óptica en una red LAN.",
+      answer: "Ethernet"
+    },
+    {
+      description: "Este protocolo permite la comunicación inalámbrica en redes LAN mediante ondas de radio.",
+      answer: "Wi-Fi"
+    },
+    {
+      description: "Este protocolo se utiliza para convertir direcciones IP en direcciones MAC dentro de una red local.",
+      answer: "ARP"
+    },
+    {
+      description: "Este protocolo es utilizado para asignar direcciones IP de manera automática a los dispositivos conectados a la red.",
+      answer: "DHCP"
+    },
+    {
+      description: "Este protocolo se utiliza para la resolución de nombres de dominio en direcciones IP, facilitando la navegación web.",
+      answer: "DNS"
+    }
+  ];
+
+  let currentProtocolIndex = 0;
+  let score = 0;
+
+  // Function to display the description of the current protocol
+  function displayDescription() {
+    const protocol = protocols[currentProtocolIndex];
+    document.getElementById('protocol-description').textContent = protocol.description;
+    document.getElementById('result').textContent = ''; // Clear the result text for new question
+  }
+
+  // Function to check the user's answer
+  function checkAnswer() {
+    const userAnswer = document.getElementById('user-answer').value.trim().toLowerCase();
+    const correctAnswer = protocols[currentProtocolIndex].answer.toLowerCase();
+    const result = document.getElementById('result');
+
+    // Check if the user's answer is correct
+    if (userAnswer === correctAnswer) {
+      result.textContent = "¡Correcto! ¡Bien hecho!";
+      result.className = "result correct";
+      score++;
+    } else {
+      result.textContent = `La respuesta correcta es: ${protocols[currentProtocolIndex].answer}`;
+      result.className = "result incorrect"; // Show the correct answer after wrong attempt
+    }
+
+    // Wait before moving to the next question (2 seconds)
+    setTimeout(() => {
+      currentProtocolIndex++; // Move to the next question
+      if (currentProtocolIndex < protocols.length) {
+        displayDescription(); // Show next description
+      } else {
+        // Show the final result after all questions are answered
+        setTimeout(() => {
+          document.getElementById('finalResult').style.display = 'block';
+          document.getElementById('score').textContent = score;
+        }, 1000);
+      }
+    }, 2000); // Wait for 2 seconds before showing the next question
+
+    document.getElementById('user-answer').value = ''; // Clear input field
+  }
+
+  // Initial call to display the first protocol description
+  displayDescription();
+</script>
+
+
+
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

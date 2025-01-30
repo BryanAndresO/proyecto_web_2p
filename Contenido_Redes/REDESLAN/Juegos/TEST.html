@@ -87,6 +87,24 @@
       font-weight: bold;
       text-align: center;
     }
+
+    .solution-container {
+      margin-top: 20px;
+      display: none;
+      font-size: 16px;
+    }
+
+    .solution-button {
+      background-color: #ff8c00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -168,6 +186,19 @@
       <div class="result" id="result"></div>
     </form>
 
+    <div id="solution" class="solution-container">
+      <h3>Respuestas correctas:</h3>
+      <ul>
+        <li><strong>Pregunta 1:</strong> Es la forma en que los dispositivos están conectados en una red</li>
+        <li><strong>Pregunta 2:</strong> Hub</li>
+        <li><strong>Pregunta 3:</strong> Local Area Network</li>
+        <li><strong>Pregunta 4:</strong> Bus</li>
+      </ul>
+      <button class="solution-button" onclick="window.location.reload();">Cerrar solución</button>
+    </div>
+
+    <button id="solution-button" class="solution-button" style="display:none" onclick="showSolution()">Ver solución</button>
+
     <!-- Botón Home -->
     <a href="../Juegos.html">
       <button class="home-button">
@@ -206,7 +237,13 @@
       // Mostrar calificación
       const resultText = `Tu calificación es ${score} de 4.`;
       document.getElementById('result').textContent = resultText;
+      document.getElementById('solution-button').style.display = 'block';
     });
+
+    function showSolution() {
+      document.getElementById('solution').style.display = 'block';
+      document.getElementById('solution-button').style.display = 'none';
+    }
   </script>
 
 </body>

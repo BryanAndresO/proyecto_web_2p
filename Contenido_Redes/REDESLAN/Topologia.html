@@ -90,6 +90,8 @@
         <li><a href="home.html" class="active"><i class="bi bi-house-fill navicon"></i> Home</a></li>
         <li><a href="indexContenido.html"><i class="bi bi-gear-fill navicon"></i> ¿Qué es una Red LAN?</a></li>
         <li><a href="Topologia.html"><i class="bi bi-graph-up navicon"></i> Topologías de red LAN</a></li>
+        <li><a href="Protocolos_Redes LAN.html"><i class="bi bi-diagram-3 navicon"></i> Protocolos</a></li>
+        <li><a href="seguridad.html"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
         <li><a href="Juegos.html"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
         <li><a href="Ejercicio.html"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
       </ul>
@@ -99,83 +101,76 @@
 
   <main class="main">
 
-<!-- Asistente end -->
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-      <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
-      </a>
-      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-          <!-- Enlace Inicio 
-          <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->  
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+      <!-- Enlace Inicio 
+      <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->  
 
-          <!-- Menú Programación -->
-          <div class="nav-item dropdown">
-            <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
-                class="dropdown-item small-text">Algoritmos</a>
-              <a href="../../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
-                class="dropdown-item small-text">Diagramas</a>
-              <a href="../../../Contenido_Programacion/Contenido_Python/Origen.html"
-                class="dropdown-item small-text">Python</a>
-            </div>
-          </div>
-
-          <!-- Menú Redes -->
-          <div class="nav-item dropdown">
-            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">Internet</a>
-              <a href="../../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">Medios de conexión</a>
-              <a href="../../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">Redes Lan</a>
-
-            </div>
-          </div>
-
-          <!-- Menú Base de Datos -->
-          <div class="nav-item dropdown">
-            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de Datos</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
-                class="dropdown-item small-text">Access</a>
-              <a href="../../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
-                class="dropdown-item small-text">MySQL (Workbench)</a>
-              <a href="../../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">Visual
-                Basic Access</a>
-            </div>
-          </div>
-
-          <!-- Menú Medios -->
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Medios</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../VANNE/mediosGuiados.html" class="dropdown-item small-text">Medios Guiados</a>
-              <a href="../YO/portfolio-details.html" class="dropdown-item small-text">Medios No Guiados</a>
-            </div>
-          </div>
-
-          <!-- Menú Ejercicios -->
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Ejercicios</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../VANNE/ejercicio1.html" class="dropdown-item small-text">Ejercicio 1</a>
-              <a href="../VANNE/ejercicio2.html" class="dropdown-item small-text">Ejercicio 2</a>
-            </div>
-          </div>
-
-          <!-- Enlace a Juegos -->
-          <a href="../VANNE/juegos.html" class="nav-item nav-link small-text">Juegos</a>
+      <!-- Menú Programación -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+            class="dropdown-item small-text">Algoritmos</a>
+          <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+            class="dropdown-item small-text">Diagramas</a>
+          <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+            class="dropdown-item small-text">Python</a>
         </div>
-        <!-- Botón Principal -->
-        <a href="../../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+      </div>
+
+      <!-- Menú Redes -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">Internet</a>
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">Medios de conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">Redes Lan</a>
+
+        </div>
+      </div>
+
+      <!-- Menú Base de Datos -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de Datos</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+            class="dropdown-item small-text">Access</a>
+          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+            class="dropdown-item small-text">MySQL (Workbench)</a>
+          <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">Visual
+            Basic Access</a>
+        </div>
+      </div>
 
       </div>
-    </nav>
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="#about" class="dropdown-item">Internet</a>
+          <a href="#connections" class="dropdown-item">Tipos de Conexión</a>
+          <a href="#resume" class="dropdown-item">Servicios Relacionados</a>
+          <a href="#portfolio2" class="dropdown-item">Navegadores Web</a>
+          <a href="#testimonials" class="dropdown-item">Protocolos de Red</a>
+          <a href="#contact" class="dropdown-item">Backbone</a>
+        </div>
+      </div>
+
+      <a href="#cuestionarios" class="nav-item nav-link">Cuestionario</a>
+
+    </div>
+    <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
     <!-- Navbar End -->
 
 
@@ -202,7 +197,7 @@
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
             <video width="100%" controls autoplay muted>
-              <source src="img/Que es una Red LAN ó Red de Area Local, Para Que Sirve y Sus Caracteristicas.mp4"
+              <source src="img/La Mejor explicación de TOPOLOGÍA DE REDES informaticas.mp4"
                 type="video/mp4">
             </video>
           </div>
@@ -333,133 +328,24 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+ <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Ventajas de las Topologías</h2>
-        <p>Las ventajas de las topologías de red son diversas y dependen de la configuración seleccionada. Cada tipo de
-          topología ofrece beneficios específicos que pueden mejorar la eficiencia, escalabilidad y confiabilidad de una
-          red. Algunas de las ventajas más comunes incluyen:</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Ventajas de las Topologías</h2>
+    <p>Las ventajas de las topologías de red son diversas y dependen de la configuración seleccionada. Cada tipo de
+      topología ofrece beneficios específicos que pueden mejorar la eficiencia, escalabilidad y confiabilidad de una
+      red. Algunas de las ventajas más comunes incluyen:</p>
+  </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La topología bus es económica y sencilla, ideal para redes pequeñas y temporales.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/1.png" class="testimonial-img" alt="">
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La topología malla ofrece alta redundancia, lo que mejora la tolerancia a fallas.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/2.png" class="testimonial-img" alt="">
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La topología híbrida combina características de varias topologías para adaptarse a las
-                    necesidades específicas.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/3.png" class="testimonial-img" alt="">
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La topología estrella es fácil de instalar y administrar, además permite detectar fallas
-                    rápidamente al estar centralizada.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/4.jpg" class="testimonial-img" alt="">
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La Topología en anillo es eficiente en la transmisión de datos, ya que las señales viajan en una
-                    sola dirección, evitando colisiones y permitiendo un flujo continuo de información.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/5.jpg" class="testimonial-img" alt="">
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Desventajas de las Topologías -->
-    <section id="disadvantages" class="disadvantages section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Desventajas de las Topologías</h2>
-        <p>Las topologías de red, aunque ofrecen beneficios, también tienen sus limitaciones. A continuación se
-          presentan algunas de las desventajas más destacadas para cada tipo de topología.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
         {
           "loop": true,
           "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
           "slidesPerView": "auto",
           "pagination": {
             "el": ".swiper-pagination",
@@ -478,166 +364,316 @@
           }
         }
       </script>
-          <div class="swiper-wrapper">
+      <div class="swiper-wrapper">
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La topología bus puede presentar problemas de congestión y dificultades para identificar
-                    fallas.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La topología malla es costosa y compleja de instalar y mantener debido a la gran cantidad de
-                    conexiones.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La topología híbrida puede ser difícil de gestionar debido a la combinación de diferentes tipos
-                    de topologías.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La topología estrella depende de un nodo central, por lo que si falla este, toda la red puede
-                    quedar inoperativa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>La topología en anillo puede ser sensible a fallos en el cableado, ya que una interrupción puede
-                    afectar toda la red.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Desventajas de las Topologías -->
-
-    <!-- Cuestionario Interactivo -->
-    <section id="quiz" class="quiz section light-background" style="background-color:aquamarine">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Cuestionario: Topologías de Redes LAN</h2>
-        <p>Responde correctamente las preguntas. Si respondes incorrectamente, deberás intentarlo nuevamente.</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div id="quizContainer">
-          <!-- Pregunta 1 -->
-          <div class="quiz-item" id="question1">
-            <p><strong>1. ¿Cuál de las siguientes topologías es más económica y sencilla para redes pequeñas?</strong>
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La topología bus es económica y sencilla, ideal para redes pequeñas y temporales.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
             </p>
-            <button class="quiz-option" data-correct="false">Malla</button>
-            <button class="quiz-option" data-correct="true">Bus</button>
-            <button class="quiz-option" data-correct="false">Estrella</button>
           </div>
+        </div><!-- End testimonial item -->
 
-          <!-- Pregunta 2 -->
-          <div class="quiz-item" id="question2" style="display: none;">
-            <p><strong>2. ¿Qué topología permite una alta redundancia y tolerancia a fallas?</strong></p>
-            <button class="quiz-option" data-correct="false">Bus</button>
-            <button class="quiz-option" data-correct="true">Malla</button>
-            <button class="quiz-option" data-correct="false">Estrella</button>
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La topología malla ofrece alta redundancia, lo que mejora la tolerancia a fallas.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
           </div>
+        </div><!-- End testimonial item -->
 
-          <!-- Pregunta 3 -->
-          <div class="quiz-item" id="question3" style="display: none;">
-            <p><strong>3. ¿Cuál es la desventaja principal de la topología estrella?</strong></p>
-            <button class="quiz-option" data-correct="false">Es difícil de instalar</button>
-            <button class="quiz-option" data-correct="true">Depende del nodo central</button>
-            <button class="quiz-option" data-correct="false">No es escalable</button>
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La topología híbrida combina características de varias topologías para adaptarse a las
+                necesidades específicas.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
           </div>
+        </div><!-- End testimonial item -->
 
-          <!-- Resultado Final -->
-          <div id="finalResult" style="display: none; margin-top: 20px;">
-            <h3>¡Felicidades! Completaste el cuestionario.</h3>
-            <p>Tu calificación final es: <span id="score">0</span>/3.</p>
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La topología estrella es fácil de instalar y administrar, además permite detectar fallas
+                rápidamente al estar centralizada.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
           </div>
-        </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La Topología en anillo es eficiente en la transmisión de datos, ya que las señales viajan en una
+                sola dirección, evitando colisiones y permitiendo un flujo continuo de información.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
       </div>
-    </section>
+      <div class="swiper-pagination"></div>
+    </div>
 
-    <script>
-      let score = 0; // Puntuación inicial
-      const options = document.querySelectorAll('.quiz-option');
+  </div>
 
-      options.forEach(option => {
-        option.addEventListener('click', function () {
-          const isCorrect = this.dataset.correct === 'true';
-          const currentQuestion = this.closest('.quiz-item');
-          const allOptions = currentQuestion.querySelectorAll('.quiz-option');
+</section><!-- /Testimonials Section -->
+<!-- Desventajas de las Topologías -->
+<section id="disadvantages" class="disadvantages section light-background">
 
-          if (isCorrect) {
-            // Respuesta correcta: avanzar y sumar puntuación
-            this.style.backgroundColor = 'green';
-            this.style.color = 'white';
-            score++;
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Desventajas de las Topologías</h2>
+    <p>Las topologías de red, aunque ofrecen beneficios, también tienen sus limitaciones. A continuación se
+      presentan algunas de las desventajas más destacadas para cada tipo de topología.</p>
+  </div><!-- End Section Title -->
 
-            // Mostrar siguiente pregunta después de 1 segundo
-            setTimeout(() => {
-              currentQuestion.style.display = 'none';
-              const nextQuestion = currentQuestion.nextElementSibling;
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-              if (nextQuestion && nextQuestion.classList.contains('quiz-item')) {
-                nextQuestion.style.display = 'block';
-              } else {
-                // Mostrar resultado final si no hay más preguntas
-                document.getElementById('finalResult').style.display = 'block';
-                document.getElementById('score').textContent = score;
-              }
-            }, 1000);
-          } else {
-            // Respuesta incorrecta: mostrar en rojo y repetir la pregunta
-            this.style.backgroundColor = 'red';
-            this.style.color = 'white';
-
-            // Reiniciar opciones para volver a intentarlo
-            setTimeout(() => {
-              allOptions.forEach(opt => {
-                opt.style.backgroundColor = '';
-                opt.style.color = '';
-              });
-            }, 1000);
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 1
+            }
           }
+        }
+      </script>
+      <div class="swiper-wrapper">
 
-          // Deshabilitar las opciones para evitar múltiples clics
-          allOptions.forEach(opt => (opt.disabled = true));
-          setTimeout(() => {
-            allOptions.forEach(opt => (opt.disabled = false));
-          }, 1000);
-        });
-      });
-    </script>
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La topología bus puede presentar problemas de congestión y dificultades para identificar
+                fallas.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La topología malla es costosa y compleja de instalar y mantener debido a la gran cantidad de
+                conexiones.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La topología híbrida puede ser difícil de gestionar debido a la combinación de diferentes tipos
+                de topologías.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La topología estrella depende de un nodo central, por lo que si falla este, toda la red puede
+                quedar inoperativa.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>La topología en anillo puede ser sensible a fallos en el cableado, ya que una interrupción puede
+                afectar toda la red.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Desventajas de las Topologías -->
+
+<!-- Cuestionario Interactivo -->
+<section id="quiz" class="quiz section light-background" style="background-color:aquamarine">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Cuestionario: Topologías de Redes LAN</h2>
+    <p>Responde correctamente las preguntas. Si respondes incorrectamente, deberás intentarlo nuevamente.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div id="quizContainer">
+      <!-- Pregunta 1 -->
+      <div class="quiz-item" id="question1">
+        <p><strong>1. ¿Cuál de las siguientes topologías es más económica y sencilla para redes pequeñas?</strong></p>
+        <button class="quiz-option" data-correct="false">Malla</button>
+        <button class="quiz-option" data-correct="true">Bus</button>
+        <button class="quiz-option" data-correct="false">Estrella</button>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="quiz-item" id="question2" style="display: none;">
+        <p><strong>2. ¿Qué topología permite una alta redundancia y tolerancia a fallas?</strong></p>
+        <button class="quiz-option" data-correct="false">Bus</button>
+        <button class="quiz-option" data-correct="true">Malla</button>
+        <button class="quiz-option" data-correct="false">Estrella</button>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="quiz-item" id="question3" style="display: none;">
+        <p><strong>3. ¿Cuál es la desventaja principal de la topología estrella?</strong></p>
+        <button class="quiz-option" data-correct="false">Es difícil de instalar</button>
+        <button class="quiz-option" data-correct="true">Depende del nodo central</button>
+        <button class="quiz-option" data-correct="false">No es escalable</button>
+      </div>
+
+      <!-- Resultado Final -->
+      <div id="finalResult" style="display: none; margin-top: 20px;">
+        <h3>¡Felicidades! Completaste el cuestionario.</h3>
+        <p>Tu calificación final es: <span id="score">0</span>/3.</p>
+        <button id="solutionButton" class="btn btn-primary">Ver Solucionario</button>
+      </div>
+
+      <!-- Controles -->
+      <div style="margin-top: 20px;">
+        <button id="prevButton" class="btn btn-secondary" style="display: none;">Anterior</button>
+        <button id="nextButton" class="btn btn-primary">Siguiente</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let score = 0; // Puntuación inicial
+  let currentQuestionIndex = 0; // Índice de la pregunta actual
+  const questions = document.querySelectorAll('.quiz-item');
+  const options = document.querySelectorAll('.quiz-option');
+  const prevButton = document.getElementById('prevButton');
+  const nextButton = document.getElementById('nextButton');
+  const finalResult = document.getElementById('finalResult');
+  const solutionButton = document.getElementById('solutionButton');
+
+  function showQuestion(index) {
+    // Ocultar todas las preguntas
+    questions.forEach(question => question.style.display = 'none');
+    // Mostrar la pregunta actual
+    questions[index].style.display = 'block';
+    // Actualizar visibilidad de los botones de navegación
+    prevButton.style.display = index > 0 ? 'inline-block' : 'none';
+    nextButton.style.display = index < questions.length - 1 ? 'inline-block' : 'none';
+    if (index === questions.length - 1) {
+      nextButton.textContent = 'Finalizar';
+    } else {
+      nextButton.textContent = 'Siguiente';
+    }
+  }
+
+  options.forEach(option => {
+    option.addEventListener('click', function () {
+      if (this.disabled) return;  // Evitar clic si la opción ya está deshabilitada
+
+      const isCorrect = this.dataset.correct === 'true';
+      const currentQuestion = this.closest('.quiz-item');
+      const allOptions = currentQuestion.querySelectorAll('.quiz-option');
+
+      // Si la pregunta ya ha sido respondida, no se pueden cambiar las respuestas
+      if (currentQuestion.dataset.answered) return;
+
+      // Marcar la pregunta como respondida
+      currentQuestion.dataset.answered = true;
+
+      // Sumar la puntuación si la respuesta es correcta
+      if (isCorrect) {
+        score++;
+      }
+
+      // Deshabilitar todas las opciones después de la selección
+      allOptions.forEach(opt => opt.disabled = true);
+
+      // Mostrar la siguiente pregunta después de un breve delay
+      setTimeout(() => {
+        // Avanzar o mostrar el resultado
+        if (currentQuestionIndex < questions.length - 1) {
+          currentQuestionIndex++;
+          showQuestion(currentQuestionIndex);
+        } else {
+          finalResult.style.display = 'block';
+          document.getElementById('score').textContent = score;
+        }
+      }, 1000);
+    });
+  });
+
+  // Función para ir a la pregunta anterior
+  prevButton.addEventListener('click', () => {
+    currentQuestionIndex--;
+    // Desmarcar la respuesta seleccionada para permitir cambiarla
+    const previousQuestion = questions[currentQuestionIndex];
+    previousQuestion.dataset.answered = false;
+    const allOptions = previousQuestion.querySelectorAll('.quiz-option');
+    allOptions.forEach(opt => opt.disabled = false); // Habilitar las opciones para la nueva selección
+    showQuestion(currentQuestionIndex);
+  });
+
+  // Función para ir a la siguiente pregunta
+  nextButton.addEventListener('click', () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      currentQuestionIndex++;
+      showQuestion(currentQuestionIndex);
+    } else {
+      finalResult.style.display = 'block';
+      document.getElementById('score').textContent = score;
+    }
+  });
+
+  // Función para mostrar el solucionario
+  solutionButton.addEventListener('click', () => {
+    const solucionario = `
+      <h4>Solucionario:</h4>
+      <p>1. La respuesta correcta es: Bus.</p>
+      <p>2. La respuesta correcta es: Malla.</p>
+      <p>3. La respuesta correcta es: Depende del nodo central.</p>
+    `;
+    finalResult.insertAdjacentHTML('beforeend', solucionario);
+    solutionButton.disabled = true;  // Deshabilitar el botón para no mostrarlo varias veces
+  });
+
+  // Iniciar mostrando la primera pregunta
+  showQuestion(currentQuestionIndex);
+</script>
 
 
 

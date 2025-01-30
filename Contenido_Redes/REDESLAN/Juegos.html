@@ -86,6 +86,8 @@
         <li><a href="home.html" class="active"><i class="bi bi-house-fill navicon"></i> Home</a></li>
         <li><a href="indexContenido.html"><i class="bi bi-gear-fill navicon"></i> ¿Qué es una Red LAN?</a></li>
         <li><a href="Topologia.html"><i class="bi bi-graph-up navicon"></i> Topologías de red LAN</a></li>
+        <li><a href="Protocolos_Redes LAN.html"><i class="bi bi-diagram-3 navicon"></i> Protocolos</a></li>
+        <li><a href="seguridad.html"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
         <li><a href="Juegos.html"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
         <li><a href="Ejercicio.html"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
       </ul>
@@ -98,156 +100,175 @@
     
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-      <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
-      </a>
-      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-          <a href="indexContenido.html" class="nav-item nav-link">Inicio</a>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+      <!-- Enlace Inicio 
+      <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->  
 
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Programación</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="/Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
-                class="dropdown-item">Algoritmos</a>
-              <a href="/Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
-                class="dropdown-item">Diagramas</a>
-              <a href="/Contenido_Programacion/Contenido_Python/Origen.html" class="dropdown-item">python</a>
-            </div>
-          </div>
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Redes</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="/Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item">Internet</a>
-              <a href="/Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item">Medios de conexión</a>
-            </div>
-          </div>
+      <!-- Menú Programación -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+            class="dropdown-item small-text">Algoritmos</a>
+          <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+            class="dropdown-item small-text">Diagramas</a>
+          <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+            class="dropdown-item small-text">Python</a>
+        </div>
+      </div>
 
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Base de Datos</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="/Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html" class="dropdown-item">Access</a>
-              <a href="/Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
-                class="dropdown-item">Mysql(Workbench)</a>
-              <a href="/Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item">Visual Basic
-                Access</a>
-            </div>
-          </div>
+      <!-- Menú Redes -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">Internet</a>
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">Medios de conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">Redes Lan</a>
 
         </div>
-        <a href="/indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
-            class="fa fa-arrow-right ms-3"></i></a>
       </div>
-    </nav>
-    <!-- Navbar End -->
-    
 
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Redes LAN - Juego de Ahorcado</h2>
-        <p>¡Adivina las palabras relacionadas con redes LAN! Trata de adivinar la palabra antes de que se te acaben los intentos.</p>
-      </div><!-- End Section Title -->
-      <ol>
-        <li>¿Qué tipo de topología de red utiliza un solo canal de comunicación compartido por todos los dispositivos conectados?</li>
-        <li>¿Cómo se llama la topología de red que tiene un nodo central al cual están conectados todos los dispositivos?</li>
-        <li>¿Qué dispositivo de red se utiliza para interconectar múltiples dispositivos en una red y gestionar el tráfico de datos?</li>
-        <li>¿Qué dispositivo dirige el tráfico entre diferentes redes y permite la comunicación entre ellas?</li>
-        <li>¿Qué equipo de red proporciona servicios o recursos a otros dispositivos conectados a la red?</li>
-        <li>¿Cómo se llama una red que conecta dispositivos dentro de una zona geográfica limitada, como una oficina o un hogar?</li>
-        <li>¿Qué topología de red forma un círculo donde cada dispositivo está conectado con otros dos dispositivos?</li>
-      </ol>
-      
-      
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-    
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/portfolio/ahorcado.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Juego del Ahorcado</h2>
-            <p class="fst-italic py-3">
-              Adivina las palabras relacionadas con redes LAN. ¡Buena suerte!
-            </p>
-    
-            <!-- Ahorcado Game -->
-            <div id="game">
-              <p>Palabra: <span id="word"></span></p>
-              <p>Intentos restantes: <span id="tries"></span></p>
-              <p>Adivina una letra:</p>
-              <input type="text" id="letter" maxlength="1" />
-              <button onclick="guessLetter()">Adivinar</button>
-    
-              <p>Intentos fallidos: <span id="failed"></span></p>
-              <p id="message"></p>
-              <button onclick="newGame()">Nuevo Juego</button>
-            </div>
-    
-          </div>
+      <!-- Menú Base de Datos -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de Datos</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+            class="dropdown-item small-text">Access</a>
+          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+            class="dropdown-item small-text">MySQL (Workbench)</a>
+          <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">Visual
+            Basic Access</a>
         </div>
-    
       </div>
+
+      </div>
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="#about" class="dropdown-item">Internet</a>
+          <a href="#connections" class="dropdown-item">Tipos de Conexión</a>
+          <a href="#resume" class="dropdown-item">Servicios Relacionados</a>
+          <a href="#portfolio2" class="dropdown-item">Navegadores Web</a>
+          <a href="#testimonials" class="dropdown-item">Protocolos de Red</a>
+          <a href="#contact" class="dropdown-item">Backbone</a>
+        </div>
+      </div>
+
+      <a href="#cuestionarios" class="nav-item nav-link">Cuestionario</a>
+
+    </div>
+    <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
     
-    </section><!-- /About Section -->
-    
-    <script>
-      const words = ["bus", "estrella", "switch", "router", "servidor", "lan", "anillo"];
-      let selectedWord, triesLeft, guessedLetters, failedLetters;
-    
-      function startGame() {
-        selectedWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
-        triesLeft = 8;
-        guessedLetters = [];
-        failedLetters = [];
-        document.getElementById("word").textContent = getDisplayWord(selectedWord);
-        document.getElementById("tries").textContent = triesLeft;
-        document.getElementById("failed").textContent = failedLetters.join(", ");
-        document.getElementById("message").textContent = "";
+
+
+<!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Redes LAN - Juego de Ahorcado</h2>
+    <p>¡Adivina las palabras relacionadas con redes LAN! Trata de adivinar la palabra antes de que se te acaben los intentos.</p>
+  </div><!-- End Section Title -->
+  <ol>
+    <li>¿Qué tipo de topología de red utiliza un solo canal de comunicación compartido por todos los dispositivos conectados?</li>
+    <li>¿Cómo se llama la topología de red que tiene un nodo central al cual están conectados todos los dispositivos?</li>
+  </ol>
+  
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+    <div class="row gy-4 justify-content-center">
+      <div class="col-lg-4">
+        <img src="assets/img/portfolio/ahorcado.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-8 content">
+        <h2>Juego del Ahorcado</h2>
+        <p class="fst-italic py-3">
+          Adivina las palabras relacionadas con redes LAN. ¡Buena suerte!
+        </p>
+  
+        <!-- Ahorcado Game -->
+        <div id="game">
+          <p>Palabra: <span id="word"></span></p>
+          <p>Intentos restantes: <span id="tries"></span></p>
+          <p>Adivina una letra:</p>
+          <input type="text" id="letter" maxlength="1" />
+          <button onclick="guessLetter()">Adivinar</button>
+  
+          <p>Intentos fallidos: <span id="failed"></span></p>
+          <p id="message"></p>
+          <button onclick="newGame()">Nuevo Juego</button>
+        </div>
+  
+      </div>
+    </div>
+  
+  </div>
+  
+</section><!-- /About Section -->
+
+<script>
+  const words = ["switch", "router"];  // Solo dos palabras
+  let selectedWord, triesLeft, guessedLetters, failedLetters;
+
+  function startGame() {
+    selectedWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
+    triesLeft = 8;
+    guessedLetters = [];
+    failedLetters = [];
+    document.getElementById("word").textContent = getDisplayWord(selectedWord);
+    document.getElementById("tries").textContent = triesLeft;
+    document.getElementById("failed").textContent = failedLetters.join(", ");
+    document.getElementById("message").textContent = "";
+  }
+
+  function guessLetter() {
+    const letter = document.getElementById("letter").value.toUpperCase();
+    if (!letter || letter.length !== 1 || guessedLetters.includes(letter)) {
+      return;
+    }
+
+    guessedLetters.push(letter);
+    if (selectedWord.includes(letter)) {
+      document.getElementById("word").textContent = getDisplayWord(selectedWord);
+      if (!getDisplayWord(selectedWord).includes("_")) {
+        document.getElementById("message").textContent = "¡Ganaste! La palabra era: " + selectedWord;
       }
-    
-      function guessLetter() {
-        const letter = document.getElementById("letter").value.toUpperCase();
-        if (!letter || letter.length !== 1 || guessedLetters.includes(letter)) {
-          return;
-        }
-    
-        guessedLetters.push(letter);
-        if (selectedWord.includes(letter)) {
-          document.getElementById("word").textContent = getDisplayWord(selectedWord);
-          if (!getDisplayWord(selectedWord).includes("_")) {
-            document.getElementById("message").textContent = "¡Ganaste! La palabra era: " + selectedWord;
-          }
-        } else {
-          failedLetters.push(letter);
-          triesLeft--;
-          document.getElementById("tries").textContent = triesLeft;
-          document.getElementById("failed").textContent = failedLetters.join(", ");
-          if (triesLeft === 0) {
-            document.getElementById("message").textContent = "Perdiste. La palabra era: " + selectedWord;
-          }
-        }
-        document.getElementById("letter").value = "";
+    } else {
+      failedLetters.push(letter);
+      triesLeft--;
+      document.getElementById("tries").textContent = triesLeft;
+      document.getElementById("failed").textContent = failedLetters.join(", ");
+      if (triesLeft === 0) {
+        document.getElementById("message").textContent = "Perdiste. La palabra era: " + selectedWord;
       }
-    
-      function getDisplayWord(word) {
-        return word.split("").map(letter => (guessedLetters.includes(letter) ? letter : "_")).join(" ");
-      }
-    
-      function newGame() {
-        startGame();
-      }
-    
-      // Start the first game
-      startGame();
-    </script>
+    }
+    document.getElementById("letter").value = "";
+  }
+
+  function getDisplayWord(word) {
+    return word.split("").map(letter => (guessedLetters.includes(letter) ? letter : "_")).join(" ");
+  }
+
+  function newGame() {
+    startGame();
+  }
+
+  // Start the first game
+  startGame();
+</script>
+
 
 
     
