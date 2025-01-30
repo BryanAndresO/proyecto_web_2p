@@ -1,5 +1,3 @@
-
-
 .test {
     max-width: 800px;
     margin: 40px auto;
@@ -29,6 +27,7 @@
     height: 150px;
     margin-right: 20px;
     border-radius: 10px;
+    margin-left: 70px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -40,8 +39,10 @@
     font-size: 0.9rem;
     /* Tamaño de fuente más pequeño */
     margin-bottom: 10px;
+    margin-left: 10px;
     color: #000000;
 }
+
 
 .btn {
     padding: 10px 20px;
@@ -131,19 +132,20 @@ button {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     margin-top: 20px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #45a049;
-  }
-  
-  button:focus {
+}
+
+button:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5);
-  }
-  
-  /* Estilo para los mensajes de felicitaciones o intento fallido */
-  #congratulations, #tryAgain {
+}
+
+/* Estilo para los mensajes de felicitaciones o intento fallido */
+#congratulations,
+#tryAgain {
     display: none;
     background-color: #f0f8ff;
     padding: 20px;
@@ -151,18 +153,19 @@ button {
     margin-top: 30px;
     text-align: center;
     font-size: 1.2rem;
-  }
-  
-  #congratulations h2, #tryAgain h2 {
+}
+
+#congratulations h2,
+#tryAgain h2 {
     color: #4CAF50;
-  }
-  
-  #tryAgain h2 {
+}
+
+#tryAgain h2 {
     color: #f44336;
-  }
-  
-  /* Estilo de los botones de reset */
-  .btn-reset {
+}
+
+/* Estilo de los botones de reset */
+.btn-reset {
     padding: 12px 20px;
     font-size: 1.1rem;
     cursor: pointer;
@@ -172,11 +175,75 @@ button {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     margin-top: 20px;
-  }
-  
-  .btn-reset:hover {
+}
+
+.btn-reset:hover {
     background-color: #f57c00;
+}
+
+/*Solucionarios respuestas*/
+#solutionContainer {
+    display: none; /* Inicialmente oculto */
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 600px; /* Limitar el ancho máximo */
+    margin-left: auto;
+    margin-right: auto;
+    
+    box-shadow: 0 4px 10px rgba(255, 16, 16, 0.2);
   }
   
-
-
+  #solutionContainer h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  #solutionContainer ul {
+    text-align: justify; /* Centrar el contenido dentro del contenedor */
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  #solutionContainer ul li {
+    text-align: justify; /* Centrar el contenido dentro del contenedor */
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  #solutionContainer ul li strong {
+    text-align: justify; /* Centrar el contenido dentro del contenedor */
+    color: #333;
+  }
+  
+  #solutionContainer ul li span {
+    text-align: justify; /* Centrar el contenido dentro del contenedor */
+    font-weight: bold;
+    color: #28a745; /* Color verde para respuestas correctas */
+  }
+  
+  #solutionContainer ul li span.incorrecto {
+    text-align: justify; /* Centrar el contenido dentro del contenedor */
+    color: #dc3545; /* Color rojo para respuestas incorrectas */
+  }
+  
+  #solutionContainer button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  #solutionContainer button:hover {
+    background-color: #0056b3;
+  }
+  

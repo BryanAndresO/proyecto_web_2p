@@ -1,20 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Las posiciones correctas para los elementos (en porcentaje)
     const correctPositions = {
-        item1: { top: 81, left: 7.5 },
-        item2: { top: 56, left: 45 },
-        item3: { top: 66, left: 85 }
+        item1: { top: 77, left: 4, explanation: "Correcto: Este botón es incorrecto ya que no deseamos imprimir registros." },
+        item2: { top: 52, left: 43, explanation: "Correcto: Este botón es erróneo ya que duplicar registros en la base de datos causaría problemas de relación." },
+        item3: { top: 62, left: 80, explanation: "Correcto: Este botón es erróneo ya que no necesitamos imprimir nuestro formulario debido a que solo estamos creando un CRUD." }
+    };
+
+    const initialPositions = {
+        item1: { top: 20, left: 10 },
+        item2: { top: 20, left: 40 },
+        item3: { top: 20, left: 70 }
     };
 
     let draggedElement = null;
 
-    // Función para iniciar el arrastre
     function dragStart(e) {
         draggedElement = e.target;
         draggedElement.style.opacity = '0.5';
     }
 
-    // Función para manejar el movimiento del mouse (arrastre)
     function dragMove(e) {
         if (draggedElement) {
             const container = document.querySelector('.image-container');
@@ -30,64 +33,121 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Función para soltar el elemento
     function dragEnd() {
         if (draggedElement) {
             draggedElement.style.opacity = '1';
-            // Verificar si la posición del elemento es correcta
-            const itemId = draggedElement.id;
-            const correctPosition = correctPositions[itemId];
+            draggedElement = null;
+        }
+    }
 
-            const rect = draggedElement.getBoundingClientRect();
+    function checkPositions() {
+        let correctCount = 0;
+        let incorrectMessages = [];
+
+        Object.keys(correctPositions).forEach(itemId => {
+            let item = document.getElementById(itemId);
+            let correctPos = correctPositions[itemId];
+
+            const rect = item.getBoundingClientRect();
             const container = document.querySelector('.image-container');
             const containerRect = container.getBoundingClientRect();
 
             const currentLeft = ((rect.left - containerRect.left) / containerRect.width) * 100;
             const currentTop = ((rect.top - containerRect.top) / containerRect.height) * 100;
 
-            const tolerance = 5;  // Tolerancia para la posición
+            const tolerance = 5;
 
-            // Verificar si la posición es suficientemente cercana
-            if (Math.abs(currentLeft - correctPosition.left) <= tolerance && Math.abs(currentTop - correctPosition.top) <= tolerance) {
-                // Mostrar mensaje de éxito
-                document.getElementById('infoMessage').textContent = `${itemId} colocado correctamente. ¡Buen trabajo!`;
-                document.getElementById('infoMessage').style.display = 'block';  // Asegurarnos de que el mensaje de éxito se muestra
+            if (Math.abs(currentLeft - correctPos.left) <= tolerance && Math.abs(currentTop - correctPos.top) <= tolerance) {
+                item.classList.add("correct");
+                correctCount++;
 
-                // Actualizar infoDato según el itemId
-                if (itemId === 'item1') {
-                    document.getElementById('infoDato').textContent = `En nuestro formulario no planteamos imprimir un registro.`;
-                } else if (itemId === 'item2') {
-                    document.getElementById('infoDato').textContent = `No debemos realizar la acción de duplicar registros, ya que comprometeríamos nuestras tablas.`;
-                } else {
-                    document.getElementById('infoDato').textContent = `No necesitamos realizar una impresión del formulario.`;
-                }
-                document.getElementById('infoDato').style.display = 'block';  // Asegurarnos de que el mensaje infoDato se muestra
+                // Mostrar la explicación cuando el punto está en la posición correcta
+                let explanationText = correctPos.explanation;
 
-                // Limpiar mensaje después de un tiempo (opcional)
-                setTimeout(() => {
-                    document.getElementById('infoMessage').style.display = 'none';
-                    document.getElementById('infoDato').style.display = 'none';
-                }, 3000); // Mensaje desaparecerá después de 3 segundos
+                // Crear un contenedor de explicación y mostrarlo en la posición correcta
+                let explanationDiv = document.createElement('div');
+                explanationDiv.classList.add('explanation');
+                explanationDiv.style.left = `${correctPos.left}%`;
+                explanationDiv.style.top = `${correctPos.top}%`;
+                explanationDiv.innerHTML = explanationText;
+
+                document.querySelector('.image-container').appendChild(explanationDiv);
+
+            } else if (Math.abs(currentLeft - correctPos.left) <= 10 && Math.abs(currentTop - correctPos.top) <= 10) {
+                item.classList.add("close");
             } else {
-                // Mostrar mensaje de error si el punto no está bien colocado
-                document.getElementById('infoMessage').textContent = `${itemId} fuera de lugar, intenta de nuevo.`;
-                document.getElementById('infoMessage').style.display = 'block';  // Mostrar mensaje de error
-                document.getElementById('infoDato').style.display = 'none'; // Ocultar infoDato en caso de error
+                item.classList.remove("correct", "close");
             }
+        });
 
-            draggedElement = null;
+        const infoMessage = document.getElementById('infoMessage');
+        if (correctCount === 3) {
+            infoMessage.textContent = "¡Felicidades! Todos los puntos están correctamente ubicados.";
+            infoMessage.style.color = "green";
+        } else if (correctCount > 0) {
+            infoMessage.textContent = "Algunos puntos están correctos, sigue intentando.";
+            infoMessage.style.color = "orange";
+        } else {
+            infoMessage.textContent = "Ningún punto está en la posición correcta. Intenta de nuevo.";
+            infoMessage.style.color = "red";
         }
+
+        infoMessage.style.display = 'block';
     }
 
-    // Asignar eventos de arrastre
+    function showSolution() {
+        Object.keys(correctPositions).forEach(itemId => {
+            let item = document.getElementById(itemId);
+            let correctPos = correctPositions[itemId];
+
+            // Mostrar las posiciones correctas
+            item.style.left = `${correctPos.left}%`;
+            item.style.top = `${correctPos.top}%`;
+            item.classList.add("solution");
+
+            // Mostrar la explicación en la posición correcta
+            let explanationText = correctPos.explanation;
+
+            let explanationDiv = document.createElement('div');
+            explanationDiv.classList.add('explanation');
+            explanationDiv.style.left = `${correctPos.left}%`;
+            explanationDiv.style.top = `${correctPos.top}%`;
+            explanationDiv.innerHTML = explanationText;
+
+            document.querySelector('.image-container').appendChild(explanationDiv);
+        });
+
+        document.getElementById('infoMessage').textContent = "Aquí están las posiciones correctas.";
+        document.getElementById('infoMessage').style.display = 'block';
+    }
+
+    function resetChallenge() {
+        Object.keys(initialPositions).forEach(itemId => {
+            let item = document.getElementById(itemId);
+            let startPos = initialPositions[itemId];
+
+            item.style.left = `${startPos.left}%`;
+            item.style.top = `${startPos.top}%`;
+            item.classList.remove("correct", "close", "solution");
+        });
+
+        // Eliminar explicaciones previas
+        document.querySelectorAll('.explanation').forEach(explanation => {
+            explanation.remove();
+        });
+
+        document.getElementById('infoMessage').style.display = 'none';
+    }
+
     const dragItems = document.querySelectorAll('.drag-item');
     dragItems.forEach(item => {
         item.addEventListener('mousedown', dragStart);
     });
 
-    // Mover el elemento mientras se arrastra
     document.addEventListener('mousemove', dragMove);
-
-    // Al soltar el elemento, verificar la posición
     document.addEventListener('mouseup', dragEnd);
+
+    window.checkPositions = checkPositions;
+    window.showSolution = showSolution;
+    window.resetChallenge = resetChallenge;
 });
