@@ -6,13 +6,13 @@ let preguntas = [
     "¿Qué hace un ciclo 'for'?",
     "¿Cómo se calcula el factorial de un número?",
     "¿Qué función realiza el algoritmo que cuenta los caracteres de una cadena?",
-    "La cadena HOLA, ¿En que posición esta la letra a?",
+    " ¿Qué son los operadores de comparación?",
     "Qué permite tomar decisiones en un algoritmo",
     "¿Qué se necesita para hacer un algoritmo?"
 ];
 
 let correcta = [
-    0, 2, 1, 1, 2, 0, 1, 3, 1, 3
+    0, 2, 1, 1, 2, 0, 1, 1, 1, 3
 ];
 
 let opciones = [
@@ -38,10 +38,10 @@ let opciones = [
      "Contar la cantidad de caracteres en la cadena.",
      "Buscar la posición de un carácter específico.",
      "Invertir la cadena."],
-     ["Posición 0", 
-        "Posición 1", 
-        "Posición 2", 
-        "Posición 3" ],
+     [ "Son operadores que permiten realizar operaciones matemáticas avanzadas.",
+        "Son símbolos usados para comparar dos valores y determinar relaciones como igualdad o diferencia.",
+        "Son operadores exclusivos para trabajar con texto en programación.",
+        "Son comandos utilizados para definir variables en un lenguaje de programación."],
     ["Operaciones básicas", 
         "Condicionales", 
         "Ciclos", 
@@ -117,4 +117,29 @@ function volverAlInicio() {
 function salir() {
     window.location.href = "../Principal.html"; // Aquí se coloca la ruta del archivo
 }
+function mostrarSolucionario() {
+    // Ocultar la pantalla final
+    document.getElementById("pantalla-final").style.display = "none";
 
+    // Mostrar la pantalla del solucionario
+    document.getElementById("pantalla-solucionario").style.display = "block";
+
+    // Generar el contenido del solucionario
+    let contenido = "";
+    for (let i = 0; i < preguntas.length; i++) {
+        contenido += `<p><strong>Pregunta ${i + 1}:</strong> ${preguntas[i]}</p>`;
+        contenido += `<p><strong>Respuesta correcta:</strong> ${opciones[i][correcta[i]]}</p>`;
+        contenido += "<hr>";
+    }
+
+    // Mostrar el contenido en el div del solucionario
+    document.getElementById("contenido-solucionario").innerHTML = contenido;
+}
+
+function cerrarSolucionario() {
+    // Ocultar la pantalla del solucionario
+    document.getElementById("pantalla-solucionario").style.display = "none";
+
+    // Volver a mostrar la pantalla final
+    document.getElementById("pantalla-final").style.display = "block";
+}

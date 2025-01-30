@@ -120,3 +120,8 @@ button:hover {
 .salir-btn:hover {
     background-color: #d43c3c;
 }
+#contenido-solucionario {
+    text-align: justify; /* Justifica el texto */
+    padding: 10px; /* Añade un poco de espacio alrededor del texto */
+    line-height: 1.6; /* Mejora la legibilidad con un interlineado adecuado */
+}

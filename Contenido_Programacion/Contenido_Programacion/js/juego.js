@@ -59,11 +59,8 @@ function validateOrder(completedSpaces) {
 }
 
 function resetGame() {
-  const emptySpaces = document.querySelectorAll('.espacio-vacio');
-  emptySpaces.forEach(space => {
-    space.innerHTML = "Espacio";
-    space.removeAttribute("data-block");
-  });
+  const algorithmContainer = document.getElementById("algorithm-container");
+  algorithmContainer.innerHTML = ""; // Limpiar espacios vacíos
   document.getElementById("completed").style.display = "none";
   document.getElementById("error-message").style.display = "none";
   document.getElementById("incomplete").style.display = "none";
@@ -74,71 +71,13 @@ function resetGame() {
   });
 }
 
-function loadAddition() {
-  blocks = {
-    "block2": "a ",
-    "block3": "b  ",
-    "block4": "Resultado ",
-    "block5": "a + b",
-    "block6": "Mostrar Resultado"
-  };
-  correctOrder = ["block2", "block3", "block5", "block4", "block6"];
-  updateGame();
-}
-
-function loadSubtraction() {
-  blocks = {
-    "block2": "a  ",
-    "block3": "b ",
-    "block4": "Resultado  ",
-    "block5": "a - b",
-    "block6": "Mostrar Resultado"
-  };
-  correctOrder = ["block2", "block3", "block5", "block4", "block6"];
-  updateGame();
-}
-
-function loadMultiplication() {
-  blocks = {
-    "block2": "a  ",
-    "block3": "b  ",
-    "block4": "Resultado  ",
-    "block5": "a * b",
-    "block6": "Mostrar Resultado"
-  };
-  correctOrder = ["block2", "block3", "block5", "block4", "block6"];
-  updateGame();
-}
-
-function loadRectangleArea() {
-  blocks = {
-    "block2": "base  ",
-    "block3": "altura  ",
-    "block4": "Resultado  ",
-    "block5": "base * altura",
-    "block6": "Mostrar Resultado"
-  };
-  correctOrder = ["block2", "block3", "block5", "block4", "block6"];
-  updateGame();
-}
-
-function loadTriangleArea() {
-  blocks = {
-    "block2": "base  ",
-    "block3": "altura  ",
-    "block4": "Resultado  ",
-    "block5": "(base * altura) / 2",
-    "block6": "Mostrar Resultado"
-  };
-  correctOrder = ["block2", "block3", "block5", "block4", "block6"];
-  updateGame();
-}
-
 function updateGame() {
-  document.getElementById("completed").style.display = "none";
+  resetGame(); // Limpiar el juego antes de actualizar
   const codeBlocksContainer = document.getElementById("code-blocks-container");
+  const algorithmContainer = document.getElementById("algorithm-container");
   codeBlocksContainer.innerHTML = "";
-  
+
+  // Generar bloques de código
   for (const blockId in blocks) {
     const block = document.createElement("div");
     block.classList.add("bloque-codigo");
@@ -148,12 +87,127 @@ function updateGame() {
     block.textContent = blocks[blockId];
     codeBlocksContainer.appendChild(block);
   }
+
+  // Generar espacios vacíos dinámicamente
+  for (let i = 1; i <= correctOrder.length; i++) {
+    const espacio = document.createElement("div");
+    espacio.classList.add("espacio-vacio");
+    espacio.id = `empty${i}`;
+    espacio.textContent = `Espacio ${i}`;
+    algorithmContainer.appendChild(espacio);
+  }
+}
+function resetToSelection() {
+  resetGame(); // Limpiar el juego actual
+  const gameContainer = document.getElementById('game-container');
+  const verifyButton = document.getElementById('verify-button');
+  const retryButton = document.getElementById('retry-button');
+  const selectElement = document.querySelector('.selector-pregunta select');
+
+  gameContainer.style.display = 'none';
+  verifyButton.style.display = 'none';
+  retryButton.style.display = 'none';
   
-  const emptySpaces = document.querySelectorAll('.espacio-vacio');
-  emptySpaces.forEach(space => {
-    space.innerHTML = "Espacio";
-    space.removeAttribute("data-block");
-  });
+  selectElement.value = ""; // Restablecer el valor del select
+}
+
+
+
+function loadPerfectosPares() {
+  blocks = {
+    "block1": 'escribir("LOS NÚMEROS PERFECTOS PARES HASTA EL ", MAX, " son:");',
+    "block2": "para(num = 1; num <= MAX; num++);",
+    "block3": "   si(num % 2 == 0);",
+    "block4": "      suma = 1;",
+    "block5": "      para(cont = 2; cont < num; cont++);",
+    "block6": "         si(num % cont == 0);",
+    "block7": "            suma = suma + cont;",
+    "block8": "      si(suma == num);",
+    "block9": '         escribir("EL NÚMERO ", num, " ES PERFECTO PAR");'
+  };
+  correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6", "block7", "block8", "block9"];
+  updateGame();
+}
+
+function loadPerfectosImpares() {
+  blocks = {
+    "block1": 'escribir("\\n\\nLOS NÚMEROS PERFECTOS IMPARES HASTA EL ", MAX, " son:");',
+    "block2": "para(num = 1; num <= MAX; num++)",
+    "block3": "   si(num % 2 != 0)",
+    "block4": "      suma = 1;",
+    "block5": "      para(cont = 2; cont < num; cont++)",
+    "block6": "         si(num % cont == 0)",
+    "block7": "            suma = suma + cont;",
+    "block8": "      si(suma == num)",
+    "block9": '         escribir("EL NÚMERO ", num, " ES PERFECTO IMPAR");'
+  };
+  correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6", "block7", "block8", "block9"];
+  updateGame();
+}
+
+function loadSerieMatematica() {
+  blocks = {
+    "block1": "hacer",
+    "block2": '   limpiar_pantalla() # clrscr() en pseudocódigo',
+    "block3": '   escribir("Exponente?: ");',
+    "block4": '   limpiar_buffer() # fflush(stdin) en pseudocódigo',
+    "block5": "   leer(num);",
+    "block6": "   si (!(num >= MIN && num <= MAX))",
+    "block7": '      escribir("Fuera de rango...presione una tecla para continuar");',
+    "block8": "      esperar() # getch() en pseudocódigo",
+    "block9": "mientras (!(num >= MIN && num <= MAX));",
+    "block10": "suma = 1;",
+    "block11": "veces = 1;",
+    "block12": "mientras (abs(suma - exp(num)) > ERROR)",
+    "block13": "   para (fact = cont = 1; cont <= veces; cont++)",
+    "block14": "      fact *= cont;",
+    "block15": "   aux = potencia(num, veces); # pow(num, veces) en pseudocódigo",
+    "block16": "   termino = aux / fact;",
+    "block17": "   suma += termino;",
+    "block18": "   veces++;",
+    "block19": 'escribir("Resultado= ", formatear(suma, 3)); # printf("Resultado= %.3f", sum) en pseudocódigo',
+    "block20": "esperar() # getch() en pseudocódigo"
+  };
+  correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6", "block7", "block8", "block9", "block10", "block11", "block12", "block13", "block14", "block15", "block16", "block17", "block18", "block19", "block20"];
+  updateGame();
+}
+
+function loadMCM() {
+  blocks = {
+    "block1": "mcm = 1;",
+    "block2": "q = 2;",
+    "block3": "y = b;",
+    "block4": 'escribir("\\n\\n\\n  mcm\\t=1");',
+    "block5": "para(x = a; q < (MAX * MAX); q++)",
+    "block6": "   z = 0;",
+    "block7": "   si((x % q == 0) || (y % q == 0))",
+    "block8": "      hacer",
+    "block9": "         si(x % q == 0)",
+    "block10": "            x = x / q;",
+    "block11": "         si(y % q == 0)",
+    "block12": "            y = y / q;",
+    "block13": "         z++;",
+    "block14": "         mcm = mcm * q;",
+    "block15": "      mientras((x % q == 0) || (y % q == 0));",
+    "block16": '      escribir("* ", q, "^", z);',
+    "block17": 'escribir("\\n\\n\\n\\n mcm= ", abs(mcm));'
+  };
+  correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6", "block7", "block8", "block9", "block10", "block11", "block12", "block13", "block14", "block15", "block16", "block17"];
+  updateGame();
+}
+
+function loadConstanteE() {
+  blocks = {
+    "block1": "para(sum = 1, veces = 2; veces <= MAX; veces++)",
+    "block2": "   para(fact = cont = 1; cont <= (veces - 1); cont++)",
+    "block3": "      fact *= cont;",
+    "block4": "   termino = 1 / fact;",
+    "block5": "   sum += termino;",
+    "block6": 'escribir("La constante E= ", formatear(sum, 5)); # printf("La constante E= %.5f", sum) en pseudocódigo',
+    "block7": "esperar() # getch() en pseudocódigo"
+  };
+  correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6", "block7"];
+  updateGame();
 }
 
 function handleSelectChange(selectElement) {
@@ -169,16 +223,16 @@ function handleSelectChange(selectElement) {
     gameContainer.style.display = 'flex';
     verifyButton.style.display = 'block';
     retryButton.style.display = 'none';
-    if (selectedValue === "addition") {
-      loadAddition();
-    } else if (selectedValue === "subtraction") {
-      loadSubtraction();
-    } else if (selectedValue === "multiplication") {
-      loadMultiplication();
-    } else if (selectedValue === "rectangleArea") {
-      loadRectangleArea();
-    } else if (selectedValue === "triangleArea") {
-      loadTriangleArea();
+    if (selectedValue === "perfectosPares") {
+      loadPerfectosPares();
+    } else if (selectedValue === "perfectosImpares") {
+      loadPerfectosImpares();
+    } else if (selectedValue === "serieMatematica") {
+      loadSerieMatematica();
+    } else if (selectedValue === "mcm") {
+      loadMCM();
+    } else if (selectedValue === "constanteE") {
+      loadConstanteE();
     }
   }
 }
