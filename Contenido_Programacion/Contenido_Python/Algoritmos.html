@@ -7,7 +7,8 @@
     <title>Starter Page - iPortfolio Bootstrap Template</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -39,110 +40,148 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  		 <!-- Icon Font Stylesheet -->
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.png" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="../Principal.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Programacion</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
 
 
-    <header id="header" class="header dark-background d-flex flex-column">
-        <i class="header-toggle d-xl-none bi bi-list"></i>
-
-        <div class="profile-img">
-            <img src="assets/img/my-profile-img.png" alt="" class="img-fluid rounded-circle">
-        </div>
-
-        <a href="../Principal.html" class="logo d-flex align-items-center justify-content-center">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="assets/img/logo.png" alt=""> -->
-            <h1 class="sitename">Programacion</h1>
-        </a>
-
-        <div class="social-links text-center">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-
-        <nav id="navmenu" class="navmenu">
-            <ul>
-
-
-                <li><a href="../Principal.html"><i class="bi bi-house navicon"></i>Home Page</a></li>
-                <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Algoritmos</span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="../Contenido_Programacion/portfolio-details.html"><i
-                                    class="bi bi-file-earmark-text navicon"></i>¿Qué es un Algoritmo?</a></li>
-                        <li><a href="../Contenido_Programacion/ConceptosBasicos.html"><i
-                                    class="bi bi-book navicon"></i>Conceptos Básicos</a></li>
-                        <li><a href="../Contenido_Programacion/ConceptosBasicos1.html"><i
-                                    class="bi bi-book navicon"></i>Funciones Matematicas</a></li>
-                        <li><a href="../Contenido_Programacion/ConceptosBasicos2.html"><i
-                                    class="bi bi-book navicon"></i>Manejo de Cadenas</a></li>
-                        <li><a href="../Contenido_Programacion/ConceptosBasicos.html"><i
-                                    class="bi bi-gear navicon"></i>Ejercicios de Aprendizaje</a></li>
-                        <li><a href="../Contenido_Programacion/Evaluacion.html"><i
-                                    class="bi bi-star navicon"></i>Cuestionario</a></li>
+        <li><a href="../Principal.html"><i class="bi bi-house navicon"></i>Home Page</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Algoritmos</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="../Contenido_Programacion/portfolio-details.html"><i
+                  class="bi bi-file-earmark-text navicon"></i>¿Qué es un Algoritmo?</a></li>
+            <li><a href="../Contenido_Programacion/ConceptosBasicos.html"><i class="bi bi-book navicon"></i>Conceptos
+                Básicos</a></li>
+            <li><a href="../Contenido_Programacion/ConceptosBasicos1.html"><i class="bi bi-book navicon"></i>Funciones
+                Matematicas</a></li>
+            <li><a href="../Contenido_Programacion/ConceptosBasicos2.html"><i class="bi bi-book navicon"></i>Manejo de
+                Cadenas</a></li>
+            <li><a href="../Contenido_Programacion/ConceptosBasicos.html"><i class="bi bi-gear navicon"></i>Ejercicios
+                de Aprendizaje</a></li>
+            <li><a href="../Contenido_Programacion/Evaluacion.html"><i class="bi bi-star navicon"></i>Cuestionario</a>
+            </li>
 
 
 
 
 
-                    </ul>
-                </li>
+          </ul>
+        </li>
 
-                <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Diagramas</span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="../Contenido_Diagramas/Introduccion.html"><i
-                                    class="bi bi-person navicon"></i>Introducción</a></li>
-                        <li><a href="../Contenido_Diagramas/Componentes.html"><i
-                                    class="bi bi-person navicon"></i>Resumen</a></li>
-                        <li><a href="../Contenido_Diagramas/Diagramas.html"><i
-                                    class="bi bi-person navicon"></i>Contruyendo</a></li>
-                        <li><a href="../Contenido_Diagramas/Comprueba.html"><i
-                                    class="bi bi-person navicon"></i>Conocimientos</a></li>
-                    </ul>
-                </li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Diagramas</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="../Contenido_Diagramas/Introduccion.html"><i class="bi bi-person navicon"></i>Introducción</a>
+            </li>
+            <li><a href="../Contenido_Diagramas/Componentes.html"><i class="bi bi-person navicon"></i>Resumen</a></li>
+            <li><a href="../Contenido_Diagramas/Diagramas.html"><i class="bi bi-person navicon"></i>Contruyendo</a></li>
+            <li><a href="../Contenido_Diagramas/Comprueba.html"><i class="bi bi-person navicon"></i>Conociemientos</a>
+            </li>
+          </ul>
+        </li>
 
-                <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Python</span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="Origen.html"><i class="bi bi-person navicon"></i>I. Origen</a></li>
-                        <li><a href="Tutoriales.html"><i
-                                    class="bi bi-person navicon"></i>II. Tutoriales</a></li>
-                        <li><a href="Ejemplos.html"><i class="bi bi-person navicon"></i>III. Ejemplos</a>
-                        </li>
-                        <li><a href="Pruebas.html"><i class="bi bi-person navicon"></i>IV. Pruebas</a></li>
-                        <li><a href="Servicios.html"><i class="bi bi-person navicon"></i>V. Servicios</a>
-                        </li>
-                        <li><a href="Algoritmos.html"><i
-                                    class="bi bi-person navicon"></i>VI. Algoritmos</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Python</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>              
+             <li><a href="Origen.html"><i class="bi bi-person navicon"></i>I. Origen</a></li>
+             <li><a href="Tutoriales.html"><i class="bi bi-person navicon"></i>II. Tutoriales</a></li>
+             <li><a href="Ejemplos.html"><i class="bi bi-person navicon"></i>III. Ejemplos</a></li> 
+             <li><a href="Pruebas.html"><i class="bi bi-person navicon"></i>IV. Pruebas</a></li>  
+             <li><a href="Servicios.html"><i class="bi bi-person navicon"></i>V. Servicios</a></li> 
+             <li><a href="Algoritmos.html"><i class="bi bi-person navicon"></i>VI. Algoritmos</a></li> 
 
+      </ul>
+    </nav>
 
-                    </ul>
-                </li>
-
-            </ul>
-        </nav>
-
-    </header>
+  </header>
 
     <main class="main">
-        <!-- Page Title -->
-        <div class="page-title dark-background">
-          <div class="container d-lg-flex justify-content-between align-items-center">
-            <h1 class="mb-2 mb-lg-0">Python</h1>
-            <nav class="breadcrumbs">
-              <ol>
-                <li><a href="../Principal.html">Home</a></li>
-                <li class="current">Algoritmos</li>
-              </ol>
-            </nav>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style=" font-family: 'Poppins', sans-serif;">
+   
+      <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
+          <h2  class="m-0" style="color:#0dcaf0; font-family: 'Poppins', sans-serif;" ><i class="fa fa-book me-3" style="color:#0dcaf0;"></i >Programación</h2>
+      </a>
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+              <a href="Principal.html" class="nav-item nav-link">
+                </a>
+    
+    
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav ms-auto p-4 p-lg-0">
+      
+                <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">PROGRAMACIÓN</a>
+                  <div class="dropdown-menu fade-down m-0">
+                    
+                    <a href="../Contenido_Programacion/portfolio-details.html"class="dropdown-item">Algoritmos</a>
+                    <a href="../Contenido_Diagramas/Introduccion.html"class="dropdown-item">Diagramas</a>
+                    <a href="Origen.html" class="dropdown-item">Python</a>
+                  </div>
+                </div>
+                <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">REDES</a>
+                  <div class="dropdown-menu fade-down m-0">
+                    <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html" class="dropdown-item">Internet</a>
+                    <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item">Medios de conexión</a>
+                    <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item">Redes LAN</a>
+                  </div>
+                </div>
+      
+                <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">BASE DE DATOS</a>
+                  <div class="dropdown-menu fade-down m-0">
+                    <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html" class="dropdown-item">Access</a>
+                    <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                      class="dropdown-item">Mysql(Workbench)</a>
+                    <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item">Visual Basic
+                      Access</a>
+                </div>
+              
+              </div>
+      
+              </div>
+      
+           
+              
           </div>
-        </div><!-- End Page Title -->
+          <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-6 d-none d-lg-block" style="background-color:#0dcaf0; border: #0dcaf0; 
+            border-radius: 0%;">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
     
 
 <!-- Algorithms Section -->
