@@ -123,15 +123,6 @@
     background-color: #2BC5D4; /* Color al pasar el mouse */
 }
 
-
-.sticky-top {
-    background-color: white;
-    padding: 15px;
-    border-radius: 5px;
-    max-height: 100vh;
-    overflow-y: auto;
-}
-
 #console {
     background-color: #040B14;
     color: #2BC5D4 ;

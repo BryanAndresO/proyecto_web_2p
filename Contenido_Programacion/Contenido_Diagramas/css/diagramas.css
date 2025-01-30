@@ -1,10 +1,4 @@
-.sticky-top {
-    background-color: white;
-    padding: 15px;
-    border-radius: 5px;
-    max-height: 100vh;
-    overflow-y: auto;
-}
+
 
 #console {
     background-color: #040B14;
@@ -336,3 +330,53 @@
     cursor: pointer;
   }
   
+
+  #juegaAhora {
+    background-color: #1E242C; /* Color base */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin bordes */
+    margin-top: 10px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 0 30px 30px 0; /* Bordes redondeados con el estilo indicado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#juegaAhora:hover {
+    background-color: #2BC5D4; /* Color al pasar el mouse */
+}
+
+
+#juegaFactorial {
+  background-color: #1E242C; /* Color base */
+  color: white; /* Texto blanco para contraste */
+  border: none; /* Sin bordes */
+  margin-top: 10px;
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 0 30px 30px 0; /* Bordes redondeados con el estilo indicado */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#juegaFactorial:hover {
+  background-color: #2BC5D4; /* Color al pasar el mouse */
+}
+
+#juegaFibonacci {
+  background-color: #1E242C; /* Color base */
+  color: white; /* Texto blanco para contraste */
+  border: none; /* Sin bordes */
+  margin-top: 10px;
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 0 30px 30px 0; /* Bordes redondeados con el estilo indicado */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave en el cambio de color */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#juegaFibonacci:hover {
+  background-color: #2BC5D4; /* Color al pasar el mouse */
+}
+

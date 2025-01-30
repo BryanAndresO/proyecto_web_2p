@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - iPortfolio Bootstrap Template</title>
+  <title>Proyecto Aplicaciones Web</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -60,13 +60,6 @@
       <h1 class="sitename">Programacion</h1>
     </a>
 
-    <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
 
     <nav id="navmenu" class="navmenu">
       <ul>
@@ -123,11 +116,53 @@
   </header>
 
   <main class="main">
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style=" font-family: 'Poppins', sans-serif;">
+
+    <!-- Asistente star -->
+
+<!--Modal  -->
+
+<div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+      <div class="modal-content mb-0 ">
+          
+        <div class="container">
+          <div class="row">
+            <div class=" col-xs-11 col-lg-11 col-md-11" ></div>
+            
+            <div class=" col-xs-1 col-lg-1 col-md-1  mt-2 mr-6">
+              <button type="button" class="btn-close mr-5" data-bs-dismiss="modal" aria-label="Close"></button>  
+            </div>
+          </div>
+
+          <div class="row">
+            <div class=" col-lg-1 col-md-1 mt-3 pr-0">
+              <img src="assetsBot/robot.png" alt="Icono" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+            </div>
+            <div class=" col-lg-11 col-md-11  pl-0">
+              <div class="modal-body mb-0" id="responseText"></div>
+            </div>
+          </div>
+        </div> 
+      </div>
+     
+  </div>
+</div>  
+<!--Moda END -->
+
+<button id="questionButton" class="btn btn-primary " data-aos="fade-up" ></button>
+
+<div  id="questionMenu" class="speech-bubble card">
+<ul class="list-group list-group-flush" id="questionList">
+  <!-- Preguntas generadas dinámicamente -->
+</ul>
+</div>
+
+<!-- Asistente end -->
+ <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style=" font-family: 'Poppins', sans-serif;">
    
   <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
-      <h2  class="m-0" style="color:#0dcaf0; font-family: 'Poppins', sans-serif;" ><i class="fa fa-book me-3" style="color:#0dcaf0;"></i >Programación</h2>
+      <h2  class="m-0" style="color:#06BBCC; font-family: 'Poppins', sans-serif;" ><i class="fa fa-book me-3" style="color:#06BBCC;"></i >Programación</h2>
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
@@ -143,33 +178,34 @@
           <div class="navbar-nav ms-auto p-4 p-lg-0">
   
             <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">PROGRAMACIÓN</a>
+              <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">PROGRAMACIÓN</a>
               <div class="dropdown-menu fade-down m-0">
                 
                 <a href="../Contenido_Programacion/portfolio-details.html"
-                  class="dropdown-item">Algoritmos</a>
-                <a href=""
-                  class="dropdown-item">Diagramas</a>
-                <a href="/Contenido_Programacion/Contenido_Python/Origen.html" class="dropdown-item">Python</a>
+                  class="dropdown-item">I.Algoritmos</a>
+                <a href="../Contenido_Diagramas/Introduccion.html"
+                  class="dropdown-item">II.Diagramas</a>
+                <a href="../Contenido_Python/Origen.html" class="dropdown-item">III.Python</a>
               </div>
             </div>
             <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">REDES</a>
+              <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">REDES</a>
               <div class="dropdown-menu fade-down m-0">
-                <a href="/Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item">Internet</a>
-                <a href="/Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item">Medios de conexión</a>
-                <a href="/Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item">Redes LAN</a>
+                <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html" class="dropdown-item">I.Internet</a>
+                <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item">II.Medios de conexión</a>
+                <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item">III.Redes LAN</a>
               </div>
             </div>
   
             <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">BASE DE DATOS</a>
+              <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">BASE DE DATOS</a>
               <div class="dropdown-menu fade-down m-0">
-                <a href="/Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html" class="dropdown-item">Access</a>
-                <a href="/Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
-                  class="dropdown-item">Mysql(Workbench)</a>
-                <a href="/Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item">Visual Basic
+                <a href="../..//Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html" class="dropdown-item">III.Access</a>
+
+                <a href="../..//Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item">III.Visual Basic
                   Access</a>
+                  <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                  class="dropdown-item">Mysql(Workbench)</a>
               </div>
             </div>
   
@@ -178,11 +214,12 @@
        
           
       </div>
-      <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-6 d-none d-lg-block" style="background-color:#0dcaf0; border: #0dcaf0; 
+      <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-6 d-none d-lg-block" style="background-color:#06BBCC; border: #06BBCC; 
         border-radius: 0%;">Principal<i class="fa fa-arrow-right ms-3"></i></a>
   </div>
 </nav>
 <!-- Navbar End -->
+    
 
 
     <!-- About Section -->
@@ -473,6 +510,107 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+<script >
+
+  document.addEventListener('DOMContentLoaded', function () {
+      // Array de preguntas, respuestas, imágenes y videos
+      const qaArray = [
+          {
+              question: "¿Cómo se leen datos del teclado en Python?",
+              response: "Se usa la función input(). Esto devuelve una cadena de texto nombre = input('¿Cuál es tu nombre?')print('Hola, ' + nombre)",
+              image: "",
+              video: ""
+          },
+          {
+              question: "¿Por qué debería elegir Python sobre otros lenguajes de programación?",
+              response: "Python es fácil de aprender debido a su sintaxis simple y clara. Es muy versátil, se usa en desarrollo web, análisis de datos, inteligencia artificial, automatización, y más. Además, tiene una comunidad grande y muchas bibliotecas que facilitan tareas complejas.",
+              image: "",
+              video: ""
+          },
+          {
+              question: "Por qué se dice que Python es un lenguaje interpretado?",
+              response: "PPython es un lenguaje interpretado porque el código fuente no se compila directamente a código de máquina. En lugar de eso, el código es leído e interpretado por el intérprete de Python, lo que facilita la ejecución y prueba rápida de programas.",
+              image: "",
+              video: ""
+          },
+
+      ];
+  
+      // Referencias a elementos del DOM
+      const questionList = document.getElementById('questionList');
+      const questionButton = document.getElementById('questionButton');
+      const questionMenu = document.getElementById('questionMenu');
+      const responseText = document.getElementById('responseText');
+  
+      // Generar las preguntas en el menú
+      qaArray.forEach((item, index) => {
+          const listItem = document.createElement('li');
+          listItem.className = 'list-group-item question mb-1 list-group-item-action';
+          listItem.style.cssText = 'border: solid 0px #7c2e2e; border-radius: 15px; background-color: #181d38; color: white;';
+          listItem.setAttribute('data-bs-toggle', 'list');
+          listItem.setAttribute('role', 'tab');
+          listItem.setAttribute('data-index', index);
+          listItem.textContent = item.question;
+          questionList.appendChild(listItem);
+      });
+  
+      // Mostrar/Ocultar el menú
+      questionButton.addEventListener('click', function () {
+          questionMenu.style.display = questionMenu.style.display === 'none' || questionMenu.style.display === '' ? 'block' : 'none';
+      });
+  
+      // Delegación de eventos para manejar clics en las preguntas
+      questionList.addEventListener('click', function (event) {
+          if (event.target && event.target.classList.contains('question')) {
+              const index = event.target.getAttribute('data-index');
+              const selectedQA = qaArray[index];
+  
+              let content = `
+                  <div class="container section-title" data-aos="fade-up">
+                      <h2>${selectedQA.question}</h2>
+                      <p>${selectedQA.response}</p>
+                  </div>
+              `;
+  
+              // Agregar imagen si existe
+              if (selectedQA.image) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-3">
+                              <div class="col-lg-4 col-md-4"></div>
+                              <div class="col-lg-4 col-md-4">
+                                  <img src="${selectedQA.image}" alt="Imagen relacionada" class="img-fluid mb-3">
+                              </div>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              // Agregar video si existe
+              if (selectedQA.video) {
+                  content += `
+                      <div class="container">
+                          <div class="row mt-1">
+                              <video controls class="w-100">
+                                  <source src="${selectedQA.video}" type="video/mp4">
+                              </video>
+                          </div>
+                      </div>
+                  `;
+              }
+  
+              responseText.innerHTML = content;
+  
+              // Mostrar el modal y ocultar el menú
+              const responseModal = new bootstrap.Modal(document.getElementById('responseModal'));
+              responseModal.show();
+              questionMenu.style.display = 'none';
+          }
+      });
+  });
+    </script>
+  
 </body>
 
 </html>

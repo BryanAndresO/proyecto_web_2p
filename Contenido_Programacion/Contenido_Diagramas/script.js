@@ -12,9 +12,9 @@ const questions = [
     title: 'Pregunta 1',
     text: '¿Qué es un diagrama de flujo?',
     answers: [
-      { text: 'Representación gráfica de un algoritmo', correct: true },
-      { text: 'Un conjunto de datos sin conexión', correct: false },
-      { text: 'Un programa de software', correct: false },
+      { text: 'a) Representación gráfica de un algoritmo', correct: true },
+      { text: 'b) Un conjunto de datos sin conexión', correct: false },
+      { text: 'c) Un programa de software', correct: false },
     ],
   },
   {
@@ -22,9 +22,9 @@ const questions = [
     title: 'Pregunta 2',
     text: '¿Cuáles son los símbolos básicos utilizados en los diagramas de flujo?',
     answers: [
-      { text: 'Rectángulos, óvalos, paralelogramos.', correct: true },
-      { text: 'Círculos, triángulos, líneas.', correct: false },
-      { text: 'Cuadrados, rombos, líneas.', correct: false },
+      { text: 'a) Cuadrados, rombos, líneas.', correct: false },
+      { text: 'b) Círculos, triángulos, líneas.', correct: false },
+      { text: 'c) Rectángulos, óvalos, paralelogramos.', correct: true },
     ],
   },
   {
@@ -32,29 +32,29 @@ const questions = [
     title: 'Pregunta 3',
     text: '¿Qué indican las flechas en el diagrama de flujo?',
     answers: [
-      { text: 'El sentido de ejecución del diagrama', correct: true },
-      { text: 'Indica el paso anterior del diagrama', correct: false },
-      { text: 'El findel diagrama', correct: false },
+      { text: 'a) El sentido de ejecución del diagrama', correct: true },
+      { text: 'b) Indica el paso anterior del diagrama', correct: false },
+      { text: 'c) El findel diagrama', correct: false },
     ],
   },
   {
     time: 141,
     title: 'Pregunta 4',
-    text: '¿Qué debe tener todo diagrama_',
+    text: '¿Qué debe tener todo diagrama?',
     answers: [
-      { text: 'Una condicional', correct: false },
-      { text: 'Un inicio y un fin', correct: true },
-      { text: 'Una salida y una entrada', correct: false },
+      { text: 'a) Una condicional', correct: false },
+      { text: 'b) Un inicio y un fin', correct: true },
+      { text: 'c) Una salida y una entrada', correct: false },
     ],
   },
   {
     time: 172,
     title: 'Pregunta 5',
-    text: '¿En qué sentido se construye el diagrama?',
+    text: '¿En qué sentido se construye el diagrama de flujo?',
     answers: [
-      { text: 'De izquierda a derecha', correct: false },
-      { text: 'De arriba hacia abajo', correct: true },
-      { text: 'De abajo hacia arriba', correct: false },
+      { text: 'a) De izquierda a derecha', correct: false },
+      { text: 'b) De arriba hacia abajo', correct: true },
+      { text: 'c) De abajo hacia arriba', correct: false },
     ],
   },
 ];
