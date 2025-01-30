@@ -523,3 +523,36 @@ body {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
+
+.button-container {
+    max-width: 400px; /* Ajusta el ancho si es necesario */
+}
+.button-container .custom-button {
+    display: flex;
+    align-items: center;
+    background: #e8f6f8;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 0;
+    margin-top: 10px;
+    padding: 0px;
+    border-radius: 0px;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+.button-container .custom-button:hover {
+    background: #d1eef0;
+}
+.button-container .number-box {
+    background: #06BBCC;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    
+    margin-right: 10px;
+    border-radius: 0px;
+    min-width: 40px;
+    text-align: center;
+}
