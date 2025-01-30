@@ -27,6 +27,8 @@ let selectedOrder = [];
 const container = document.getElementById("game-container");
 const feedbackDiv = document.getElementById("feedback");
 const gameOverDiv = document.getElementById("game-over");
+const showSolutionBtn = document.getElementById("show-solution-btn");
+const solutionContainer = document.getElementById("solution-container");
 
 function createBubble(step) {
   const bubble = document.createElement("div");
@@ -38,25 +40,26 @@ function createBubble(step) {
   const containerHeight = container.offsetHeight;
   const bubbleSize = 120;
 
-  // Asegurarse de que la burbuja esté dentro de los límites del contenedor
+  // Asegurarse de que la burbuja no se salga del contenedor
   bubble.style.top = `${Math.random() * (containerHeight - bubbleSize)}px`;
   bubble.style.left = `${Math.random() * (containerWidth - bubbleSize)}px`;
 
   bubble.addEventListener("click", () => {
     if (step === correctSteps[currentStepIndex]) {
-      // Paso correcto
+      // Paso correcto: ocultar burbuja
       currentStepIndex++;
       selectedOrder.push(step);
-      bubble.classList.add("hidden"); // Ocultar la burbuja cuando se elige correctamente
+      bubble.classList.add("hidden");
       feedbackDiv.innerHTML = `¡Correcto! Orden seleccionado: ${selectedOrder.join(' -> ')}`;
 
       if (currentStepIndex === correctSteps.length) {
         endGame(true);
       }
     } else {
-      // Paso incorrecto
+      // Paso incorrecto: tachar burbuja
       attempts--;
-      feedbackDiv.textContent = `¡Elección incorrecta o fuera de orden! Pierdes un intento. Quedan ${attempts} intentos.`;
+      bubble.classList.add("incorrect");
+      feedbackDiv.textContent = `¡Elección incorrecta! Pierdes un intento. Quedan ${attempts} intentos.`;
 
       if (attempts === 0) {
         endGame(false);
@@ -79,20 +82,25 @@ function startGame() {
 function endGame(win) {
   container.style.display = "none"; // Ocultar el contenedor del juego
   feedbackDiv.style.display = "none"; // Ocultar el feedback
-  gameOverDiv.style.display = "block"; // Mostrar el mensaje de fin de juego
+  gameOverDiv.style.display = "block"; // Asegurar que el contenedor de fin de juego sea visible
 
   // Limpiar clases anteriores
   gameOverDiv.classList.remove("win", "lose");
 
-  // Retrasar la aparición del mensaje para aplicar la animación
+  // Mostrar el mensaje de fin de juego con animación
   setTimeout(() => {
     gameOverDiv.classList.add(win ? "win" : "lose");
     gameOverDiv.innerHTML = win
       ? "¡Felicidades! Completaste el juego correctamente. 🎉"
       : "Juego terminado. Te quedaste sin intentos. 😞";
-    gameOverDiv.style.opacity = 1; // Mostrar el mensaje con una transición suave
-    gameOverDiv.style.transform = "translate(-50%, -50%)"; // Asegura que el mensaje esté centrado
+    
+    // Asegurarse de que el mensaje sea visible con animación
+    gameOverDiv.style.opacity = 1;
+    gameOverDiv.style.transform = "translate(-50%, -50%)"; // Centrar el mensaje
   }, 100);
+
+  // Mostrar el botón de solución después de finalizar el juego
+  showSolutionBtn.style.display = 'block'; // Hacer visible el botón de solución
 
   // Eliminar burbujas restantes
   document.querySelectorAll(".bubble").forEach((bubble) => bubble.remove());
@@ -104,14 +112,33 @@ function restartGame() {
   attempts = 5;
   currentStepIndex = 0;
   selectedOrder = [];
+
+  // Limpiar el feedback antes de reiniciar
+  feedbackDiv.innerHTML = "";  // Limpiar el contenido de feedback
+  feedbackDiv.style.display = "block"; // Asegurarse de que el feedback esté visible
+
   container.style.display = "block"; // Volver a mostrar el contenedor
-  feedbackDiv.style.display = "block"; // Volver a mostrar el feedback
   gameOverDiv.style.display = "none"; // Ocultar el mensaje de fin de juego
   gameOverDiv.style.opacity = 0; // Ocultar el mensaje antes de reiniciar
 
   // Limpiar burbujas y reiniciar el juego
   document.querySelectorAll(".bubble").forEach((bubble) => bubble.remove());
   startGame(); // Iniciar el juego de nuevo
+
+  // Ocultar el botón de ver solución
+  showSolutionBtn.style.display = 'none';
+
+  // Limpiar el contenedor de la solución
+  solutionContainer.style.display = 'none';
+  solutionContainer.innerHTML = ''; // Limpiar el texto de la solución
+}
+
+
+// Mostrar la solución cuando el jugador haga clic en el botón
+function Solution() {
+  // Mostrar la secuencia correcta de pasos como texto dentro del contenedor
+  solutionContainer.style.display = 'block'; // Asegurar que el contenedor sea visible
+  solutionContainer.innerHTML = "La solución es: <br>" + correctSteps.join(" -> ");
 }
 
 startGame(); // Iniciar el juego cuando la página se carga

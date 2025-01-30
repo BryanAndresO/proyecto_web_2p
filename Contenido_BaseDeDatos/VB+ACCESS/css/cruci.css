@@ -1,87 +1,74 @@
-/* Estilo para la sección de conceptos */
-.conceptos {
-  margin-top: 30px;
+
+h2 {
+  font-size: 2rem;
+  color: #000000;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para título */
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.dropzone {
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  margin: 5px;
+  border: 2px dashed #333;
+  line-height: 30px;
+}
+.option {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: lightblue;
+  cursor: grab;
+}
+#resultado, #felicidades {
+  margin-top: 20px;
+  font-weight: bold;
+}
+#solucionario {
+  display: none;
+}
+#comprobar {
+  background-color: blue;
+  color: white;
+}
+#reiniciar {
+  background-color: red;
+  color: white;
+}
+#mostrarSolucionario {
+  background-color: purple;
+  color: white;
+  display: block;
+}
+#felicitaciones {
+  display: none;
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: green;
+  padding: 10px;
+  border: 2px solid green;
+  border-radius: 5px;
+  background-color: #e0f8e0;
+}
+p {
+  font-size: 18px;
   font-family: 'Arial', sans-serif;
   color: #333;
-}
-
-.conceptos h2 {
-  font-size: 1.5rem;
-  color: #4CAF50;
-  margin-bottom: 15px;
-}
-
-.conceptos strong {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-.conceptos ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.conceptos li {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-/* Estilo para el formulario */
-form {
-  margin-top: 30px;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  padding: 20px;
+  background-color: #f0f8ff;
+  padding: 10px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-form div {
-  margin-bottom: 15px;
-}
-
-form label {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-  display: block;
-  color: #333;
-}
-
-form input {
-  width: 100%;
-  padding: 12px 15px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #fff;
-  transition: border 0.3s ease-in-out;
-}
-
-form input:focus {
-  border-color: #4CAF50;
-  outline: none;
-}
-
-/* Estilo para el botón */
-button {
-  padding: 12px 20px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  text-align: center;
   margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
-  background-color: #45a049;
-}
-
-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5);
+p:hover {
+  background-color: #add8e6;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }

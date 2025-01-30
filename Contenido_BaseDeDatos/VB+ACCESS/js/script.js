@@ -127,3 +127,18 @@ window.onload = () => {
     copySuccess.style.display = 'none';
   }, 2000);
 }
+function mostrarVideo() {
+  const popup = document.getElementById("videoPopup");
+  popup.style.display = "flex";
+  setTimeout(() => {
+      popup.classList.add("active");
+  }, 50);
+}
+
+function cerrarVideo() {
+  const popup = document.getElementById("videoPopup");
+  popup.classList.remove("active");
+  setTimeout(() => {
+      popup.style.display = "none";
+  }, 500);
+}

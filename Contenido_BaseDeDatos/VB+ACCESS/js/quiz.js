@@ -6,6 +6,7 @@ const resetButton = document.getElementById('resetButton');
 const form = document.getElementById('testForm');
 const congratulationsMessage = document.getElementById('congratulations');
 const tryAgainMessage = document.getElementById('tryAgain');
+const solutionContainer = document.getElementById('solutionContainer'); // Contenedor de la solución
 let currentQuestion = 0;
 
 function updateQuestionVisibility() {
@@ -26,7 +27,6 @@ function validateAnswers() {
     return Array.from(inputs).some(input => input.checked);
   });
 
-  // Habilitar el botón de finalizar solo si todas las preguntas tienen respuestas
   finalizeButton.disabled = !allAnswered;
 }
 
@@ -65,6 +65,9 @@ finalizeButton.addEventListener('click', () => {
   }
 
   alert(`¡Test finalizado! Tu calificación es: ${correctAnswers}/${totalQuestions}`);
+
+  // Mostrar el solucionario cuando el test haya sido completado
+  solutionContainer.style.display = 'block';
 });
 
 resetButton.addEventListener('click', () => {
@@ -72,9 +75,13 @@ resetButton.addEventListener('click', () => {
   form.reset();
   currentQuestion = 0;
   updateQuestionVisibility();
+
   // Ocultar los mensajes de felicitaciones o intento fallido
   congratulationsMessage.style.display = 'none';
   tryAgainMessage.style.display = 'none';
+
+  // Ocultar el solucionario al reiniciar
+  solutionContainer.style.display = 'none';
 });
 
 updateQuestionVisibility();
