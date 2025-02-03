@@ -161,5 +161,8 @@
             toggleInfo(card);
         });
     });
+
+
+
 })(jQuery);
 
