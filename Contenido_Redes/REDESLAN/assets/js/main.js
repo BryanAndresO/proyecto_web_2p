@@ -204,6 +204,23 @@
     }
   });
 
+  document.addEventListener("DOMContentLoaded", function() {
+    // Obtén la URL actual
+    const currentUrl = window.location.pathname;
+  
+    // Obtén todos los enlaces en el menú
+    const links = document.querySelectorAll('.navitem');
+  
+    // Itera a través de los enlaces y compara su href con la URL actual
+    links.forEach(link => {
+      if (link.href.includes(currentUrl)) {
+        link.classList.add('active');  // Añadir la clase 'active' al enlace correspondiente
+      } else {
+        link.classList.remove('active');  // Remover la clase 'active' de los demás enlaces
+      }
+    });
+  });
+
   /**
    * Navmenu Scrollspy
    */

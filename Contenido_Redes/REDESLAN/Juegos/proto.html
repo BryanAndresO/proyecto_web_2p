@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulación de Seguridad en Redes LAN - Universidad</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Juego de Seguridad en Redes LAN</title>
     <style>
-        /* Estilos generales */
         body {
             font-family: 'Arial', sans-serif;
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #42a5f5, #558b2f);
             color: #fff;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
             text-align: center;
-            background: linear-gradient(135deg, #42a5f5, #558b2f);
         }
 
         .container {
@@ -28,263 +24,209 @@
             width: 80%;
             max-width: 1000px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            position: relative;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
             color: #ffeb3b;
         }
 
-        /* Estilo para el botón de Home en la esquina superior derecha */
-        .home-btn {
-            background-color: #ffeb3b;
-            color: #333;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 10; /* Asegura que el botón se muestre por encima del contenedor */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.2s;
-        }
-
-        .home-btn i {
-            margin-right: 10px;
-        }
-
-        .home-btn:hover {
-            background-color: #ffcc00;
-            transform: scale(1.05);
-        }
-
-        .home-btn:active {
-            transform: scale(0.98);
-        }
-
-        .network-map {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 20px 0;
-        }
-
         .device-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: inline-block;
             text-align: center;
+            margin: 20px;
+            padding: 10px;
+            border: 2px dashed #fff;
+            border-radius: 10px;
+            min-height: 150px;
+            background-color: #444;
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .device-container:hover {
+            transform: scale(1.1);
         }
 
         .device-image {
             width: 100px;
             height: 100px;
             object-fit: contain;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-        .device {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px;
-            border-radius: 15px;
-            transition: all 0.3s;
-            cursor: pointer;
-            font-size: 1.2rem;
-            width: 100%;
-        }
-
-        .device:hover {
-            transform: scale(1.1);
-            background-color: #45a049;
-        }
-
-        .device.active {
-            background-color: #ff9800;
-            transform: scale(1.1);
-        }
-
-        .controls {
+        .security-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             margin-top: 30px;
         }
 
-        button {
+        .security-item {
             background-color: #008CBA;
             color: white;
             padding: 12px 24px;
-            border: none;
             border-radius: 8px;
-            margin: 10px;
+            margin: 5px;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s;
+            transition: transform 0.2s, background 0.3s;
         }
 
-        button:hover {
-            background-color: #007b9e;
+        .security-item:active {
+            transform: scale(0.9);
+        }
+
+        .check-btn, .solution-btn, .home-btn {
+            background-color: #ffeb3b;
+            color: #333;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+        }
+
+        .check-btn:hover, .solution-btn:hover, .home-btn:hover {
+            background-color: #fbc02d;
             transform: scale(1.05);
         }
 
-        button:active {
-            transform: scale(0.98);
-        }
-
         .feedback {
-            margin-top: 30px;
+            margin-top: 20px;
             font-size: 1.3rem;
             font-weight: bold;
-            color: #fff;
         }
 
-        .feedback.success {
+        .success {
             color: #4caf50;
         }
 
-        .feedback.warning {
+        .warning {
             color: #f44336;
         }
 
-        .footer {
-            margin-top: 40px;
-            font-size: 1rem;
-            color: #bdbdbd;
+        .hidden {
+            display: none;
         }
+
+        .home-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #ffeb3b;
+        color: #333;
+        font-size: 1.2rem;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        border: none;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .home-btn:hover {
+        background-color: #fbc02d;
+        transform: scale(1.05);
+    }
     </style>
 </head>
 <body>
-    <!-- Botón Home en la esquina superior derecha -->
-    <button class="home-btn" onclick="window.location.href='../seguridad.html'">
-        <i class="fas fa-home"></i> Home
-    </button>
-
     <div class="container">
-        <h1>Simulación de Seguridad en Redes LAN</h1>
-        <p>¡Bienvenido a la simulación! Aplica medidas de seguridad en la red y verifica su estado.</p>
+        <h1>Juego de Seguridad en Redes LAN</h1>
+        <p>Arrastra las medidas de seguridad a los dispositivos adecuados.</p>
 
-        <div class="network-map">
-            <div class="device-container">
-                <img src="../assets/img/rou.jpg" alt="Router" class="device-image">
-                <div class="device" id="router">
-                    Router
-                </div>
+        <div class="device-container" id="router" ondrop="drop(event, 'router')" ondragover="allowDrop(event)">
+            <img src="../img/routers.jpg" class="device-image">
+        </div>
+
+        <div class="device-container" id="switch" ondrop="drop(event, 'switch')" ondragover="allowDrop(event)">
+            <img src="../img/Switches.jpg" class="device-image">
+        </div>
+
+        <div class="device-container" id="server" ondrop="drop(event, 'server')" ondragover="allowDrop(event)">
+            <img src="../img/servidores.jpg" class="device-image">
+        </div>
+
+        <div class="device-container" id="pc" ondrop="drop(event, 'pc')" ondragover="allowDrop(event)">
+            <img src="../img/pcs.jpg" class="device-image">
+        </div>
+
+        <div class="security-container">
+            <div class="security-item" id="segmentation" draggable="true" ondragstart="drag(event)">
+                Segmentación de Red
             </div>
-
-            <div class="device-container">
-                <img src="../assets/img/swi.jpg" alt="Switch" class="device-image">
-                <div class="device" id="switch">
-                    Switch
-                </div>
+            <div class="security-item" id="firewall" draggable="true" ondragstart="drag(event)">
+                Firewall
             </div>
-
-            <div class="device-container">
-                <img src="../assets/img/servi.jpg" alt="Servidor" class="device-image">
-                <div class="device" id="server">
-                    Servidor
-                </div>
+            <div class="security-item" id="encryption" draggable="true" ondragstart="drag(event)">
+                Cifrado
             </div>
-
-            <div class="device-container">
-                <img src="../assets/img/pc1.jpg" alt="PC 1" class="device-image">
-                <div class="device" id="pc1">
-                    PC 1
-                </div>
-            </div>
-
-            <div class="device-container">
-                <img src="../assets/img/pc2.jpg" alt="PC 2" class="device-image">
-                <div class="device" id="pc2">
-                    PC 2
-                </div>
+            <div class="security-item" id="authentication" draggable="true" ondragstart="drag(event)">
+                Autenticación
             </div>
         </div>
 
-        <div class="controls">
-            <h2>Medidas de Seguridad:</h2>
-            <button onclick="applySegmentation()">Aplicar Segmentación de Red</button>
-            <button onclick="applyFirewall()">Aplicar Firewall</button>
-            <button onclick="applyEncryption()">Aplicar Cifrado</button>
-            <button onclick="applyAuthentication()">Aplicar Autenticación</button>
-            <button onclick="checkSecurity()">Verificar Seguridad</button>
-        </div>
+        <button class="check-btn" onclick="checkSolution()">Verificar</button>
+        <button class="solution-btn hidden" id="solutionBtn" onclick="showSolution()">Ver solución</button>
+        <button class="home-btn" onclick="goHome()">🏠 Home</button>
 
-        <div class="feedback" id="feedback">
-            <p>Aplica las medidas de seguridad para proteger tu red.</p>
-        </div>
-
+        <div class="feedback" id="feedback"></div>
     </div>
 
     <script>
-        // Estado de las medidas de seguridad
-        let securityStatus = {
-            segmentation: false,
-            firewall: false,
-            encryption: false,
-            authentication: false,
-        };
-
-        // Función para aplicar segmentación
-        function applySegmentation() {
-            securityStatus.segmentation = true;
-            document.getElementById('feedback').innerHTML = "¡Segmentación aplicada! La red ahora está dividida en VLANs.";
-            updateDeviceState();
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
         }
 
-        // Función para aplicar firewall
-        function applyFirewall() {
-            securityStatus.firewall = true;
-            document.getElementById('feedback').innerHTML = "¡Firewall aplicado! El tráfico de la red está filtrado.";
-            updateDeviceState();
+        function allowDrop(event) {
+            event.preventDefault();
         }
 
-        // Función para aplicar cifrado
-        function applyEncryption() {
-            securityStatus.encryption = true;
-            document.getElementById('feedback').innerHTML = "¡Cifrado aplicado! La red ahora está protegida.";
-            updateDeviceState();
+        function drop(event, deviceId) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            var security = document.getElementById(data);
+            var device = document.getElementById(deviceId);
+
+            if (!device.contains(security)) {
+                device.appendChild(security);
+            }
         }
 
-        // Función para aplicar autenticación
-        function applyAuthentication() {
-            securityStatus.authentication = true;
-            document.getElementById('feedback').innerHTML = "¡Autenticación aplicada! Sólo usuarios autorizados pueden acceder.";
-            updateDeviceState();
-        }
+        function checkSolution() {
+            var correct = true;
 
-        // Función para verificar la seguridad de la red
-        function checkSecurity() {
-            if (securityStatus.segmentation && securityStatus.firewall && securityStatus.encryption && securityStatus.authentication) {
-                document.getElementById('feedback').innerHTML = "¡Red segura! Todas las medidas de seguridad están implementadas correctamente.";
-                document.getElementById('feedback').classList.add('success');
-                document.getElementById('feedback').classList.remove('warning');
+            if (!document.getElementById("router").contains(document.getElementById("firewall"))) correct = false;
+            if (!document.getElementById("switch").contains(document.getElementById("segmentation"))) correct = false;
+            if (!document.getElementById("server").contains(document.getElementById("encryption"))) correct = false;
+            if (!document.getElementById("pc").contains(document.getElementById("authentication"))) correct = false;
+
+            if (correct) {
+                document.getElementById("feedback").innerHTML = "<p class='success'>¡Todo está correcto!</p>";
+                document.getElementById("solutionBtn").classList.add("hidden");
             } else {
-                document.getElementById('feedback').innerHTML = "¡Faltan medidas de seguridad! Asegúrate de aplicar todas.";
-                document.getElementById('feedback').classList.add('warning');
-                document.getElementById('feedback').classList.remove('success');
+                document.getElementById("feedback").innerHTML = "<p class='warning'>Algunos dispositivos no tienen la medida de seguridad correcta.</p>";
+                document.getElementById("solutionBtn").classList.remove("hidden");
             }
         }
 
-        // Función para actualizar el estado de los dispositivos
-        function updateDeviceState() {
-            if (securityStatus.segmentation) {
-                document.getElementById('router').classList.add('active');
-            }
-            if (securityStatus.firewall) {
-                document.getElementById('switch').classList.add('active');
-            }
-            if (securityStatus.encryption) {
-                document.getElementById('server').classList.add('active');
-            }
-            if (securityStatus.authentication) {
-                document.getElementById('pc1').classList.add('active');
-                document.getElementById('pc2').classList.add('active');
-            }
+        function showSolution() {
+            document.getElementById("router").appendChild(document.getElementById("firewall"));
+            document.getElementById("switch").appendChild(document.getElementById("segmentation"));
+            document.getElementById("server").appendChild(document.getElementById("encryption"));
+            document.getElementById("pc").appendChild(document.getElementById("authentication"));
+
+            document.getElementById("feedback").innerHTML = "<p class='success'>Esta es la solución correcta.</p>";
+            document.getElementById("solutionBtn").classList.add("hidden");
+        }
+
+        function goHome() {
+            window.location.href = "../seguridad.html#simulacion-seguridad"; // Cambia "index.html" por la URL de la página de inicio
         }
     </script>
 </body>
