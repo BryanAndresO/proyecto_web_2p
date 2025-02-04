@@ -226,11 +226,15 @@
             </div>
             <!-- END Categories Programacion -->
 
-            <!-- Start Categories Redes -->
-            <div id="redes" class="row g-3 mt-5">
-                <div class="col-lg-1 col-md-1 "></div>
+          <section  >
+              <!-- Start Categories Redes -->
 
-                <div class="col-lg-5 col-md-6 wow zoomIn mb-5" data-wow-delay="0.5s">
+             
+              <div id="redes"  class="row g-3 mt-5">
+               
+                <div  class="col-lg-1 col-md-1 "></div>
+             
+                <div  class="col-lg-5 col-md-6 wow zoomIn mb-5" data-wow-delay="0.5s">
                     <a class="position-relative d-block overflow-hidden" href="./Contenido_Redes/algoritmos/index.html">
                         <div class="course-item bg-light">
                             <div id="toggleDivs1" class="position-relative overflow-hidden">
@@ -259,13 +263,13 @@
                         </div>
                     </a>
                 </div>
-
+                    
                 <div class="col-lg-6 col-md-5 " style="padding-left: 1%;">
                     <div class="row g-3 " >
                         <div class="col-lg-10 col-md-10">
                         
                             
-                            <div id="div4" class="row g-3 collapse ">
+                            <div  id="div4" class="row g-3 collapse ">
                                 <!--
                                 <div class="col-lg-12 col-md-12" data-wow-delay="0.1s">
                                     <a class="position-relative d-block overflow-hidden"
@@ -324,6 +328,7 @@
                                 
                         </div>
                        
+                        <section  id="redes"></section>
                             <div id="div3" class="row g-3 collapse show">
                                 <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
                                     <h6 class="section-title bg-white text-start text-primary pe-3">Contenido</h6>
@@ -360,11 +365,13 @@
                 </div>
             </div>
             <!-- END Categories Redes -->
+          </section>
 
 
-
+          <section id="baseDatos">
+            
             <!-- Start Categories Base de datos -->
-            <div id="baseDatos" class="row g-3 mt-5">
+            <div  class="row g-3 mt-5">
                 <div class="col-lg-1 col-md-1 "></div>
 
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.5s">
@@ -518,8 +525,8 @@
                     </div>
 
                 </div>
-            </div>
             <!-- END Categories Base de datos -->
+          </section>
 
 
         </div>
@@ -850,6 +857,20 @@
 
 
         });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Verificar si la URL tiene un hash (#seccion-destino)
+        if (window.location.hash) {
+            let elemento = document.querySelector(window.location.hash);
+            if (elemento) {
+                setTimeout(() => {
+                    elemento.scrollIntoView({ behavior: "smooth", block: "center" });
+                }, 100); // Espera breve para asegurar que la página cargó
+            }
+        }
+    });
     </script>
 
 </body>
