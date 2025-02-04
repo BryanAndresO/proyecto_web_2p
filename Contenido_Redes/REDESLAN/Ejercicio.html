@@ -74,96 +74,94 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/logo.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="img/icono.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">REDES</h1>
+      <h1 class="sitename">REDES LAN</h1>
     </a>
 
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="home.html" class="active"><i class="bi bi-house-fill navicon"></i> Home</a></li>
-        <li><a href="indexContenido.html"><i class="bi bi-gear-fill navicon"></i> ¿Qué es una Red LAN?</a></li>
-        <li><a href="Topologia.html"><i class="bi bi-graph-up navicon"></i> Topologías de red LAN</a></li>
-        <li><a href="Protocolos_Redes LAN.html"><i class="bi bi-diagram-3 navicon"></i> Protocolos</a></li>
-        <li><a href="seguridad.html"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
-        <li><a href="Juegos.html"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
-        <li><a href="Ejercicio.html"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
+        <li><a href="home.html" class="navitem"><i class="bi bi-house-fill navicon"></i> Home</a></li>
+        <li><a href="indexContenido.html" class="navitem"><i class="bi bi-router navicon"></i> ¿Qué es una Red LAN?</a></li>
+        <li><a href="Topologia.html" class="navitem"><i class="bi bi-diagram-3 navicon"></i> Topologías de red LAN</a></li>
+        <li><a href="Protocolos_Redes LAN.html" class="navitem"><i class="bi bi-plug navicon"></i> Protocolos de Comunicación</a></li>
+        <li><a href="seguridad.html" class="navitem"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
+        <li><a href="Juegos.html" class="navitem"><i class="bi bi-controller navicon"></i>Juegos</a></li>
+        <li><a href="Ejercicio.html" class="navitem"><i class="bi bi-pencil-square navicon"></i>Ejercicio</a></li>
       </ul>
     </nav>
-
 
   </header>
 
   <main class="main">
 
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Redes</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-      <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
-      </a>
-      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
 
-
-          <!-- Menú Programación -->
-          <div class="nav-item dropdown">
-            <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
-              data-bs-toggle="dropdown">Programación</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../../Contenido_Programacion/Principal.html"
-                class="dropdown-item small-text">I. Algoritmos</a>
-              <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
-                class="dropdown-item small-text">II. Diagramas</a>
-              <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
-                class="dropdown-item small-text">III. Python</a>
-            </div>
-          </div>
-
-          <!-- Menú Redes -->
-          <div class="nav-item dropdown">
-            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de
-                conexión</a>
-              <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
-                Lan</a>
-                <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
-                class="dropdown-item small-text">III. Internet</a>
-
-            </div>
-          </div>
-
-          <!-- Menú Base de Datos -->
-          <div class="nav-item dropdown">
-            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
-              Datos</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
-                class="dropdown-item small-text">I. Access</a>
-                <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
-                class="dropdown-item small-text">II. Visual
-                Basic Access</a>
-              <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
-                class="dropdown-item small-text">III. MySQL (Workbench)</a>
-
-            </div>
-          </div>
-
+      <!-- Menú Programación -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+          data-bs-toggle="dropdown">Programación</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Programacion/Principal.html"
+            class="dropdown-item small-text">I. Algoritmos</a>
+          <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+            class="dropdown-item small-text">II. Diagramas</a>
+          <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+            class="dropdown-item small-text">III. Python</a>
+        </div>
       </div>
-      <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
-          class="fa fa-arrow-right ms-3"></i></a>
+
+      <!-- Menú Redes -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de
+            conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
+            Lan</a>
+            <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
+            class="dropdown-item small-text">III. Internet</a>
+
+        </div>
       </div>
-    </nav>
-    <!-- Navbar End -->
+
+      <!-- Menú Base de Datos -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
+          Datos</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+            class="dropdown-item small-text">I. Access</a>
+            <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+            class="dropdown-item small-text">II. Visual
+            Basic Access</a>
+          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+            class="dropdown-item small-text">III. MySQL (Workbench)</a>
+
+        </div>
+      </div>
+
+  </div>
+  <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
+      class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
 
 <!-- Section Content -->
 <div class="container-fluid" style="position: relative; z-index: 2; text-align: center; color: #fff; padding: 50px; overflow: hidden;">
@@ -303,29 +301,30 @@
     document.getElementById('correct-configs').style.display = 'block';
     document.getElementById('solution-btn').style.display = 'none'; // Ocultar el botón de solución después de mostrar la solución
   }
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Obtén la URL actual
+    const currentUrl = window.location.pathname;
+  
+    // Obtén todos los enlaces en el menú
+    const links = document.querySelectorAll('.navitem');
+  
+    // Itera a través de los enlaces y compara su href con la URL actual
+    links.forEach(link => {
+      if (link.href.includes(currentUrl)) {
+        link.classList.add('active');  // Añadir la clase 'active' al enlace correspondiente
+      } else {
+        link.classList.remove('active');  // Remover la clase 'active' de los demás enlaces
+      }
+    });
+  });
+  
 </script>
 
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span>
-        </p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
-          href="https://themewagon.com">ThemeWagon</a>
-      </div>
-    </div>
-
-  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i

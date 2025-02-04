@@ -74,94 +74,104 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/logo.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="img/icono.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">REDES</h1>
+      <h1 class="sitename">REDES LAN</h1>
     </a>
-
 
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="home.html" class="active"><i class="bi bi-house-fill navicon"></i> Home</a></li>
-        <li><a href="indexContenido.html"><i class="bi bi-gear-fill navicon"></i> ¿Qué es una Red LAN?</a></li>
-        <li><a href="Topologia.html"><i class="bi bi-graph-up navicon"></i> Topologías de red LAN</a></li>
-        <li><a href="Protocolos_Redes LAN.html"><i class="bi bi-diagram-3 navicon"></i> Protocolos</a></li>
-        <li><a href="seguridad.html"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
-        <li><a href="Juegos.html"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
-        <li><a href="Ejercicio.html"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
+        <li><a href="home.html" class="navitem"><i class="bi bi-house-fill navicon"></i> Home</a></li>
+        <li><a href="indexContenido.html" class="navitem"><i class="bi bi-router navicon"></i> ¿Qué es una Red LAN?</a></li>
+        <li><a href="Topologia.html" class="navitem"><i class="bi bi-diagram-3 navicon"></i> Topologías de red LAN</a></li>
+        <li><a href="Protocolos_Redes LAN.html" class="navitem"><i class="bi bi-plug navicon"></i> Protocolos de Comunicación</a></li>
+        <li><a href="seguridad.html" class="navitem"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
+        <li><a href="Juegos.html" class="navitem"><i class="bi bi-controller navicon"></i>Juegos</a></li>
+        <li><a href="Ejercicio.html" class="navitem"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
       </ul>
     </nav>
+    
 
   </header>
 
   <main class="main">
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-      <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
-      </a>
-      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Redes</h2>
 
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+      <!-- Enlace Inicio 
+      <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->  
 
-          <!-- Menú Programación -->
-          <div class="nav-item dropdown">
-            <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
-              data-bs-toggle="dropdown">Programación</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../../Contenido_Programacion/Principal.html"
-                class="dropdown-item small-text">I. Algoritmos</a>
-              <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
-                class="dropdown-item small-text">II. Diagramas</a>
-              <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
-                class="dropdown-item small-text">III. Python</a>
-            </div>
-          </div>
+      <!-- Menú Programación -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
+            class="dropdown-item small-text">Algoritmos</a>
+          <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+            class="dropdown-item small-text">Diagramas</a>
+          <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
+            class="dropdown-item small-text">Python</a>
+        </div>
+      </div>
 
-          <!-- Menú Redes -->
-          <div class="nav-item dropdown">
-            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de
-                conexión</a>
-              <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
-                Lan</a>
-                <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
-                class="dropdown-item small-text">III. Internet</a>
+      <!-- Menú Redes -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">Internet</a>
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">Medios de conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">Redes Lan</a>
 
-            </div>
-          </div>
+        </div>
+      </div>
 
-          <!-- Menú Base de Datos -->
-          <div class="nav-item dropdown">
-            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
-              Datos</a>
-            <div class="dropdown-menu fade-down m-0">
-              <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
-                class="dropdown-item small-text">I. Access</a>
-                <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
-                class="dropdown-item small-text">II. Visual
-                Basic Access</a>
-              <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
-                class="dropdown-item small-text">III. MySQL (Workbench)</a>
-
-            </div>
-          </div>
+      <!-- Menú Base de Datos -->
+      <div class="nav-item dropdown">
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de Datos</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+            class="dropdown-item small-text">Access</a>
+          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+            class="dropdown-item small-text">MySQL (Workbench)</a>
+          <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">Visual
+            Basic Access</a>
+        </div>
+      </div>
 
       </div>
-      <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
-          class="fa fa-arrow-right ms-3"></i></a>
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+        <div class="dropdown-menu fade-down m-0">
+          <a href="#about" class="dropdown-item">Internet</a>
+          <a href="#connections" class="dropdown-item">Tipos de Conexión</a>
+          <a href="#resume" class="dropdown-item">Servicios Relacionados</a>
+          <a href="#portfolio2" class="dropdown-item">Navegadores Web</a>
+          <a href="#testimonials" class="dropdown-item">Protocolos de Red</a>
+          <a href="#contact" class="dropdown-item">Backbone</a>
+        </div>
       </div>
-    </nav>
+
+      <a href="#cuestionarios" class="nav-item nav-link">Cuestionario</a>
+
+    </div>
+    <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+</nav>
+<!-- Navbar End -->
     <!-- Navbar End -->
 
 
@@ -170,502 +180,608 @@
 
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section"  style="background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); color: #333;">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>¿Qué es una Topología de Red LAN?</h2>
-        <p>Las topologías de red LAN se refieren a la estructura en la que los dispositivos están conectados dentro de
-          una Red de Área Local (LAN). Cada tipo de topología tiene una disposición única que define cómo los datos se
-          transmiten entre los dispositivos y cómo se gestionan las conexiones. Existen varias topologías utilizadas en
-          las redes LAN, y la elección de una sobre otra depende de factores como el rendimiento, la fiabilidad y el
-          costo. Algunas de las topologías más comunes son la topología en estrella, en bus, en anillo y en malla, cada
-          una con sus propias ventajas y desventajas</p>
-      </div><!-- End Section Title -->
+   <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>¿Qué es una Topología de Red LAN?</h2>
+  </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 justify-content-center">
+      <!-- Columna del texto -->
+      <div class="col-lg-6">
+        <br><br><br>
+        <p style="font-size: 18px; text-align: justify;">Las topologías de red LAN son la estructura o diseño físico y lógico de una red de área local (LAN), es decir, la forma en que los dispositivos (como computadoras, impresoras, switches, routers, etc.) se 
+          conectan entre sí y cómo se transmite la información dentro de la red.</p>
+          
+          
+      </div>
 
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <video width="100%" controls autoplay muted>
-              <source src="img/La Mejor explicación de TOPOLOGÍA DE REDES informaticas.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Tipos de Topologías.</h2>
-            <p class="fst-italic py-3">
-              En una red LAN, las topologías determinan cómo se conectan los dispositivos. Existen varios tipos de
-              topologías comunes:</p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Arbol</strong></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Hibrida</strong></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Bus</strong></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Estrella</strong></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Anillo</strong></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Malla</strong></li>
-                </ul>
+      <!-- Columna del video -->
+      <div class="col-lg-6">
+        <video width="100%" height="100%" controls autoplay muted>
+          <source src="img/La Mejor explicación de TOPOLOGÍA DE REDES informaticas.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div><!-- End Row -->
+  </div><!-- End Container -->
+    </section>
+
+
+          <br><br>
+          <!-- Features Section -->
+          <section id="features" class="features section" style="margin-top: -50px;">
+            <div class="container section-title" data-aos="fade-up">
+              <h2>TIPOS DE TOPOLOGÍAS</h2>
+            </div><!-- End Section Title -->
+      
+            <div class="container">
+              <ul class="nav nav-tabs row d-flex" data-aos-delay="100">
+                <li class="nav-item col-2">
+                  <a class="nav-link cnt-tab active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                    <i class="bi bi-link"></i>
+                    <h4 class="d-none d-lg-block">BUS</h4>
+                  </a>
+                </li>
+                <li class="nav-item col-2">
+                  <a class="nav-link netlife-tab" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                    <i class="bi bi-star"></i>
+                    <h4 class="d-none d-lg-block">ESTRELLA</h4>
+                  </a>
+                </li>
+                <li class="nav-item col-2">
+                  <a class="nav-link claro-tab" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <h4 class="d-none d-lg-block">ANILLO</h4>
+                  </a>
+                </li>
+                <li class="nav-item col-2">
+                  <a class="nav-link xtrim-tab" data-bs-toggle="tab" data-bs-target="#features-tab-4">
+                    <i class="bi bi-diagram-3"></i> <!-- Icono para Árbol -->
+                    <h4 class="d-none d-lg-block">ARBOL</h4>
+                  </a>
+                </li>
+              
+              <li class="nav-item col-2">
+                <a class="nav-link xtrim-tab" data-bs-toggle="tab" data-bs-target="#features-tab-5">
+                  <i class="bi bi-grid"></i> <!-- Icono para Malla -->
+                  <h4 class="d-none d-lg-block">MALLA</h4>
+                </a>
+              </li>
+            
+            <li class="nav-item col-2">
+              <a class="nav-link xtrim-tab" data-bs-toggle="tab" data-bs-target="#features-tab-6">
+                <i class="bi bi-diagram-3"></i>
+
+                <h4 class="d-none d-lg-block">HÍBRIDA</h4>
+              </a>
+            </li>
+          </ul>
+
+
+
+      
+              <div class="tab-content" data-aos-delay="200">
+                <div class="tab-pane fade active show" id="features-tab-1">
+                  <div class="row">
+                    <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                      <h3>Topología de Bus</h3>
+                      <br>
+                      <p style="font-size: 18px; text-align: justify;">
+                        En esta topología, todos los dispositivos de la red se conectan a un único cable, llamado bus o tronco,
+                        a través de un conector T. Todos los dispositivos comparten el mismo canal de comunicación.
+                      </p>
+                <br>
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Ventajas</th>
+                            <th>Desventajas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><i class="bi bi-star text-primary"></i> Económico</td> <!-- Usando una estrella para Ventajas -->
+                            <td><i class="bi bi-exclamation-circle text-warning"></i>Dificultad en la localización de fallos</td> <!-- Usando un icono de advertencia para Desventajas -->
+                          </tr>
+                          <tr>
+                            <td><i class="bi bi-check2-circle text-success"></i> Fácil de instalar y manejar</td> <!-- Icono de "check" más moderno -->
+                            <td><i class="bi bi-slash-circle text-danger"></i> Escalabilidad limitada: No es adecuada para redes grandes</td> <!-- Icono de "slash" como desventaja -->
+                          </tr>
+                          <tr>
+                          </tr>
+                        </tbody>
+                      </table>
+                
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 text-center">
+                      <img src="img/bus.gif" alt="Topología de Bus" class="img-fluid" style="width: 100%; height: auto; border-radius: 20px;">
+                    </div>
+                  </div>
+                </div>
+                
+                
+      
+                <div class="tab-pane fade" id="features-tab-2">
+                  <div class="row">
+                    <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                      <h3>Topología de Estrella</h3>
+                      <br>
+                      <p style="font-size: 18px; text-align: justify;">
+                        En la topología de estrella, todos los dispositivos están conectados a un dispositivo central, 
+                        generalmente un switch o un hub. 
+                        Este dispositivo central se encarga de gestionar la comunicación entre los dispositivos.
+                      </p>
+                <br><br>
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Ventajas</th>
+                            <th>Desventajas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><i class="bi bi-star text-primary"></i>Fácil de instalar y configurar.</td> <!-- Usando una estrella para Ventajas -->
+                            <td><i class="bi bi-exclamation-circle text-warning"></i>Mayor costo de cableado</td> <!-- Usando un icono de advertencia para Desventajas -->
+                          </tr>
+                          <tr>
+                            <td><i class="bi bi-check2-circle text-success"></i>Escalabilidad</td> <!-- Icono de "check" más moderno -->
+                            <td><i class="bi bi-slash-circle text-danger"></i>Dependencia del centro</td> <!-- Icono de "slash" como desventaja -->
+                          </tr>
+                      
+                        </tbody>
+                      </table>
+                
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 text-center">
+                      <img src="img/estrella.gif" alt="Topología de Estrella" class="img-fluid" style="width: 90%; height: auto;">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="tab-pane fade" id="features-tab-3">
+                  <div class="row">
+                    <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                      <h3>Topología de Anillo</h3>
+
+                      <p style="font-size: 18px; text-align: justify;">
+                        En una red de anillo, cada dispositivo está conectado al siguiente formando un ciclo cerrado, es decir, 
+                        la comunicación sigue un camino circular 
+                        (de un dispositivo a otro) hasta llegar al destino.
+                      </p>
+                <br>
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Ventajas</th>
+                            <th>Desventajas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><i class="bi bi-star text-primary"></i>Buen rendimiento en redes pequeñas</td> <!-- Usando una estrella para Ventajas -->
+                            <td><i class="bi bi-exclamation-circle text-warning"></i>Vulnerabilidad al fallo de un dispositivo</td> <!-- Usando un icono de advertencia para Desventajas -->
+                          </tr>
+                          <tr>
+                            <td><i class="bi bi-check2-circle text-success"></i>Sin congestión de tráfico</td> <!-- Icono de "check" más moderno -->
+                            <td><i class="bi bi-slash-circle text-danger"></i>Dificultad para agregar o quitar dispositivos</td> <!-- Icono de "slash" como desventaja -->
+                          </tr>
+                      
+                        </tbody>
+                      </table>
+                
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 text-center">
+                      <img src="img/anillo.gif" alt="Topología de Estrella" class="img-fluid" style="width: 70%; height: auto;">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="tab-pane fade" id="features-tab-4">
+                  <div class="row">
+                    <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                      <h3>Topología de Arbol</h3>
+                      <br>
+                      <p style="font-size: 18px; text-align: justify;">
+                        Es una combinación de la topología de estrella y la de bus. Tiene un dispositivo central (generalmente un switch o router) que conecta varios dispositivos en diferentes niveles. Este dispositivo central actúa como un tronco del árbol y 
+                        las conexiones de los dispositivos secundarios forman ramas.
+                      </p>
+           
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Ventajas</th>
+                            <th>Desventajas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><i class="bi bi-star text-primary"></i>Escalabilidad</td> <!-- Usando una estrella para Ventajas -->
+                            <td><i class="bi bi-exclamation-circle text-warning"></i>Complejidad de instalación</td> <!-- Usando un icono de advertencia para Desventajas -->
+                          </tr>
+                          <tr>
+                            <td><i class="bi bi-check2-circle text-success"></i>Buena gestión de tráfico</td> <!-- Icono de "check" más moderno -->
+                            <td><i class="bi bi-slash-circle text-danger"></i>Dependencia de los nodos centrales</td> <!-- Icono de "slash" como desventaja -->
+                          </tr>
+                      
+                        </tbody>
+                      </table>
+                
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 text-center">
+                      <img src="img/arbol.gif" alt="Topología de Estrella" class="img-fluid" style="width: 90%; height: auto;">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="features-tab-5">
+                  <div class="row">
+                    <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                      <h3>Topología de Malla</h3>
+                      <br>
+                      <p style="font-size: 18px; text-align: justify;">
+                        En esta topología, cada dispositivo de la red está conectado a todos los demás dispositivos, 
+                        formando una malla completa de conexiones.
+                      </p>
+                <br>
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Ventajas</th>
+                            <th>Desventajas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><i class="bi bi-star text-primary"></i>Alta tolerancia a fallos</td> <!-- Usando una estrella para Ventajas -->
+                            <td><i class="bi bi-exclamation-circle text-warning"></i>Costo elevado</td> <!-- Usando un icono de advertencia para Desventajas -->
+                          </tr>
+                          <tr>
+                            <td><i class="bi bi-check2-circle text-success"></i>Redundancia: Aumenta la confiabilidad de la red, ya que no hay un único punto de fallo</td> <!-- Icono de "check" más moderno -->
+                            <td><i class="bi bi-slash-circle text-danger"></i>Complejidad en la instalación y mantenimiento</td> <!-- Icono de "slash" como desventaja -->
+                          </tr>
+                      
+                        </tbody>
+                      </table>
+                
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 text-center">
+                      <img src="img/malla.gif" alt="Topología de Estrella" class="img-fluid" style="width: 80%; height: auto;">
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="features-tab-6">
+                  <div class="row">
+                     <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                      <h3>Topología Híbrida</h3>
+                      <br>
+                      <p style="font-size: 18px; text-align: justify;">
+                        Una topología híbrida combina diferentes topologías de red dentro de una misma red, 
+                        integrando lo mejor de cada una según el tipo de dispositivos y la estructura de la red.
+                      </p>
+                
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Ventajas</th>
+                            <th>Desventajas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><i class="bi bi-star text-primary"></i>Optimización de recursos</td> <!-- Usando una estrella para Ventajas -->
+                            <td><i class="bi bi-exclamation-circle text-warning"></i>Complejidad</td> <!-- Usando un icono de advertencia para Desventajas -->
+                          </tr>
+                          <tr>
+                            <td><i class="bi bi-check2-circle text-success"></i>Flexibilidad</td> <!-- Icono de "check" más moderno -->
+                            <td><i class="bi bi-slash-circle text-danger"></i>Problemas de interoperabilidad</td> <!-- Icono de "slash" como desventaja -->
+                          </tr>
+                      
+                        </tbody>
+                      </table>
+                
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 text-center">
+                      <img src="img/hibrida.jpg" alt="Topología de Estrella" class="img-fluid" style="width: 90%; height: auto;">
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
             </div>
-          </div>
-        </div>
-
+          </section>
+          
       </div>
     </section><!-- /About Section -->
+ <!-- Impacto del Internet -->
+ <section id="impacto" class="impacto section py-5"
+ style="background: linear-gradient(to right, #cdeef1, #cdeef1);">
+ <div class="container section-title" data-aos="fade-up">
+   <h2 class="text-center" style="color: #34495e;">Factores a Considerar al Elegir la Topología</h2>
+ </div><!-- End Section Title -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>TIPOS DE TOPOLOGÍAS</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="img/bus.gif" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Topología BUS</h4>
-                  <a href="img/bus.gif" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="topologia_BUS.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="img/estrella.gif" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Topología ESTRELLA</h4>
-                  <a href="img/estrella.gif" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="topologia_ESTRELLA.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="img/arbol.gif" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Topología ARBOL</h4>
-                  <a href="img/arbol.gif" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="topologia_ARBOL.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="img/malla.gif" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Topología MALLA</h4>
-                  <a href="img/malla.gif" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="topologia_MALLA.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="img/hibrida.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Topología HÍBRIDA</h4>
-                  <a href="img/hibrida.jpg" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="topologia_HIBRIDA.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="img/anillo.gif" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Topología ANILLO</h4>
-                  <a href="img/anillo.gifg" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="topologia_ANILLO.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
+ <div class="container section-title" data-aos="fade-up">
+      
+  <div class="row gy-4 align-items-center">
+    <div class="col-lg-4">
+      <div class="card custom-card" data-aos="fade-left">
+        <div class="card-body">
+          <div class="card-face card-front">
+            <i class="bi bi-grid text-warning"></i>
+            <h5 class="card-title">Tamaño de la red</h5>
+          </div>
+          <div class="card-face card-back">
+            <p class="card-text">La cantidad de dispositivos que necesitarán conectarse.</p>
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Portfolio Section -->
-
- <!-- Testimonials Section -->
-<section id="testimonials" class="testimonials section light-background">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Ventajas de las Topologías</h2>
-    <p>Las ventajas de las topologías de red son diversas y dependen de la configuración seleccionada. Cada tipo de
-      topología ofrece beneficios específicos que pueden mejorar la eficiencia, escalabilidad y confiabilidad de una
-      red. Algunas de las ventajas más comunes incluyen:</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "slidesPerView": "auto",
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          },
-          "breakpoints": {
-            "320": {
-              "slidesPerView": 1,
-              "spaceBetween": 40
-            },
-            "1200": {
-              "slidesPerView": 3,
-              "spaceBetween": 1
-            }
-          }
-        }
-      </script>
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La topología bus es económica y sencilla, ideal para redes pequeñas y temporales.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La topología malla ofrece alta redundancia, lo que mejora la tolerancia a fallas.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La topología híbrida combina características de varias topologías para adaptarse a las
-                necesidades específicas.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La topología estrella es fácil de instalar y administrar, además permite detectar fallas
-                rápidamente al estar centralizada.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La Topología en anillo es eficiente en la transmisión de datos, ya que las señales viajan en una
-                sola dirección, evitando colisiones y permitiendo un flujo continuo de información.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-          </div>
-        </div><!-- End testimonial item -->
-
-      </div>
-      <div class="swiper-pagination"></div>
     </div>
-
-  </div>
-
-</section><!-- /Testimonials Section -->
-<!-- Desventajas de las Topologías -->
-<section id="disadvantages" class="disadvantages section light-background">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Desventajas de las Topologías</h2>
-    <p>Las topologías de red, aunque ofrecen beneficios, también tienen sus limitaciones. A continuación se
-      presentan algunas de las desventajas más destacadas para cada tipo de topología.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "slidesPerView": "auto",
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          },
-          "breakpoints": {
-            "320": {
-              "slidesPerView": 1,
-              "spaceBetween": 40
-            },
-            "1200": {
-              "slidesPerView": 3,
-              "spaceBetween": 1
-            }
-          }
-        }
-      </script>
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La topología bus puede presentar problemas de congestión y dificultades para identificar
-                fallas.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
+    <div class="col-lg-4">
+      <div class="card custom-card" data-aos="fade-left" data-aos-delay="200">
+        <div class="card-body">
+          <div class="card-face card-front">
+            <i class="bi bi-currency-dollar text-primary"></i> 
+            <h5 class="card-title">Presupuesto</h5>
           </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La topología malla es costosa y compleja de instalar y mantener debido a la gran cantidad de
-                conexiones.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
+          <div class="card-face card-back">
+            <p class="card-text">Gastos en cableado, equipos y mantenimiento.</p>
           </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La topología híbrida puede ser difícil de gestionar debido a la combinación de diferentes tipos
-                de topologías.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La topología estrella depende de un nodo central, por lo que si falla este, toda la red puede
-                quedar inoperativa.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              <span>La topología en anillo puede ser sensible a fallos en el cableado, ya que una interrupción puede
-                afectar toda la red.</span>
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-          </div>
-        </div><!-- End testimonial item -->
-
+        </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
+    <div class="col-lg-4">
+      <div class="card custom-card" data-aos="fade-left" data-aos-delay="300">
+        <div class="card-body">
+          <div class="card-face card-front">
+            <i class="bi bi-arrow-repeat text-success"></i>
+            <h5 class="card-title">Escalabilidad</h5>
+          </div>
+          <div class="card-face card-back">
+            <p class="card-text">¿La red necesita crecer en el futuro? <br>Algunas topologías permiten agregar más dispositivos fácilmente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+   
 
+
+
+
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Cómo Elegir Según el Tamaño y las Necesidades</h2>
   </div>
 
-</section><!-- /Desventajas de las Topologías -->
-
-<!-- Cuestionario Interactivo -->
-<section id="quiz" class="quiz section light-background" style="background-color:aquamarine">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Cuestionario: Topologías de Redes LAN</h2>
-    <p>Responde correctamente las preguntas. Si respondes incorrectamente, deberás intentarlo nuevamente.</p>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div id="quizContainer">
-      <!-- Pregunta 1 -->
-      <div class="quiz-item" id="question1">
-        <p><strong>1. ¿Cuál de las siguientes topologías es más económica y sencilla para redes pequeñas?</strong></p>
-        <button class="quiz-option" data-correct="false">Malla</button>
-        <button class="quiz-option" data-correct="true">Bus</button>
-        <button class="quiz-option" data-correct="false">Estrella</button>
+    <div class="row">
+      <!-- ComboBox (Select) -->
+      <div class="col-md-6">
+        <div class="form-group" style="max-width: 450px; margin: 0 auto;">
+          <br><br>
+          <label for="topologiaSelect" style="font-size: 1.2rem; font-weight: 500; color: #504b4b;">Selecciona una Topología</label>
+          <select class="form-control" id="topologiaSelect" style="border: 2px solid #ddd; font-size: 1rem; max-width: 500px; margin: 0 auto; display: block;">
+            <option value="1"  >Bus</option>
+            <option value="2">Anillo</option>
+            <option value="3">Malla</option>
+            <option value="4">Estrella</option>
+            <option value="5">Árbol</option>
+            <option value="6">Híbrida</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6" id="infoFoto" class="centrar-contenido">
+       
+      </div>
+    </div>
+    
+    <br><br>
+    <!-- Información sobre la topología seleccionada -->
+    <div class="row">
+      <!-- Uso Ideal -->
+      <div class="col-md-6" id="infoUsoIdeal" class="centrar-contenido"  style="max-width: 550px; margin: 0 auto;">
+        <div class="info-box " >
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes pequeñas, económicas, con pocos dispositivos.</p>
+        </div>
       </div>
 
-      <!-- Pregunta 2 -->
-      <div class="quiz-item" id="question2" style="display: none;">
-        <p><strong>2. ¿Qué topología permite una alta redundancia y tolerancia a fallas?</strong></p>
-        <button class="quiz-option" data-correct="false">Bus</button>
-        <button class="quiz-option" data-correct="true">Malla</button>
-        <button class="quiz-option" data-correct="false">Estrella</button>
-      </div>
-
-      <!-- Pregunta 3 -->
-      <div class="quiz-item" id="question3" style="display: none;">
-        <p><strong>3. ¿Cuál es la desventaja principal de la topología estrella?</strong></p>
-        <button class="quiz-option" data-correct="false">Es difícil de instalar</button>
-        <button class="quiz-option" data-correct="true">Depende del nodo central</button>
-        <button class="quiz-option" data-correct="false">No es escalable</button>
-      </div>
-
-      <!-- Resultado Final -->
-      <div id="finalResult" style="display: none; margin-top: 20px;">
-        <h3>¡Felicidades! Completaste el cuestionario.</h3>
-        <p>Tu calificación final es: <span id="score">0</span>/3.</p>
-        <button id="solutionButton" class="btn btn-primary">Ver Solucionario</button>
-      </div>
-
-      <!-- Controles -->
-      <div style="margin-top: 20px;">
-        <button id="prevButton" class="btn btn-secondary" style="display: none;">Anterior</button>
-        <button id="nextButton" class="btn btn-primary">Siguiente</button>
+      <!-- Tamaño de Red Recomendado -->
+      <div class="col-md-6" id="infoTamañoRed" class="centrar-contenido" style="max-width: 500px; margin: 0 auto;">
+        <div class="info-box">
+          <h3 style="text-align: center;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Pequeña (1-10 dispositivos)</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<script>
-  let score = 0; // Puntuación inicial
-  let currentQuestionIndex = 0; // Índice de la pregunta actual
-  const questions = document.querySelectorAll('.quiz-item');
-  const options = document.querySelectorAll('.quiz-option');
-  const prevButton = document.getElementById('prevButton');
-  const nextButton = document.getElementById('nextButton');
-  const finalResult = document.getElementById('finalResult');
-  const solutionButton = document.getElementById('solutionButton');
 
-  function showQuestion(index) {
-    // Ocultar todas las preguntas
-    questions.forEach(question => question.style.display = 'none');
-    // Mostrar la pregunta actual
-    questions[index].style.display = 'block';
-    // Actualizar visibilidad de los botones de navegación
-    prevButton.style.display = index > 0 ? 'inline-block' : 'none';
-    nextButton.style.display = index < questions.length - 1 ? 'inline-block' : 'none';
-    if (index === questions.length - 1) {
-      nextButton.textContent = 'Finalizar';
-    } else {
-      nextButton.textContent = 'Siguiente';
+
+<!-- JS para cambiar la información según la selección del combobox -->
+<script>
+  // Función para actualizar la información según la selección del combobox
+  function updateInfo() {
+    const selectedValue = document.getElementById('topologiaSelect').value;
+    const infoUsoIdeal = document.getElementById('infoUsoIdeal');
+    const infoTamañoRed = document.getElementById('infoTamañoRed');
+    const infoFoto= document.getElementById('infoFoto');
+
+    // Cambiar el contenido según la opción seleccionada
+    if (selectedValue == '1') {
+     infoFoto.innerHTML=`
+     <img src="img/bus.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+     `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #92e7f4; color: #black; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes pequeñas, económicas, con pocos dispositivos.</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color:#92e7f4; color: #black; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Pequeña (1-10 dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '2') {
+      infoFoto.innerHTML=`
+      <img src="img/anillo.png" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #f8d291; color: #black; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;" >Uso Ideal</h3>
+          <p style="text-align: center;">Redes pequeñas a medianas</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color:#f8d291; color: #black; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Pequeña a Mediana (10-100 dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '3') {
+      infoFoto.innerHTML=`
+      <img src="img/malla.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #d7f891; color: #black; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes críticas, alta disponibilidad</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #d7f891; color: #black; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Grande (100+ dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '4') {
+      infoFoto.innerHTML=`
+      <img src="img/estrella.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #cebafc; color: #black; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Oficinas, edificios comerciales, redes medianas</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #cebafc; color: #black; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Pequeña a Mediana (10-100 dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '5') {
+      infoFoto.innerHTML=`
+      <img src="img/arbol.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #fcbafc; color:#black; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes grandes, empresas con múltiples subredes</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #fcbafc; color: #black; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Mediana a Grande (50+ dispositivos)</p>
+        </div>
+      `;
+    } else if (selectedValue == '6') {
+      infoFoto.innerHTML=`
+      <img src="img/hibrida.webp" alt="Descripción de la imagen" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+      `;
+      infoUsoIdeal.innerHTML = `
+        <div class="info-box" style="background-color: #bafcea
+; color:#black; border: 1px solid #f5c6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Uso Ideal</h3>
+          <p style="text-align: center;">Redes grandes, complejas, adaptadas a diferentes necesidades</p>
+        </div>
+      `;
+      infoTamañoRed.innerHTML = `
+        <div class="info-box" style="background-color: #bafcea
+; color: #black; border: 1px solid #c3e6cb; border-radius: 8px; padding: 20px;">
+          <h3 style="text-align: center; color:#007bff;">Tamaño de Red Recomendado</h3>
+          <p style="text-align: center;">Mediana a Grande (50+ dispositivos)</p>
+        </div>
+      `;
     }
   }
 
-  options.forEach(option => {
-    option.addEventListener('click', function () {
-      if (this.disabled) return;  // Evitar clic si la opción ya está deshabilitada
+  // Llamar la función al cambiar la selección del combobox
+  document.getElementById('topologiaSelect').addEventListener('change', updateInfo);
 
-      const isCorrect = this.dataset.correct === 'true';
-      const currentQuestion = this.closest('.quiz-item');
-      const allOptions = currentQuestion.querySelectorAll('.quiz-option');
-
-      // Si la pregunta ya ha sido respondida, no se pueden cambiar las respuestas
-      if (currentQuestion.dataset.answered) return;
-
-      // Marcar la pregunta como respondida
-      currentQuestion.dataset.answered = true;
-
-      // Sumar la puntuación si la respuesta es correcta
-      if (isCorrect) {
-        score++;
-      }
-
-      // Deshabilitar todas las opciones después de la selección
-      allOptions.forEach(opt => opt.disabled = true);
-
-      // Mostrar la siguiente pregunta después de un breve delay
-      setTimeout(() => {
-        // Avanzar o mostrar el resultado
-        if (currentQuestionIndex < questions.length - 1) {
-          currentQuestionIndex++;
-          showQuestion(currentQuestionIndex);
-        } else {
-          finalResult.style.display = 'block';
-          document.getElementById('score').textContent = score;
-        }
-      }, 1000);
-    });
-  });
-
-  // Función para ir a la pregunta anterior
-  prevButton.addEventListener('click', () => {
-    currentQuestionIndex--;
-    // Desmarcar la respuesta seleccionada para permitir cambiarla
-    const previousQuestion = questions[currentQuestionIndex];
-    previousQuestion.dataset.answered = false;
-    const allOptions = previousQuestion.querySelectorAll('.quiz-option');
-    allOptions.forEach(opt => opt.disabled = false); // Habilitar las opciones para la nueva selección
-    showQuestion(currentQuestionIndex);
-  });
-
-  // Función para ir a la siguiente pregunta
-  nextButton.addEventListener('click', () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      currentQuestionIndex++;
-      showQuestion(currentQuestionIndex);
-    } else {
-      finalResult.style.display = 'block';
-      document.getElementById('score').textContent = score;
-    }
-  });
-
-  // Función para mostrar el solucionario
-  solutionButton.addEventListener('click', () => {
-    const solucionario = `
-      <h4>Solucionario:</h4>
-      <p>1. La respuesta correcta es: Bus.</p>
-      <p>2. La respuesta correcta es: Malla.</p>
-      <p>3. La respuesta correcta es: Depende del nodo central.</p>
-    `;
-    finalResult.insertAdjacentHTML('beforeend', solucionario);
-    solutionButton.disabled = true;  // Deshabilitar el botón para no mostrarlo varias veces
-  });
-
-  // Iniciar mostrando la primera pregunta
-  showQuestion(currentQuestionIndex);
+  // Llamar la función al cargar la página para establecer el contenido inicial
+  document.addEventListener("DOMContentLoaded", updateInfo);
 </script>
 
+<br><br>
+<section id="juegos" class="about section" style="position: relative; overflow: hidden; height: 50vh; background: url('../VANNE/assets/img/fondo.gif') no-repeat center center/cover;">
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="background-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+    <source src="/REDESLAN/REDESLAN/img/video_fondo.mp4" type="video/mp4">
+    Tu navegador no soporta el formato de video.
+  </video>
+
+  <!-- Contenedor con título y botón -->
+  <div class="container section-title" data-aos="fade-up" style="position: relative; z-index: 1; color: white;">
+    <!-- Contenedor centrado con flexbox -->
+    <br><br>
+    <div class="d-flex flex-column justify-content-center align-items-center h-100" style="z-index: 1; text-align: center;">
+      <h2 style="color: white;">Pon a prueba tu conocimiento sobre Topologías</h2>
+      <!-- Botón con estilo corregido -->
+      <button id="startButton" class="btn btn-primary" style="font-size: 150%;">EMPECEMOS</button>
+    </div>
+  </div>
+</section>
+
+<!-- Sección del Juego que se mostrará al hacer clic -->
+<section id="gameSection" style="display: none; padding-top: 20px;">
+  <iframe id="gameIframe" src="Juegos/arrastrar.html" style="width: 100%; height: 800px; border: none;"></iframe>
+</section>
+
+
+  <script>
+    // Obtener los elementos
+    const startButton = document.getElementById('startButton');
+    const gameSection = document.getElementById('gameSection');
+    
+    // Evento para mostrar el iframe y desplazarse hacia la sección del juego cuando se hace clic en el botón
+    startButton.addEventListener('click', function() {
+      // Hacer visible la sección con el iframe
+      gameSection.style.display = 'block';
+  
+      // Ocultar el botón "EMPECEMOS"
+      startButton.style.display = 'none';
+  
+      // Desplazarse automáticamente hacia la sección del juego
+      gameSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Obtén la URL actual
+      const currentUrl = window.location.pathname;
+    
+      // Obtén todos los enlaces en el menú
+      const links = document.querySelectorAll('.navitem');
+    
+      // Itera a través de los enlaces y compara su href con la URL actual
+      links.forEach(link => {
+        if (link.href.includes(currentUrl)) {
+          link.classList.add('active');  // Añadir la clase 'active' al enlace correspondiente
+        } else {
+          link.classList.remove('active');  // Remover la clase 'active' de los demás enlaces
+        }
+      });
+    });
+  </script>
 
 
 
