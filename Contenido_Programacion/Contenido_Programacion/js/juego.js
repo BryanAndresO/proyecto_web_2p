@@ -116,13 +116,13 @@ function resetToSelection() {
 function loadPerfectosPares() {
   blocks = {
     "block1": 'escribir("LOS NÚMEROS PERFECTOS PARES HASTA EL ", MAX, " son:");',
-    "block2": "para(num = 1; num <= MAX; num++);",
-    "block3": "   si(num % 2 == 0);",
+    "block2": "para(num = 1; num <= MAX; num++)",
+    "block3": "   si(num % 2 == 0)",
     "block4": "      suma = 1;",
-    "block5": "      para(cont = 2; cont < num; cont++);",
-    "block6": "         si(num % cont == 0);",
+    "block5": "      para(cont = 2; cont < num; cont++)",
+    "block6": "         si(num % cont == 0)",
     "block7": "            suma = suma + cont;",
-    "block8": "      si(suma == num);",
+    "block8": "      si(suma == num)",
     "block9": '         escribir("EL NÚMERO ", num, " ES PERFECTO PAR");'
   };
   correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6", "block7", "block8", "block9"];
@@ -148,27 +148,26 @@ function loadPerfectosImpares() {
 function loadSerieMatematica() {
   blocks = {
     "block1": "hacer",
-    "block2": '   limpiar_pantalla() # clrscr() en pseudocódigo',
+    "block2": '   limpiar_pantalla()',
     "block3": '   escribir("Exponente?: ");',
-    "block4": '   limpiar_buffer() # fflush(stdin) en pseudocódigo',
+    "block4": '   limpiar_buffer()',
     "block5": "   leer(num);",
-    "block6": "   si (!(num >= MIN && num <= MAX))",
+    "block6": "   si (!(num >= MIN AND num <= MAX))",
     "block7": '      escribir("Fuera de rango...presione una tecla para continuar");',
-    "block8": "      esperar() # getch() en pseudocódigo",
-    "block9": "mientras (!(num >= MIN && num <= MAX));",
+    "block8": "      esperar() ",
+    "block9": "mientras (!(num >= MIN AND num <= MAX));",
     "block10": "suma = 1;",
     "block11": "veces = 1;",
     "block12": "mientras (abs(suma - exp(num)) > ERROR)",
     "block13": "   para (fact = cont = 1; cont <= veces; cont++)",
     "block14": "      fact *= cont;",
-    "block15": "   aux = potencia(num, veces); # pow(num, veces) en pseudocódigo",
+    "block15": "   aux = potencia(num, veces); ",
     "block16": "   termino = aux / fact;",
     "block17": "   suma += termino;",
     "block18": "   veces++;",
-    "block19": 'escribir("Resultado= ", formatear(suma, 3)); # printf("Resultado= %.3f", sum) en pseudocódigo',
-    "block20": "esperar() # getch() en pseudocódigo"
+    "block19": 'escribir("Resultado= ", formatear(suma, 3)); ',
   };
-  correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6", "block7", "block8", "block9", "block10", "block11", "block12", "block13", "block14", "block15", "block16", "block17", "block18", "block19", "block20"];
+  correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6", "block7", "block8", "block9", "block10", "block11", "block12", "block13", "block14", "block15", "block16", "block17", "block18", "block19"];
   updateGame();
 }
 
@@ -180,7 +179,7 @@ function loadMCM() {
     "block4": 'escribir("\\n\\n\\n  mcm\\t=1");',
     "block5": "para(x = a; q < (MAX * MAX); q++)",
     "block6": "   z = 0;",
-    "block7": "   si((x % q == 0) || (y % q == 0))",
+    "block7": "   si((x % q == 0) OR (y % q == 0))",
     "block8": "      hacer",
     "block9": "         si(x % q == 0)",
     "block10": "            x = x / q;",
@@ -188,7 +187,7 @@ function loadMCM() {
     "block12": "            y = y / q;",
     "block13": "         z++;",
     "block14": "         mcm = mcm * q;",
-    "block15": "      mientras((x % q == 0) || (y % q == 0));",
+    "block15": "      mientras((x % q == 0) OR (y % q == 0));",
     "block16": '      escribir("* ", q, "^", z);',
     "block17": 'escribir("\\n\\n\\n\\n mcm= ", abs(mcm));'
   };
@@ -203,10 +202,9 @@ function loadConstanteE() {
     "block3": "      fact *= cont;",
     "block4": "   termino = 1 / fact;",
     "block5": "   sum += termino;",
-    "block6": 'escribir("La constante E= ", formatear(sum, 5)); # printf("La constante E= %.5f", sum) en pseudocódigo',
-    "block7": "esperar() # getch() en pseudocódigo"
+    "block6": 'escribir("La constante E= ", formatear(sum, 5));',
   };
-  correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6", "block7"];
+  correctOrder = ["block1", "block2", "block3", "block4", "block5", "block6"];
   updateGame();
 }
 
