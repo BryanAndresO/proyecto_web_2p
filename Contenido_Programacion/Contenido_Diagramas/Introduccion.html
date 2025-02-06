@@ -42,7 +42,14 @@
    <!-- Icon Font Stylesheet -->
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-   
+  
+   <style>
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+   </style>
 
 </head>
 
@@ -155,7 +162,7 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style=" font-family: 'Poppins', sans-serif;">
    
-  <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
+  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
       <h2  class="m-0" style="color:#06BBCC; font-family: 'Poppins', sans-serif;" ><i class="fa fa-book me-3" style="color:#06BBCC;"></i >Programación</h2>
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -171,7 +178,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto p-4 p-lg-0">
   
-            <div class="nav-item dropdown">
+            <div class="nav-item dropdown" style=" display: block;">
               <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">PROGRAMACIÓN</a>
               <div class="dropdown-menu fade-down m-0">
                 
@@ -180,6 +187,7 @@
                 <a href="../Contenido_Python/Origen.html" class="dropdown-item">III. Python</a>
               </div>
             </div>
+
             <div class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">REDES</a>
               <div class="dropdown-menu fade-down m-0">
