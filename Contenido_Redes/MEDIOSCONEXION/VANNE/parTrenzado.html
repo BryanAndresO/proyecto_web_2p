@@ -273,13 +273,9 @@
       </div>
     </div>
 
-    <div class="container text-center mt-5">
-        <canvas id="twistedPairCanvas" width="600" height="300" style="border:1px solid #000;"></canvas>
-      </div>
-
 
       <!-- Botón izquierdo -->
-    <div style="position: relative;">
+    <div style="position: relative; margin-top: 2%;">
         <!-- Botón izquierdo -->
         <div class="text-start" style="position: absolute; bottom: 20px; left: 20px; top: 0;">
           <a 
@@ -300,37 +296,6 @@
           </a>
         </div>
       </div>
-    
-      <script>
-        const canvas = document.getElementById('twistedPairCanvas');
-        const ctx = canvas.getContext('2d');
-        let angle = 0;
-    
-        function drawTwistedPair() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.beginPath();
-          for (let x = 0; x < canvas.width; x += 5) {
-            let y = 150 + 40 * Math.sin((x + angle) * 0.05);
-            ctx.lineTo(x, y);
-          }
-          ctx.strokeStyle = 'blue';
-          ctx.lineWidth = 3;
-          ctx.stroke();
-    
-          ctx.beginPath();
-          for (let x = 0; x < canvas.width; x += 5) {
-            let y = 150 - 40 * Math.sin((x + angle) * 0.05);
-            ctx.lineTo(x, y);
-          }
-          ctx.strokeStyle = 'red';
-          ctx.lineWidth = 3;
-          ctx.stroke();
-          angle += 2;
-          requestAnimationFrame(drawTwistedPair);
-        }
-    
-        drawTwistedPair();
-      </script>
   </section>
   
 
